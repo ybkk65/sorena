@@ -36,10 +36,6 @@ export function SiteEffects() {
     const onScroll = () => {
       const y = window.scrollY;
       if (nav) nav.classList.toggle("scrolled", y > 30);
-      const mono = document.getElementById("heroMono");
-      if (mono && y < 1200) {
-        mono.style.transform = `translate(0, calc(-50% + ${y * 0.15}px)) rotate(${y * 0.02}deg)`;
-      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
 

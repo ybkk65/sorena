@@ -9,7 +9,6 @@ import { Methode } from "@/components/Methode";
 import { Nav } from "@/components/Nav";
 import { Positionnement } from "@/components/Positionnement";
 import { Probleme } from "@/components/Probleme";
-import { Resultats } from "@/components/Resultats";
 import { SiteEffects } from "@/components/SiteEffects";
 
 export default function Page() {
@@ -21,7 +20,6 @@ export default function Page() {
       <Probleme />
       <Positionnement />
       <Methode />
-      <Resultats />
       <Faq />
       <CtaFinal />
       <Calendar />

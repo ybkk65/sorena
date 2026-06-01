@@ -33,7 +33,6 @@ function Track() {
 export function Marquee() {
   return (
     <div className="marquee" aria-hidden="true">
-      <span className="marquee-label">Spécialités prises en charge</span>
       <div className="marquee-track">
         <Track />
         <Track />

@@ -1,7 +1,5 @@
 import { Arrow } from "./Arrow";
 
-const TRUST_INITIALS = ["L", "S", "K", "M"];
-
 const HERO_BULLETS = [
   {
     icon: (
@@ -34,7 +32,9 @@ const HERO_BULLETS = [
 export function Hero() {
   return (
     <section id="top" className="hero grain">
-      <div className="hero-monogram" id="heroMono" aria-hidden="true" />
+      <div className="hero-visual" aria-hidden="true">
+        <img src="/assets/image_salon.png" alt="" />
+      </div>
       <div className="hero-glow" aria-hidden="true" />
       <div className="hero-orb hero-orb-1" aria-hidden="true" />
       <div className="hero-orb hero-orb-2" aria-hidden="true" />
@@ -85,38 +85,6 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="hero-trust">
-          <div className="trust-avatars" aria-hidden="true">
-            {TRUST_INITIALS.map((i, idx) => (
-              <span key={i} className={`avatar avatar-${idx + 1}`}>{i}</span>
-            ))}
-          </div>
-          <div className="trust-content">
-            <div className="trust-stars" aria-label="Note 5 sur 5">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <div className="trust-text">
-              <strong>38 centres accompagnés</strong>
-              <span className="trust-sep">·</span>
-              <span>Note 4,9/5</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="hero-stats">
-          <Stat i={0} num={147} prefix="+" unit="%">
-            Croissance moyenne en 90&nbsp;jours
-          </Stat>
-          <Stat i={1} num={38}>
-            Maisons premium accompagnées
-          </Stat>
-          <Stat i={2} num={42} divide={10} unit="×">
-            Panier moyen par cliente
-          </Stat>
-          <Stat i={3} num={7} unit="jours">
-            Pour lancer le système
-          </Stat>
-        </div>
       </div>
 
       <a href="#methode" className="hero-scroll" aria-label="Faire défiler">
@@ -135,33 +103,3 @@ function currentMonth(): string {
   return months[new Date().getMonth()];
 }
 
-function Stat({
-  i,
-  num,
-  prefix,
-  unit,
-  divide,
-  children,
-}: {
-  i: number;
-  num: number;
-  prefix?: string;
-  unit?: string;
-  divide?: number;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="stat" style={{ "--si": i } as React.CSSProperties}>
-      <div
-        className="stat-num"
-        data-num={num}
-        {...(prefix ? { "data-prefix": prefix } : {})}
-        {...(divide ? { "data-divide": divide } : {})}
-      >
-        <span className="stat-val">0</span>
-        {unit && <span className="unit">{unit}</span>}
-      </div>
-      <div className="stat-label">{children}</div>
-    </div>
-  );
-}

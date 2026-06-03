@@ -4,9 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sorena — Système d'acquisition pour centres esthétiques premium",
   description:
-    "Sorena installe un système qui remplit votre agenda avec des clientes qualifiées pour vos cures premium — sans casser votre image, sans promo permanente. Résultats en moins de 30 jours.",
+    "Sorena met en place un système qui attire, qualifie et convertit les bonnes clientes pour vos cures premium — sans diluer votre image. Lancement en 7 jours.",
   openGraph: {
-    title: "Sorena — Remplissez vos cabines avec des clientes premium",
+    title: "Sorena — Remplissez votre agenda de clientes qualifiées",
     description:
       "Le système d'acquisition pensé pour les centres esthétiques qui vendent des cures haute valeur.",
     locale: "fr_FR",

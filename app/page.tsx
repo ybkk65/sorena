@@ -1,3 +1,4 @@
+import { Approche } from "@/components/Approche";
 import { Calendar } from "@/components/Calendar";
 import { ContactModal } from "@/components/ContactModal";
 import { CtaFinal } from "@/components/CtaFinal";
@@ -18,8 +19,9 @@ export default function Page() {
       <Hero />
       <Marquee />
       <Probleme />
-      <Positionnement />
       <Methode />
+      <Positionnement />
+      <Approche />
       <Faq />
       <CtaFinal />
       <Calendar />

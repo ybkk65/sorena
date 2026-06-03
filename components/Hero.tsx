@@ -17,7 +17,7 @@ const HERO_BULLETS = [
         <path d="M4 12l8 3 8-3M4 17l8 3 8-3" />
       </svg>
     ),
-    label: "Clientes premium qualifiées",
+    label: "Clientes qualifiées",
   },
   {
     icon: (
@@ -42,25 +42,23 @@ export function Hero() {
       <div className="wrap hero-inner">
         <span className="hero-availability">
           <span className="dot" />
-          <span>2 nouveaux centres acceptés en {currentMonth()}</span>
-          <span className="sep" aria-hidden="true">·</span>
-          <span className="muted">Diagnostic offert</span>
+          <span>Pour les centres esthétiques qui proposent des cures premium</span>
         </span>
 
         <h1 className="hero-h1">
           <span className="reveal-line">
-            <span style={{ "--i": 0 } as React.CSSProperties}>Remplissez vos cabines</span>
+            <span style={{ "--i": 0 } as React.CSSProperties}>Vous réalisez les soins.</span>
           </span>
           <span className="reveal-line">
             <span style={{ "--i": 1 } as React.CSSProperties}>
-              avec des clientes <em>premium.</em>
+              Nous remplissons votre <em>agenda.</em>
             </span>
           </span>
         </h1>
 
         <p className="hero-sub">
-          Un système d'acquisition clé en main qui attire, qualifie et convertit en
-          rendez-vous confirmés — <strong>en moins de 30 jours</strong>.
+          Pendant que votre équipe se concentre sur les soins, notre système remplit votre agenda
+          de <strong>demandes de rendez-vous qualifiées</strong> pour vos cures premium.
         </p>
 
         <ul className="hero-bullets">
@@ -74,7 +72,7 @@ export function Hero() {
 
         <div className="hero-cta">
           <a className="btn btn-primary" href="#agenda">
-            Réserver mon créneau
+            Réserver mon diagnostic stratégique
             <Arrow />
           </a>
           <a className="btn btn-ghost" href="#methode">
@@ -93,13 +91,5 @@ export function Hero() {
       </a>
     </section>
   );
-}
-
-function currentMonth(): string {
-  const months = [
-    "janvier", "février", "mars", "avril", "mai", "juin",
-    "juillet", "août", "septembre", "octobre", "novembre", "décembre",
-  ];
-  return months[new Date().getMonth()];
 }
 

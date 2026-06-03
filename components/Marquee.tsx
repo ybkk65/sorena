@@ -1,29 +1,32 @@
 import { Fragment } from "react";
 
 const CURES = [
+  "Cures minceur",
   "Cryolipolyse",
-  "HydraFacial",
-  "HIFU",
-  "Body Contouring",
-  "Anti-Âge",
   "Radiofréquence",
-  "Head Spa",
-  "PRP",
-  "Remodeling",
-  "Skin Treatments",
-  "Hair Treatments",
-  "Jet Peel",
-  "LED Therapy",
+  "Lipocavitation",
+  "Remodelage corporel",
+  "HIFU",
+  "Anti-âge",
+  "HydraFacial",
   "Microneedling",
+  "Jet Peel",
+  "Skin Treatments",
+  "Cryothérapie",
+  "Épilation laser",
 ];
 
 function Track() {
   return (
-    <span>
+    <span className="marquee-seq">
       {CURES.map((cure) => (
         <Fragment key={cure}>
           <span className="cure-item">{cure}</span>
-          <span className="dot-sep" aria-hidden="true">✦</span>
+          <span className="dot-sep" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="currentColor">
+              <path d="M6 0l1.4 4.6L12 6l-4.6 1.4L6 12l-1.4-4.6L0 6l4.6-1.4z" />
+            </svg>
+          </span>
         </Fragment>
       ))}
     </span>
@@ -33,9 +36,11 @@ function Track() {
 export function Marquee() {
   return (
     <div className="marquee" aria-hidden="true">
-      <div className="marquee-track">
-        <Track />
-        <Track />
+      <div className="marquee-viewport">
+        <div className="marquee-track">
+          <Track />
+          <Track />
+        </div>
       </div>
     </div>
   );

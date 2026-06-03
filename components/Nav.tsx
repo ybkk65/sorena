@@ -16,14 +16,13 @@ export function Nav() {
 
         <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
           <a href="#methode" onClick={() => setMenuOpen(false)}>Méthode</a>
-          <a href="#resultats" onClick={() => setMenuOpen(false)}>Résultats</a>
+          <a href="#approche" onClick={() => setMenuOpen(false)}>Approche</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
           <a href="#agenda" onClick={() => setMenuOpen(false)}>Agenda</a>
         </div>
 
         <div className="nav-actions">
           <a className="btn btn-primary" href="#agenda">
-            <span className="dot dot-mini" aria-hidden="true" />
             Réserver un créneau
             <Arrow />
           </a>

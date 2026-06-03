@@ -1,92 +1,73 @@
 import { Arrow } from "./Arrow";
 
-const FOR_YOU = [
-  "Cures premium à 800 € et plus",
-  "Équipe et protocole déjà solides",
-  "Vendre des cures, pas des séances",
-  "Refus catégorique des promos",
+const BLOCKS = [
+  {
+    label: "Clientèle",
+    text: "Sorena est pensé pour les centres qui veulent attirer une clientèle plus qualifiée, vendre davantage de cures premium et développer leur acquisition sans diluer leur image.",
+  },
+  {
+    label: "Approche",
+    text: "Mais un bon système ne repose jamais uniquement sur la publicité. Il demande aussi une offre claire, un parcours de rendez-vous solide et une vraie collaboration tout au long du process.",
+  },
+  {
+    label: "Fit",
+    text: "Si votre objectif est simplement d'avoir plus de demandes, nous ne sommes probablement pas le bon partenaire.",
+  },
 ];
 
-const NOT_FOR_YOU = [
-  "Démarrage sans clientèle existante",
-  "Modèle 100 % promos -50 %",
-  "Coup ponctuel, pas un système",
-  "Pas de budget pub à confirmer",
-];
+function Check() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 8.5l3.5 3.5L13 4.5" />
+    </svg>
+  );
+}
 
 export function Positionnement() {
   return (
-    <section className="section section-light qualify-section">
+    <section className="section section-light posi-section">
       <div className="wrap">
-        <div className="section-head-v2 reveal">
-          <span className="kicker" style={{ color: "var(--bordeaux-warm)" }}>POSITIONNEMENT</span>
-          <h2 className="section-title">
-            On ne travaille pas avec <em>tout le monde.</em>
-          </h2>
-        </div>
-
-        <div className="qualify-grid qualify-grid-v3">
-          <div className="qualify-card qualify-yes qualify-card-v3 reveal from-left">
-            <div className="qualify-head">
-              <span className="qualify-badge qualify-badge-yes">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 8l3.5 3.5L13 5" />
-                </svg>
-              </span>
-              <h3>C'est pour vous</h3>
-            </div>
-            <ul>
-              {FOR_YOU.map((it, i) => (
-                <li
-                  key={it}
-                  className="qualify-li"
-                  style={{ "--qi": i } as React.CSSProperties}
-                >
-                  <span className="li-icon" aria-hidden="true">
-                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 8l3 3 7-7" />
-                    </svg>
-                  </span>
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="posi-split reveal">
+          <div className="posi-head-col">
+            <span className="kicker posi-eyebrow" style={{ color: "var(--bordeaux-warm)" }}>
+              POSITIONNEMENT
+            </span>
+            <h2 className="posi-h2">
+              Nous ne travaillons pas avec <em>tous les centres.</em>
+            </h2>
           </div>
 
-          <div className="qualify-card qualify-no qualify-card-v3 reveal from-right">
-            <div className="qualify-head">
-              <span className="qualify-badge qualify-badge-no">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
-                  <path d="M4 4l8 8M12 4l-8 8" />
-                </svg>
-              </span>
-              <h3>Ce n'est pas pour vous</h3>
-            </div>
-            <ul>
-              {NOT_FOR_YOU.map((it, i) => (
-                <li
-                  key={it}
-                  className="qualify-li"
-                  style={{ "--qi": i } as React.CSSProperties}
-                >
-                  <span className="li-icon" aria-hidden="true">
-                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                      <path d="M4 4l8 8M12 4l-8 8" />
-                    </svg>
+          <div className="posi-blocks">
+            {BLOCKS.map((b) => (
+              <div key={b.label} className="posi-block">
+                <div className="posi-block-head">
+                  <span className="posi-block-mark" aria-hidden="true">
+                    <Check />
                   </span>
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
+                  <span className="posi-block-label">{b.label}</span>
+                </div>
+                <p className="posi-block-text">{b.text}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="qualify-cta reveal">
-          <p className="qualify-cta-text">
-            Vous vous reconnaissez à gauche ?
+        <div className="posi-foot reveal">
+          <p className="posi-closing">
+            Si vous cherchez des clientes plus qualifiées, une acquisition plus stable et une
+            approche cohérente avec votre positionnement, le diagnostic stratégique est
+            probablement la prochaine étape.
           </p>
-          <a className="btn btn-dark qualify-cta-btn" href="#agenda">
-            Réserver mon diagnostic
+          <a className="btn btn-dark posi-cta" href="#agenda">
+            Réserver mon diagnostic stratégique
             <Arrow />
           </a>
         </div>

@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Methode } from "@/components/Methode";
+import { MobileCta } from "@/components/MobileCta";
 import { Nav } from "@/components/Nav";
 import { Positionnement } from "@/components/Positionnement";
 import { Probleme } from "@/components/Probleme";
@@ -28,6 +29,7 @@ export default function Page() {
       <Footer />
 
       <ContactModal />
+      <MobileCta />
       <SiteEffects />
     </>
   );

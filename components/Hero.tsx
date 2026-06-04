@@ -11,7 +11,10 @@ export function Hero() {
 
       <div className="wrap hero-inner">
         <span className="hero-availability">
-          Pour les centres spécialisés en cures premium
+          <span className="only-desktop">
+            Pour les centres spécialisés en cures premium
+          </span>
+          <span className="only-mobile">Centres de cures premium</span>
         </span>
 
         <h1 className="hero-h1">

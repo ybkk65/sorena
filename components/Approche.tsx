@@ -4,7 +4,7 @@ const APPROACH = [
     text: "Des clientes plus pertinentes, plutôt qu'un volume de demandes peu qualifiées.",
   },
   {
-    title: "Plus de rendez-vous réellement honorés",
+    title: "Des rendez-vous qui se présentent",
     text: "Attirer des clientes plus engagées et réduire la dépendance aux rendez-vous qui ne se présentent jamais.",
   },
   {
@@ -39,34 +39,36 @@ export function Approche() {
           <span className="kicker" style={{ color: "var(--bordeaux-warm)" }}>
             NOTRE APPROCHE
           </span>
+
           <h2 className="approche-h2">
             Une acquisition pensée pour les centres qui veulent enfin{" "}
             <em>un vrai système.</em>
           </h2>
+
           <div className="approche-lead">
             <p>
-              Après Instagram, le bouche-à-oreille, les solutions irrégulières ou les promesses
-              d'agences décevantes… beaucoup de centres se retrouvent sans flux prévisible de
-              clientes.
+              Après Instagram, le bouche-à-oreille, les solutions irrégulières
+              ou les promesses d’agences décevantes… beaucoup de centres se
+              retrouvent sans flux prévisible de clientes.
             </p>
+
             <p>
-              Notre approche vise à attirer des clientes qualifiées pour vos cures premium —{" "}
+              Notre approche vise à attirer des clientes qualifiées pour vos
+              cures premium {" "}
               <strong>qui se présentent, démarrent et reviennent.</strong>
             </p>
           </div>
         </div>
 
         <div className="approche-grid">
-          {APPROACH.map((a, i) => (
-            <article
-              key={a.title}
-              className="approche-card reveal"
-              style={{ "--rd": `${i * 0.1}s` } as React.CSSProperties}
-            >
+          {APPROACH.map((a) => (
+            <article key={a.title} className="approche-card reveal">
               <span className="approche-card-icon" aria-hidden="true">
                 <Check />
               </span>
+
               <h3 className="approche-card-title">{a.title}</h3>
+
               <p className="approche-card-text">{a.text}</p>
             </article>
           ))}

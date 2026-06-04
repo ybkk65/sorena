@@ -20,9 +20,9 @@ export function CtaFinal() {
           </span>
 
           <h2 className="cta-h2">
-            Voyons ce qui freine aujourd’hui
+            Faisons le point sur ce qui freine
             <br />
-            <em>vos rendez-vous.</em>
+            <em>vos résultats.</em>
           </h2>
 
           <p className="cta-desc">
@@ -39,12 +39,12 @@ export function CtaFinal() {
               <span className="dot" /> Offert
             </span>
 
-            <h3>Faisons le point sur votre centre.</h3>
+            <h3>Un regard extérieur sur votre situation actuelle.</h3>
           </div>
 
           <p className="cta-card-note">
-            En 30 minutes, nous analysons votre situation actuelle, vos points
-            de blocage et vos opportunités d’amélioration.
+            En 30 minutes, nous identifions ensemble ce qui mérite d’être
+            optimisé et les prochaines étapes possibles pour votre centre.
           </p>
 
           <a className="btn btn-primary full-btn cta-big-btn" href="#agenda">

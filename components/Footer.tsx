@@ -1,31 +1,13 @@
-import { Arrow } from "./Arrow";
-
 export function Footer() {
   return (
     <>
       <div className="footer-blend" aria-hidden="true" />
 
       <footer className="footer">
-        <div className="wrap" style={{ paddingTop: 64, position: "relative", zIndex: 2 }}>
-          <div className="foot-mega-cta">
-            <div>
-              <span className="kicker" style={{ color: "var(--rose)" }}>
-                VOUS HÉSITEZ ENCORE ?
-              </span>
-
-              <h3>
-                Une discussion de 30 minutes
-                <br />
-                peut <em>tout changer.</em>
-              </h3>
-            </div>
-
-            <a className="btn btn-primary big-cta" href="#agenda">
-              Réserver mon diagnostic
-              <Arrow />
-            </a>
-          </div>
-
+        <div
+          className="wrap"
+          style={{ paddingTop: 0, position: "relative", zIndex: 2 }}
+        >
           <div className="footer-inner">
             <div className="foot-brand">
               <div className="brand">
@@ -74,7 +56,7 @@ export function Footer() {
                 <li><a href="#methode">La méthode</a></li>
                 <li><a href="#approche">Notre approche</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#agenda">Réserver un appel</a></li>
+                <li><a href="#agenda">Obtenir mon plan personnalisé</a></li>
               </ul>
             </div>
 

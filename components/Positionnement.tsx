@@ -67,7 +67,7 @@ export function Positionnement() {
             probablement la prochaine étape.
           </p>
           <a className="btn btn-dark posi-cta" href="#agenda">
-            Réserver mon diagnostic stratégique
+            Obtenir mon plan personnalisé
             <Arrow />
           </a>
         </div>

@@ -58,7 +58,7 @@ export function Methode() {
 
         <div className="methode-foot reveal">
           <a className="methode-link" href="#agenda">
-            Réserver mon diagnostic stratégique
+            Obtenir mon plan personnalisé
             <Arrow />
           </a>
         </div>

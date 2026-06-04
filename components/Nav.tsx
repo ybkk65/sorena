@@ -23,7 +23,7 @@ export function Nav() {
 
         <div className="nav-actions">
           <a className="btn btn-primary" href="#agenda">
-            Réserver un créneau
+            Obtenir mon plan personnalisé
             <Arrow />
           </a>
           <button

@@ -26,48 +26,49 @@ export function Calendar() {
     const scriptId = "calendly-widget-script";
     const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
 
-    // Initialise explicitement le widget dans notre conteneur, plutôt que de
-    // compter sur le scan automatique de Calendly (qui ne s'exécute qu'une
-    // seule fois au chargement du script -> bug "une fois sur deux").
-    const initWidget = () => {
+    // On s'assure que le script est présent (une seule fois pour toute la page).
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = scriptSrc;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    // On NE se fie PAS à l'événement "load" : quand le navigateur sert
+    // widget.js depuis son cache (une fois sur deux au refresh), "load" peut
+    // partir avant qu'on attache l'écouteur -> le widget ne s'initialise
+    // jamais. On poll donc jusqu'à ce que l'API Calendly ET le conteneur
+    // soient prêts, puis on initialise une seule fois.
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout>;
+
+    const tryInit = () => {
+      if (cancelled) return;
+
       const parent = widgetRef.current;
-      if (!parent || !window.Calendly) return;
 
-      // Idempotent : en dev (React Strict Mode) l'effet s'exécute deux fois.
-      // Sans ce garde, deux iframes Calendly se chargent en concurrence et
-      // l'un affiche "calendrier indisponible" -> bug "une fois sur deux".
-      if (parent.dataset.calendlyInit === "true") return;
-      parent.dataset.calendlyInit = "true";
+      if (parent && window.Calendly) {
+        // Garde idempotent basé sur le DOM réel : si un iframe est déjà
+        // injecté (Strict Mode en dev), on n'en recrée pas un second.
+        if (parent.childElementCount === 0) {
+          window.Calendly.initInlineWidget({
+            url: widgetUrl,
+            parentElement: parent,
+          });
+        }
+        return;
+      }
 
-      window.Calendly.initInlineWidget({
-        url: widgetUrl,
-        parentElement: parent,
-      });
+      timer = setTimeout(tryInit, 100);
     };
 
-    // Si le script est déjà chargé et l'API dispo, on initialise tout de suite.
-    if (window.Calendly) {
-      initWidget();
-      return;
-    }
+    tryInit();
 
-    const existing = document.getElementById(
-      scriptId
-    ) as HTMLScriptElement | null;
-
-    if (existing) {
-      existing.addEventListener("load", initWidget);
-      return () => existing.removeEventListener("load", initWidget);
-    }
-
-    const script = document.createElement("script");
-    script.id = scriptId;
-    script.src = scriptSrc;
-    script.async = true;
-    script.addEventListener("load", initWidget);
-    document.body.appendChild(script);
-
-    return () => script.removeEventListener("load", initWidget);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
   }, [widgetUrl]);
 
   return (

@@ -32,9 +32,9 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Un système conçu pour attirer des demandes de rendez-vous qualifiées
-          pour vos cures premium sans dépendre uniquement d’Instagram ou du
-          bouche-à-oreille.
+          Un système — augmenté par l’IA — conçu pour attirer, qualifier et
+          relancer les bonnes clientes pour vos cures premium, sans dépendre
+          uniquement d’Instagram ou du bouche-à-oreille.
         </p>
 
         <div className="hero-cta">

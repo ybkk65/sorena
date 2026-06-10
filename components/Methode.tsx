@@ -9,12 +9,12 @@ const STEPS = [
   {
     num: "02",
     word: "QUALIFIER",
-    text: "Toutes les demandes ne méritent pas un créneau. Notre système filtre, pré-qualifie et structure avant d'atteindre votre agenda.",
+    text: "Toutes les demandes ne méritent pas un créneau. Notre système filtre, pré-qualifie et structure avant d'atteindre votre agenda, grâce à une qualification automatisée par l'IA.",
   },
   {
     num: "03",
     word: "CONVERTIR",
-    text: "Relances, confirmations et suivi transforment les demandes qualifiées en rendez-vous réellement honorés.",
+    text: "Relances, confirmations et suivi transforment les demandes qualifiées en rendez-vous réellement honorés, avec des relances intelligentes, au bon moment, sans effort de votre part.",
   },
   {
     num: "04",

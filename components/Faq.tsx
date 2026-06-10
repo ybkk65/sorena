@@ -21,6 +21,10 @@ const QUESTIONS = [
     q: "Quel niveau d'implication est attendu de notre côté ?",
     a: "Nous construisons ce système avec vous. Une collaboration réactive et une implication minimale dans le process sont nécessaires pour obtenir les meilleurs résultats.",
   },
+  {
+    q: "Est-ce une IA qui parle à mes clientes à ma place ?",
+    a: "L'IA travaille en coulisses pour répondre vite et relancer au bon moment — toujours dans un ton premium et humain, fidèle à votre image. Vos clientes vivent une expérience fluide et soignée, jamais robotique. Et vous gardez la main dès que ça compte.",
+  },
 ];
 
 export function Faq() {

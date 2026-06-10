@@ -35,7 +35,7 @@ export function Footer() {
                   </svg>
                 </a>
 
-                <a href="mailto:contact@sorenaagency.com" aria-label="Email">
+                <a href="mailto:sofya@sorenaagency.com" aria-label="Email">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
                     <rect x="2" y="3" width="12" height="10" rx="1" />
                     <path d="M2 4l6 5 6-5" />

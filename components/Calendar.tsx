@@ -1,75 +1,90 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-const CALENDLY_URL =
-  process.env.NEXT_PUBLIC_CALENDLY_URL ||
-  "https://calendly.com/sofya-sorenaagency/30min";
+// Lien Cal.com (remplace l'ancienne intégration Calendly).
+const CAL_LINK =
+  process.env.NEXT_PUBLIC_CAL_LINK ||
+  "sofya-dvdulm/votre-plan-d-acquisition-personnalise-offert";
+
+// Namespace Cal.com (identifiant interne de l'embed sur la page).
+const CAL_NS = "sorena-agenda";
+
+// Conteneur ciblé par l'embed inline.
+const CAL_ELEMENT_ID = "cal-inline-sorena";
 
 declare global {
   interface Window {
-    Calendly?: {
-      initInlineWidget: (options: {
-        url: string;
-        parentElement: HTMLElement;
-      }) => void;
+    Cal?: {
+      (...args: unknown[]): void;
+      ns?: Record<string, (...args: unknown[]) => void>;
+      loaded?: boolean;
     };
   }
 }
 
 export function Calendar() {
-  const widgetRef = useRef<HTMLDivElement>(null);
-
-  const widgetUrl = `${CALENDLY_URL}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=4a1620`;
-
   useEffect(() => {
-    const scriptId = "calendly-widget-script";
-    const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
+    // Loader officiel Cal.com : injecte embed.js une seule fois et expose
+    // l'API globale window.Cal (il se garde lui-même contre les doublons).
+    (function (C: Window, A: string, L: string) {
+      const p = (a: { q: unknown[] }, ar: unknown) => {
+        a.q.push(ar);
+      };
+      const d = C.document;
+      C.Cal =
+        C.Cal ||
+        function (...args: unknown[]) {
+          const cal = C.Cal!;
+          if (!cal.loaded) {
+            cal.ns = {};
+            (cal as unknown as { q: unknown[] }).q =
+              (cal as unknown as { q: unknown[] }).q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (args[0] === L) {
+            const api = function (...a: unknown[]) {
+              p(api as unknown as { q: unknown[] }, a);
+            };
+            const namespace = args[1];
+            (api as unknown as { q: unknown[] }).q = [];
+            if (typeof namespace === "string") {
+              cal.ns![namespace] = cal.ns![namespace] || (api as never);
+              p(cal.ns![namespace] as unknown as { q: unknown[] }, args);
+              p(cal as unknown as { q: unknown[] }, ["initNamespace", namespace]);
+            } else {
+              p(cal as unknown as { q: unknown[] }, args);
+            }
+            return;
+          }
+          p(cal as unknown as { q: unknown[] }, args);
+        };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    // On s'assure que le script est présent (une seule fois pour toute la page).
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = scriptSrc;
-      script.async = true;
-      document.body.appendChild(script);
+    const Cal = window.Cal!;
+
+    Cal("init", CAL_NS, { origin: "https://cal.com" });
+
+    const ns = Cal.ns![CAL_NS];
+
+    // Garde idempotent : en dev (React Strict Mode) l'effet s'exécute deux
+    // fois ; on évite d'injecter deux iframes dans le même conteneur.
+    const target = document.getElementById(CAL_ELEMENT_ID);
+    if (target && target.childElementCount === 0) {
+      ns("inline", {
+        elementOrSelector: `#${CAL_ELEMENT_ID}`,
+        config: { layout: "month_view" },
+        calLink: CAL_LINK,
+      });
+
+      ns("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+        cssVarsPerTheme: { light: { "cal-brand": "#4a1620" } },
+      });
     }
-
-    // On NE se fie PAS à l'événement "load" : quand le navigateur sert
-    // widget.js depuis son cache (une fois sur deux au refresh), "load" peut
-    // partir avant qu'on attache l'écouteur -> le widget ne s'initialise
-    // jamais. On poll donc jusqu'à ce que l'API Calendly ET le conteneur
-    // soient prêts, puis on initialise une seule fois.
-    let cancelled = false;
-    let timer: ReturnType<typeof setTimeout>;
-
-    const tryInit = () => {
-      if (cancelled) return;
-
-      const parent = widgetRef.current;
-
-      if (parent && window.Calendly) {
-        // Garde idempotent basé sur le DOM réel : si un iframe est déjà
-        // injecté (Strict Mode en dev), on n'en recrée pas un second.
-        if (parent.childElementCount === 0) {
-          window.Calendly.initInlineWidget({
-            url: widgetUrl,
-            parentElement: parent,
-          });
-        }
-        return;
-      }
-
-      timer = setTimeout(tryInit, 100);
-    };
-
-    tryInit();
-
-    return () => {
-      cancelled = true;
-      clearTimeout(timer);
-    };
-  }, [widgetUrl]);
+  }, []);
 
   return (
     <section id="agenda" className="section calendar-section">
@@ -93,16 +108,17 @@ export function Calendar() {
         </div>
 
         <div
-          className="calendly-frame reveal"
+          className="cal-frame reveal"
           style={{ "--rd": ".15s" } as React.CSSProperties}
         >
           <div
-            ref={widgetRef}
-            className="calendly-embed"
+            id={CAL_ELEMENT_ID}
+            className="cal-embed"
             style={{
               minWidth: 320,
               height: 720,
               width: "100%",
+              overflow: "auto",
             }}
           />
         </div>

@@ -855,46 +855,6 @@ section { position: relative; }
   margin-top: 28px; max-width: 46ch;
 }
 
-.cta-col {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.cta-guarantee {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 20px 22px;
-  border-radius: 18px;
-  background: rgba(240, 200, 192, 0.06);
-  border: 1px solid rgba(240, 200, 192, 0.18);
-}
-.cta-guarantee-icon {
-  flex: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(240, 200, 192, 0.12);
-  color: var(--rose);
-}
-.cta-guarantee-icon svg { width: 20px; height: 20px; }
-.cta-guarantee-body strong {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--off-white);
-  margin-bottom: 4px;
-}
-.cta-guarantee-body p {
-  margin: 0;
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: var(--rose-light);
-  opacity: 0.8;
-}
-
 .cta-card {
   background: rgba(50, 12, 20, 0.65);
   backdrop-filter: blur(12px);

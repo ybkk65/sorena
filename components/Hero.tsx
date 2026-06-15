@@ -32,7 +32,7 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Vous n’avez pas ouvert votre centre pour passer vos journées sur
+          Vous n’avez pas ouvert votre centre esthétique pour passer vos journées sur
           Instagram à chercher des clientes. Notre système IA s’en charge pour
           vous.
         </p>
@@ -45,7 +45,7 @@ export function Hero() {
         </div>
 
         <p className="hero-reassurance">
-          Audit offert · sans engagement · réponse sous 24h
+          Audit offert · sans engagement
         </p>
       </div>
     </section>

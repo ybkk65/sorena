@@ -17,20 +17,6 @@ export function Probleme() {
             <br />
             <em>Mais trop peu deviennent de vraies clientes.</em>
           </h2>
-
-          <div className="constat-lead">
-            <p>
-              Entre les personnes qui demandent juste les tarifs,
-              les rendez-vous annulés et les prospects qui ne répondent plus,
-              remplir votre agenda régulièrement devient vite compliqué.
-            </p>
-
-            <p>
-              Le but n’est pas simplement d’avoir plus de contacts.
-              C’est d’attirer des clientes sérieuses, qui viennent au rendez-vous
-              et peuvent réellement investir dans une cure.
-            </p>
-          </div>
         </div>
 
         <div className="pain-grid">

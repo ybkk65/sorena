@@ -32,10 +32,9 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Un système IA qui répond aux demandes en quelques secondes, les
-          pré-qualifie et relance au bon moment — jour et nuit — pour faire venir
-          les bonnes clientes pour vos cures premium, sans dépendre uniquement
-          d’Instagram ou du bouche-à-oreille.
+          Vous n’avez pas ouvert votre centre pour passer vos journées sur
+          Instagram à chercher des clientes. Notre système IA s’en charge pour
+          vous.
         </p>
 
         <div className="hero-cta">

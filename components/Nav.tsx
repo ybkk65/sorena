@@ -57,7 +57,7 @@ export function Nav() {
 
         <div className="nav-actions">
           <a className="btn btn-primary" href="#agenda" onClick={() => setMenuOpen(false)}>
-            Diagnostic offert
+            Réserver mon audit
             <Arrow />
           </a>
           <button

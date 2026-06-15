@@ -47,9 +47,9 @@ export function Footer() {
             <div className="foot-col">
               <h4>Agence</h4>
               <ul>
-                <li><a href="#methode">La méthode</a></li>
-                <li><a href="#approche">Notre approche</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#methode">La solution</a></li>
+                <li><a href="#resultat">Le résultat</a></li>
+                <li><a href="#positionnement">Pour qui ?</a></li>
                 <li><a href="#agenda">Réserver mon audit</a></li>
               </ul>
             </div>

@@ -4013,13 +4013,13 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 }
 .parcours-cap {
   font-size: clamp(13px, 1.3vw, 15px);
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--bordeaux-night);
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   transition-delay: calc(var(--i) * 0.5s + 0.2s);
-  max-width: 22ch;
+  max-width: 28ch;
 }
 .parcours.is-active .parcours-word,
 .parcours.is-active .parcours-cap {

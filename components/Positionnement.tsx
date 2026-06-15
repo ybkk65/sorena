@@ -33,7 +33,7 @@ function Check() {
 
 export function Positionnement() {
   return (
-    <section className="section section-light posi-section">
+    <section id="positionnement" className="section section-light posi-section">
       <div className="wrap">
         <div className="posi-split reveal">
           <div className="posi-head-col">

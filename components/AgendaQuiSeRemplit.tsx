@@ -47,7 +47,7 @@ export default function AgendaQuiSeRemplit() {
   }, []);
 
   return (
-    <section className="sorena-agenda">
+    <section id="resultat" className="sorena-agenda">
       <div className="wrap">
         <div className="kicker"><span>L&apos;agenda</span></div>
         <h2 className="title">

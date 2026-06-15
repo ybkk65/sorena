@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import { Arrow } from "./Arrow";
 
 const SECTIONS = [
-  { id: "methode", label: "Méthode" },
-  { id: "technologie", label: "Système IA" },
-  { id: "approche", label: "Approche" },
-  { id: "faq", label: "FAQ" },
+  { id: "methode", label: "La solution" },
+  { id: "resultat", label: "Le résultat" },
+  { id: "positionnement", label: "Pour qui ?" },
 ];
 
 export function Nav() {

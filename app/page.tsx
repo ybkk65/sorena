@@ -1,33 +1,31 @@
 import AgendaQuiSeRemplit from "@/components/AgendaQuiSeRemplit";
-import { Approche } from "@/components/Approche";
 import { Calendar } from "@/components/Calendar";
 import { ContactModal } from "@/components/ContactModal";
 import { CtaFinal } from "@/components/CtaFinal";
-import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
-import { Marquee } from "@/components/Marquee";
-import { Methode } from "@/components/Methode";
 import { MobileCta } from "@/components/MobileCta";
 import { Nav } from "@/components/Nav";
 import { Positionnement } from "@/components/Positionnement";
 import { Probleme } from "@/components/Probleme";
 import { SiteEffects } from "@/components/SiteEffects";
-import { Technologie } from "@/components/Technologie";
+import { Methode } from "@/components/Methode";
 
 export default function Page() {
   return (
     <>
       <Nav />
+      {/* 1. Hero — qu'est-ce que vous faites ? */}
       <Hero />
-      <Marquee />
+      {/* 2. Le problème — est-ce que vous comprenez ma situation ? */}
       <Probleme />
+      {/* 3. La solution — qu'est-ce qui est différent dans votre système ? */}
       <Methode />
+      {/* 4. L'outcome — à quoi ressemble le résultat ? */}
       <AgendaQuiSeRemplit />
-      <Technologie />
+      {/* 5. Le positionnement — est-ce que c'est pour moi ? */}
       <Positionnement />
-      <Approche />
-      <Faq />
+      {/* 6. CTA final — quelle est la prochaine étape ? */}
       <CtaFinal />
       <Calendar />
       <Footer />

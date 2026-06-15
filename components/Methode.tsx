@@ -6,7 +6,7 @@ import { Arrow } from "./Arrow";
 const NODES = [
   {
     word: "Attirer",
-    cap: "Les bonnes clientes",
+    cap: "Des campagnes ciblées font venir les bonnes clientes pour vos cures premium, dans votre zone.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M5 4v6a7 7 0 0 0 14 0V4" />
@@ -16,7 +16,7 @@ const NODES = [
   },
   {
     word: "Qualifier",
-    cap: "Filtrées avant l'agenda",
+    cap: "Une IA répond en quelques secondes, 24/7, et pré-qualifie chaque demande avant qu'elle atteigne votre agenda.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M3 5h18l-7 8v6l-4-2v-4z" />
@@ -25,7 +25,7 @@ const NODES = [
   },
   {
     word: "Convertir",
-    cap: "Des rendez-vous honorés",
+    cap: "L'IA relance au bon moment les clientes qui hésitent, jusqu'au rendez-vous confirmé — sans que vous interveniez.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3.5" y="5" width="17" height="16" rx="2.5" />
@@ -35,7 +35,7 @@ const NODES = [
   },
   {
     word: "Préserver",
-    cap: "Votre image intacte",
+    cap: "Un ton premium et humain, fidèle à votre image. Vous gardez la main dès que ça compte.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
@@ -77,15 +77,14 @@ export function Methode() {
       <div className="wrap">
         <div className="methode-intro reveal">
           <span className="kicker" style={{ color: "var(--bordeaux-warm)" }}>
-            LA MÉTHODE
+            LA SOLUTION
           </span>
           <h2 className="methode-h2">
-            Le système derrière vos <em>clientes qualifiées.</em>
+            Un système IA qui remplit votre agenda, <em>étape par étape.</em>
           </h2>
           <p className="methode-sub">
-            Vous réalisez les soins, on remplit votre agenda. Un parcours continu —
-            attirer, filtrer puis convertir les bonnes clientes, sans jamais diluer
-            votre image.
+            Chaque demande est captée, qualifiée et relancée automatiquement — jour
+            et nuit — jusqu&apos;au rendez-vous. Voici ce qui se passe en coulisses.
           </p>
         </div>
 
@@ -116,11 +115,6 @@ export function Methode() {
             </div>
           ))}
         </div>
-
-        <p className="parcours-summary reveal">
-          Un système continu qui attire les bonnes clientes, filtre les demandes et
-          les transforme en rendez-vous honorés — sans jamais diluer votre image.
-        </p>
 
         <div className="methode-foot reveal">
           <a className="methode-link" href="#agenda">

@@ -9,7 +9,7 @@ const APPROACH = [
   },
   {
     title: "Pensé pour les cures premium & la récurrence",
-    text: "Une acquisition conçue pour soutenir la vente de cures, la fidélisation et une activité plus stable dans le temps.",
+    text: "Un système conçu pour soutenir la vente de cures, la fidélisation et une activité plus stable dans le temps.",
   },
 ];
 
@@ -41,8 +41,8 @@ export function Approche() {
           </span>
 
           <h2 className="approche-h2">
-            Une acquisition pensée pour les centres qui veulent enfin{" "}
-            <em>un vrai système.</em>
+            Un système pensé pour les centres qui veulent enfin{" "}
+            <em>remplir leur agenda.</em>
           </h2>
 
           <div className="approche-lead">

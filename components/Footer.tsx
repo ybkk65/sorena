@@ -50,7 +50,7 @@ export function Footer() {
                 <li><a href="#methode">La méthode</a></li>
                 <li><a href="#approche">Notre approche</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#agenda">Obtenir mon plan personnalisé</a></li>
+                <li><a href="#agenda">Réserver mon audit</a></li>
               </ul>
             </div>
 

@@ -3,7 +3,7 @@ import { Arrow } from "./Arrow";
 const BLOCKS = [
   {
     label: "Clientèle",
-    text: "Sorena est pensé pour les centres qui veulent attirer une clientèle plus qualifiée, vendre davantage de cures premium et développer leur acquisition sans diluer leur image.",
+    text: "Sorena est pensé pour les centres qui veulent attirer une clientèle plus qualifiée, vendre davantage de cures premium et un flux régulier de clientes sans diluer leur image.",
   },
   {
     label: "Approche",
@@ -62,12 +62,12 @@ export function Positionnement() {
 
         <div className="posi-foot reveal">
           <p className="posi-closing">
-            Si vous cherchez des clientes plus qualifiées, une acquisition plus stable et une
-            approche cohérente avec votre positionnement, le diagnostic stratégique est
+            Si vous cherchez des clientes plus qualifiées, un flux régulier de clientes et une
+            approche cohérente avec votre positionnement, l’audit offert est
             probablement la prochaine étape.
           </p>
           <a className="btn btn-dark posi-cta" href="#agenda">
-            Obtenir mon plan personnalisé
+            Réserver mon audit
             <Arrow />
           </a>
         </div>

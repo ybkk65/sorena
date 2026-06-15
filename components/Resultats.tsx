@@ -11,7 +11,7 @@ const METRICS = [
     num: "4,2",
     unit: "×",
     label: "panier moyen multiplié",
-    sub: "Vs. acquisition organique classique",
+    sub: "Vs. bouche-à-oreille classique",
   },
   {
     num: "<7",

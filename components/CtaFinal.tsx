@@ -33,6 +33,24 @@ export function CtaFinal() {
           </p>
         </div>
 
+        <div className="cta-col">
+        <div className="cta-guarantee reveal" role="note">
+          <span className="cta-guarantee-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
+              <path d="M9 12l2 2 4-4.5" />
+            </svg>
+          </span>
+          <div className="cta-guarantee-body">
+            <strong>Notre garantie</strong>
+            <p>
+              [GARANTIE] — Vous savez exactement à quoi vous attendre, sans risque.
+              Si le système ne tient pas ses promesses, vous n’avez rien à perdre :
+              vous repartez au minimum avec un plan d’action clair pour votre centre.
+            </p>
+          </div>
+        </div>
+
         <div className="cta-card reveal">
           <div className="cta-card-header">
             <span className="cta-card-tag">
@@ -48,9 +66,10 @@ export function CtaFinal() {
           </p>
 
           <a className="btn btn-primary full-btn cta-big-btn" href="#agenda">
-            Obtenir mon plan personnalisé
+            Réserver mon audit
             <Arrow />
           </a>
+        </div>
         </div>
       </div>
     </section>

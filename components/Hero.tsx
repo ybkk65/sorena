@@ -32,17 +32,22 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Un système — augmenté par l’IA — conçu pour attirer, qualifier et
-          relancer les bonnes clientes pour vos cures premium, sans dépendre
-          uniquement d’Instagram ou du bouche-à-oreille.
+          Un système IA qui répond aux demandes en quelques secondes, les
+          pré-qualifie et relance au bon moment — jour et nuit — pour faire venir
+          les bonnes clientes pour vos cures premium, sans dépendre uniquement
+          d’Instagram ou du bouche-à-oreille.
         </p>
 
         <div className="hero-cta">
           <a className="btn btn-primary" href="#agenda">
-            Obtenir mon plan personnalisé
+            Réserver mon audit
             <Arrow />
           </a>
         </div>
+
+        <p className="hero-reassurance">
+          Audit offert · sans engagement · réponse sous 24h
+        </p>
       </div>
     </section>
   );

@@ -152,9 +152,29 @@ export default function AgendaQuiSeRemplit() {
         .slot.appt.is-hidden { opacity: 0; transform: scale(0.92) translateY(8px); }
         .foot { text-align: center; margin-top: 30px; font-size: 14px; letter-spacing: 0.06em; color: rgba(244, 231, 223, 0.45); }
         @media (max-width: 640px) {
-          .sorena-agenda { padding: 72px 16px 84px; }
-          .card { padding: 24px 20px 22px; border-radius: 20px; }
-          .card-head h3 { font-size: 24px; }
+          .sorena-agenda { padding: 72px 14px 84px; }
+          .card { padding: 22px 14px 20px; border-radius: 20px; }
+          .card-head { margin-bottom: 22px; flex-wrap: wrap; }
+          .card-head h3 { font-size: 22px; }
+          /* Le calendrier tient dans l'écran : plus de scroll horizontal */
+          .scroll { overflow-x: visible; }
+          .grid { min-width: 0; gap: 6px; }
+          .col { gap: 6px; }
+          .day { font-size: 9px; letter-spacing: 0.08em; padding-bottom: 2px; }
+          .slot {
+            height: 44px;
+            border-radius: 10px;
+            font-size: 10.5px;
+            padding: 0 1px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          .foot { margin-top: 22px; font-size: 12.5px; }
+        }
+        @media (max-width: 380px) {
+          .slot { height: 40px; font-size: 9.5px; }
+          .grid, .col { gap: 5px; }
         }
         @media (prefers-reduced-motion: reduce) {
           .slot.appt { transition: none; }

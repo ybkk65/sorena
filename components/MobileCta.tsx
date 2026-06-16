@@ -37,7 +37,7 @@ export function MobileCta() {
         </svg>
       </span>
 
-      <span className="mobile-cta-label">Prendre un rendez-vous</span>
+      <span className="mobile-cta-label">Réserver mon audit</span>
 
       <svg className="mobile-cta-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
         <path d="M3 8h10M9 4l4 4-4 4" />

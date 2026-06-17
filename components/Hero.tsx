@@ -33,8 +33,9 @@ export function Hero() {
 
         <p className="hero-sub">
           Vous n’avez pas ouvert votre centre esthétique pour passer vos journées sur
-          Instagram à chercher des clientes. Notre système IA s’en charge pour
-          vous.
+          Instagram à chercher des clientes.
+          <br />
+          Notre système IA s’en charge pour vous.
         </p>
 
         <div className="hero-cta">

@@ -2,28 +2,20 @@ import { Arrow } from "./Arrow";
 
 const QUESTIONS = [
   {
-    q: "Quel budget publicitaire faut-il prévoir ?",
-    a: "Le budget dépend de votre offre, votre zone géographique et vos objectifs. Nous définissons cela ensemble lors du diagnostic.",
-  },
-  {
-    q: "En combien de temps peut-on lancer le système ?",
-    a: "Une fois l'onboarding terminé, nous pouvons généralement lancer le système en 7 jours.",
+    q: "Est-ce une IA qui parle à mes clientes à ma place ?",
+    a: "L'IA travaille en coulisses pour répondre vite et relancer au bon moment — toujours dans un ton premium et humain, fidèle à votre image. Vos clientes vivent une expérience fluide et soignée, jamais robotique. Et vous gardez la main dès que ça compte.",
   },
   {
     q: "Est-ce adapté à mon centre ?",
     a: "Nous travaillons principalement avec les centres proposant des soins premium à forte valeur (anti-âge, minceur, remodelage corporel, soins experts, etc.).",
   },
   {
+    q: "Quel budget faut-il prévoir ?",
+    a: "Le budget dépend de votre offre, votre zone géographique et vos objectifs. Nous définissons cela ensemble lors de l'audit — sans aucun engagement.",
+  },
+  {
     q: "Et si j'ai déjà essayé la publicité sans résultats ?",
-    a: "Oui. La plupart de nos clientes ont déjà testé différentes approches avant nous. Bien souvent, le problème ne vient pas uniquement de la publicité, mais de la stratégie, de la qualification ou du parcours de conversion derrière.",
-  },
-  {
-    q: "Quel niveau d'implication est attendu de notre côté ?",
-    a: "Nous construisons ce système avec vous. Une collaboration réactive et une implication minimale dans le process sont nécessaires pour obtenir les meilleurs résultats.",
-  },
-  {
-    q: "Est-ce une IA qui parle à mes clientes à ma place ?",
-    a: "L'IA travaille en coulisses pour répondre vite et relancer au bon moment — toujours dans un ton premium et humain, fidèle à votre image. Vos clientes vivent une expérience fluide et soignée, jamais robotique. Et vous gardez la main dès que ça compte.",
+    a: "C'est fréquent. Bien souvent, le problème ne vient pas de la publicité elle-même, mais de la stratégie, de la qualification ou du parcours de conversion derrière. C'est précisément ce que notre système corrige.",
   },
 ];
 

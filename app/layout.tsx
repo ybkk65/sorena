@@ -1,7 +1,21 @@
 import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
+
+// Polices auto-hébergées : zéro requête bloquante vers Google Fonts, pas de
+// FOUT, CLS réduit. Geist via le paquet officiel Vercel ; Instrument Serif
+// via next/font/google.
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -108,18 +122,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html
+      lang="fr"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${instrumentSerif.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

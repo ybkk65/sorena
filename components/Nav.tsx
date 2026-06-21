@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { Arrow } from "./Arrow";
 
 const SECTIONS = [
-  { id: "methode", label: "La solution" },
-  { id: "resultat", label: "Le résultat" },
+  { id: "methode", label: "La méthode" },
   { id: "positionnement", label: "Pour qui ?" },
+  { id: "fondatrice", label: "La fondatrice" },
+  { id: "faq", label: "FAQ" },
 ];
 
 export function Nav() {
@@ -56,7 +57,7 @@ export function Nav() {
 
         <div className="nav-actions">
           <a className="btn btn-primary" href="#agenda" onClick={() => setMenuOpen(false)}>
-            Réserver mon audit
+            Diagnostic offert
             <Arrow />
           </a>
           <button

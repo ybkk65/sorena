@@ -16,8 +16,8 @@ export function Footer() {
               </div>
 
               <p>
-                Pour les centres esthétiques qui veulent un flux plus prévisible
-                de clientes pour leurs cures premium.
+                Pour les centres esthétiques qui veulent les bonnes clientes,
+                celles qui paient et qui reviennent.
               </p>
 
               <div className="foot-socials">
@@ -50,7 +50,7 @@ export function Footer() {
                 <li><a href="#methode">La solution</a></li>
                 <li><a href="#resultat">Le résultat</a></li>
                 <li><a href="#positionnement">Pour qui ?</a></li>
-                <li><a href="#agenda">Réserver mon audit</a></li>
+                <li><a href="#agenda">Réserver mon diagnostic offert</a></li>
               </ul>
             </div>
 
@@ -68,8 +68,6 @@ export function Footer() {
             <div className="foot-col">
               <h4>Légal</h4>
               <ul>
-                <li><a href="/mentions-legales">Mentions légales</a></li>
-                <li><a href="/cgv">CGV</a></li>
                 <li><a href="/confidentialite">Confidentialité</a></li>
                 <li><a href="/cookies">Cookies</a></li>
               </ul>
@@ -84,7 +82,7 @@ export function Footer() {
         <div className="wrap">
           <div className="foot-base">
             <span>
-              © {new Date().getFullYear()} Sorena Agency — Tous droits réservés.
+              © {new Date().getFullYear()} Sorena Agency · Tous droits réservés.
             </span>
           </div>
         </div>

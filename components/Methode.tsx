@@ -5,8 +5,8 @@ import { Arrow } from "./Arrow";
 
 const NODES = [
   {
-    word: "Attirer",
-    cap: "Des campagnes ciblées font venir les bonnes clientes pour vos cures premium, dans votre zone.",
+    word: "Attirer par la valeur",
+    cap: "Des campagnes géolocalisées sur Meta et Instagram qui mènent avec une offre de valeur (un bilan, un diagnostic offert), jamais une promo qui brade vos cures. Vous faites venir du monde sans casser vos prix ni votre image.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M5 4v6a7 7 0 0 0 14 0V4" />
@@ -15,8 +15,8 @@ const NODES = [
     ),
   },
   {
-    word: "Qualifier",
-    cap: "Une IA répond en quelques secondes, 24/7, et pré-qualifie chaque demande avant qu'elle atteigne votre agenda.",
+    word: "Cibler les bonnes",
+    cap: "On vise des clientes à fort pouvoir d'achat, prêtes pour vos cures premium dans votre zone, pas les chasseuses de réductions.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M3 5h18l-7 8v6l-4-2v-4z" />
@@ -24,8 +24,8 @@ const NODES = [
     ),
   },
   {
-    word: "Convertir",
-    cap: "L'IA relance au bon moment les clientes qui hésitent, jusqu'au rendez-vous confirmé — sans que vous interveniez.",
+    word: "Filtrer",
+    cap: "En coulisse, une IA répond et qualifie chaque demande en quelques secondes, jour et nuit. Seules les clientes sérieuses arrivent dans votre agenda. Votre temps et votre image sont protégés.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3.5" y="5" width="17" height="16" rx="2.5" />
@@ -34,8 +34,8 @@ const NODES = [
     ),
   },
   {
-    word: "Préserver",
-    cap: "Un ton premium et humain, fidèle à votre image. Vous gardez la main dès que ça compte.",
+    word: "Convertir & préserver",
+    cap: "Relances au bon moment orchestrées par l'IA, acompte à la réservation pour garantir la présence, ton premium et humain fidèle à votre image. Vous gardez la main dès que ça compte.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
@@ -77,14 +77,16 @@ export function Methode() {
       <div className="wrap">
         <div className="methode-intro reveal">
           <span className="kicker" style={{ color: "var(--bordeaux-warm)" }}>
-            LA SOLUTION
+            LA MÉTHODE
           </span>
           <h2 className="methode-h2">
-            Un système IA qui remplit votre agenda, <em>étape par étape.</em>
+            On fait venir les bonnes clientes, <em>étape par étape.</em>
           </h2>
           <p className="methode-sub">
-            Chaque demande est captée, qualifiée et relancée automatiquement — jour
-            et nuit — jusqu&apos;au rendez-vous. Voici ce qui se passe en coulisses.
+            On ne vous balance pas du volume pour disparaître ensuite. On installe
+            un système complet (publicité ciblée et IA de qualification en
+            coulisse) qui attire les clientes qui paient et qui viennent, et qui
+            garde votre image intacte.
           </p>
         </div>
 
@@ -118,7 +120,7 @@ export function Methode() {
 
         <div className="methode-foot reveal">
           <a className="methode-link" href="#agenda">
-            Réserver mon audit
+            Réserver mon diagnostic offert
             <Arrow />
           </a>
         </div>

@@ -2,16 +2,16 @@ import { Arrow } from "./Arrow";
 
 const BLOCKS = [
   {
-    label: "Clientèle",
-    text: "Sorena est pensé pour les centres qui veulent attirer une clientèle plus qualifiée, vendre davantage de cures premium et un flux régulier de clientes sans diluer leur image.",
+    label: "Pour vous si",
+    text: "Vous voulez des clientes qui paient plein tarif, qui reviennent, et un flux régulier, sans diluer votre image.",
   },
   {
-    label: "Approche",
-    text: "Mais un bon système ne repose jamais uniquement sur la publicité. Il demande aussi une offre claire, un parcours de rendez-vous solide et une vraie collaboration tout au long du process.",
+    label: "L'approche",
+    text: "Un bon système ne repose jamais que sur la pub. Il demande une offre claire, un parcours de rendez-vous solide et une vraie collaboration. On construit avec vous.",
   },
   {
-    label: "Fit",
-    text: "Si votre objectif est simplement d'avoir plus de demandes, nous ne sommes probablement pas le bon partenaire.",
+    label: "Pas pour vous si",
+    text: "Votre seul objectif est « plus de demandes » au volume, peu importe lesquelles. Là, dix agences font ça mieux que nous.",
   },
 ];
 
@@ -38,10 +38,10 @@ export function Positionnement() {
         <div className="posi-split reveal">
           <div className="posi-head-col">
             <span className="kicker posi-eyebrow" style={{ color: "var(--bordeaux-warm)" }}>
-              POSITIONNEMENT
+              POUR QUI
             </span>
             <h2 className="posi-h2">
-              Nous ne travaillons pas avec <em>tous les centres.</em>
+              On ne travaille pas avec <em>tous les centres.</em>
             </h2>
           </div>
 
@@ -62,12 +62,11 @@ export function Positionnement() {
 
         <div className="posi-foot reveal">
           <p className="posi-closing">
-            Si vous cherchez des clientes plus qualifiées, un flux régulier de clientes et une
-            approche cohérente avec votre positionnement, l’audit offert est
-            probablement la prochaine étape.
+            Si vous voulez les bonnes clientes plutôt que du volume, le diagnostic
+            offert est probablement votre prochaine étape.
           </p>
           <a className="btn btn-dark posi-cta" href="#agenda">
-            Réserver mon audit
+            Réserver mon diagnostic offert
             <Arrow />
           </a>
         </div>

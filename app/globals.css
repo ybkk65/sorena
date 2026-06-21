@@ -464,7 +464,7 @@ section { position: relative; }
   height:100%;
 
   object-fit:cover;
-  object-position:center;
+  object-position:72% center;
 
   display:block;
 }
@@ -475,19 +475,29 @@ section { position: relative; }
   inset:0;
 
   background:
+  /* nappe sombre douce derrière le texte (gauche), qui se fond vers l'image */
+  radial-gradient(
+    120% 130% at 8% 50%,
+    rgba(18,4,8,.95) 0%,
+    rgba(18,4,8,.7) 34%,
+    rgba(18,4,8,.28) 60%,
+    rgba(18,4,8,0) 84%
+  ),
+  /* léger voile global pour l'unité */
   linear-gradient(
     90deg,
-    rgba(20,4,9,.88) 0%,
-    rgba(20,4,9,.72) 28%,
-    rgba(20,4,9,.28) 58%,
-    rgba(20,4,9,.08) 100%
+    rgba(18,4,8,.5) 0%,
+    rgba(18,4,8,.18) 45%,
+    rgba(18,4,8,0) 80%
   ),
-
+  /* fondu haut + bas vers le bordeaux : le hero fond dans la section suivante */
   linear-gradient(
     180deg,
-    rgba(20,4,9,.22) 0%,
-    rgba(20,4,9,.10) 50%,
-    rgba(20,4,9,.38) 100%
+    rgba(18,4,8,.45) 0%,
+    rgba(18,4,8,0) 24%,
+    rgba(18,4,8,0) 52%,
+    rgba(31,7,13,.85) 86%,
+    var(--bordeaux-night) 100%
   );
 }
 /* ============================================
@@ -4568,4 +4578,48 @@ inset 0 1px 0 rgba(255,255,255,.92);
   .approche-card { padding: 26px 22px; }
   .faq-q { font-size: 16.5px; }
   .mobile-cta-btn { font-size: 14.5px; }
+}
+/* ============================================
+   PAGES LÉGALES
+============================================ */
+.legal {
+  min-height: 100svh;
+  background:
+    radial-gradient(90% 50% at 50% 0%, rgba(110,34,50,.35), transparent 60%),
+    var(--bordeaux-night);
+  color: var(--rose-light);
+  padding: clamp(96px, 13vh, 150px) 20px clamp(64px, 10vh, 110px);
+}
+.legal-wrap { max-width: 760px; margin: 0 auto; }
+.legal-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--rose); margin-bottom: 44px;
+  transition: gap .25s ease;
+}
+.legal-back:hover { gap: 12px; }
+.legal h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(34px, 5vw, 56px); line-height: 1.05;
+  color: var(--off-white); margin: 0 0 10px;
+}
+.legal-updated { font-size: 13px; color: rgba(244,230,216,.5); margin: 0 0 44px; }
+.legal h2 {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(21px, 2.4vw, 27px); color: var(--off-white);
+  margin: 40px 0 12px;
+}
+.legal p, .legal li {
+  font-size: 15.5px; line-height: 1.75; color: rgba(244,230,216,.82);
+}
+.legal p { margin: 0 0 14px; }
+.legal ul { padding-left: 20px; margin: 0 0 14px; }
+.legal li { margin-bottom: 6px; }
+.legal a { color: var(--rose); text-decoration: underline; text-underline-offset: 3px; }
+.legal-note {
+  background: rgba(240,200,192,.06);
+  border: 1px solid rgba(240,200,192,.16);
+  border-radius: 14px; padding: 16px 18px;
+  font-size: 13.5px; line-height: 1.6; color: rgba(244,230,216,.66);
+  margin-top: 36px;
 }

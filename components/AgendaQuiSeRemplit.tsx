@@ -52,11 +52,12 @@ export default function AgendaQuiSeRemplit() {
         <div className="kicker"><span>L&apos;agenda</span></div>
         <h2 className="title">
           Pendant que vous travaillez,<br />
-          <em>votre agenda se remplit.</em>
+          <em>les bonnes clientes arrivent.</em>
         </h2>
         <p className="sub">
-          Chaque demande qualifiée se transforme en rendez-vous confirmé dans votre
-          agenda — sans que vous ayez à gérer chaque échange à la main.
+          Des clientes qualifiées, qui paient plein tarif et qui se présentent,
+          tombent dans votre agenda, sans que vous gériez chaque échange à la
+          main.
         </p>
 
         <div className="card">

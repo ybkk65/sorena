@@ -3,6 +3,7 @@ import { Calendar } from "@/components/Calendar";
 import { ContactModal } from "@/components/ContactModal";
 import { CtaFinal } from "@/components/CtaFinal";
 import { Faq } from "@/components/Faq";
+import { Fondatrice } from "@/components/Fondatrice";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { MobileCta } from "@/components/MobileCta";
@@ -26,6 +27,8 @@ export default function Page() {
       <AgendaQuiSeRemplit />
       {/* 5. Le positionnement — est-ce que c'est pour moi ? */}
       <Positionnement />
+      {/* 7. La fondatrice — Sofya, sans visage */}
+      <Fondatrice />
       {/* Objections — avant le passage à l'action */}
       <Faq />
       {/* 6. CTA final — quelle est la prochaine étape ? */}

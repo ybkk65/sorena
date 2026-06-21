@@ -16,7 +16,7 @@ export function CtaFinal() {
               display: "inline-flex",
             }}
           >
-            30 MINUTES • SANS ENGAGEMENT
+            DIAGNOSTIC · 30 MIN · OFFERT
           </span>
 
           <h2 className="cta-h2">
@@ -26,10 +26,10 @@ export function CtaFinal() {
           </h2>
 
           <p className="cta-desc">
-            Audit offert. Sans engagement.
-            <br />
-            Vous repartez avec des recommandations concrètes même si nous ne
-            travaillons pas ensemble.
+            Un regard extérieur sur votre situation : on analyse votre centre,
+            votre marché et vos cures, et on identifie le levier concret pour
+            faire venir les bonnes clientes. Vous repartez avec un plan clair,
+            même si on ne travaille pas ensemble.
           </p>
         </div>
 
@@ -53,18 +53,18 @@ export function CtaFinal() {
             </li>
             <li>
               <span aria-hidden="true">3</span>
-              Vous repartez avec un plan d’action clair — même si nous ne
+              Vous repartez avec un plan d’action clair, même si nous ne
               travaillons pas ensemble.
             </li>
           </ol>
 
           <a className="btn btn-primary full-btn cta-big-btn" href="#agenda">
-            Réserver mon audit
+            Réserver mon diagnostic offert
             <Arrow />
           </a>
 
           <p className="cta-reassure">
-            Sans engagement · réponse sous 24h
+            Sans engagement · places limitées
           </p>
         </div>
       </div>

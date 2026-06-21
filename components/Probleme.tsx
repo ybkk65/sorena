@@ -1,8 +1,8 @@
 const PAINS = [
-  "Elles demandent les tarifs puis disparaissent",
-  "Vos cures premium restent difficiles à vendre régulièrement",
-  "Elles prennent rendez-vous… puis ne viennent pas",
-  "Votre centre dépend encore trop d’Instagram, du bouche-à-oreille ou des périodes creuses",
+  "Elles demandent les tarifs… puis disparaissent.",
+  "Vos cures premium restent dures à vendre régulièrement.",
+  "Elles prennent rendez-vous… puis ne viennent pas.",
+  "Les « leads » qu’on vous a déjà envoyés chassaient les bons plans et ne sont jamais revenus.",
 ];
 
 export function Probleme() {
@@ -39,7 +39,10 @@ export function Probleme() {
 
         <div className="constat-transition reveal">
           <span className="constat-transition-line" aria-hidden="true" />
-          <p>C’est précisément ce que notre système cherche à résoudre.</p>
+          <p>
+            Le problème n’a jamais été d’avoir <em>plus</em> de demandes. C’est
+            d’avoir les <em>bonnes</em>. C’est exactement ce qu’on installe.
+          </p>
         </div>
       </div>
     </section>

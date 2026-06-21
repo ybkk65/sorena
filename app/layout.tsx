@@ -20,18 +20,19 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sorena — Remplissez votre agenda de clientes qualifiées",
+    default: "Sorena — Les bonnes clientes, pas plus de leads",
     template: "%s · Sorena",
   },
   description:
-    "Vous réalisez les soins, on remplit votre agenda. Un système IA qui répond, qualifie et relance les bonnes clientes pour vos cures premium, jour et nuit — sans diluer votre image.",
+    "Des clientes qui viennent, paient le juste prix et reviennent. On installe le système qui les fait venir — sans brader votre image.",
   applicationName: "Sorena",
   keywords: [
-    "acquisition clientes centre esthétique",
+    "clientes qualifiées centre esthétique",
     "remplir agenda institut de beauté",
-    "système IA prise de rendez-vous",
-    "cures premium médecine esthétique",
+    "acquisition clientes cures premium",
+    "publicité Meta Instagram esthétique",
     "agence marketing centre esthétique",
+    "qualification IA prise de rendez-vous",
     "Sorena",
   ],
   authors: [{ name: "Sorena Agency" }],
@@ -52,28 +53,28 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sorena — Remplissez votre agenda de clientes qualifiées",
+    title: "Sorena — Les bonnes clientes, pas plus de leads",
     description:
-      "Un système IA qui fait venir les bonnes clientes pour vos cures premium, sans dépendre uniquement d'Instagram ou du bouche-à-oreille.",
+      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures. Sans brader votre image.",
     url: SITE_URL,
     siteName: "Sorena",
     locale: "fr_FR",
     type: "website",
     images: [
       {
-        url: "/assets/image_salon.png",
-        width: 1698,
-        height: 926,
-        alt: "Sorena — système d'acquisition pour centres esthétiques premium",
+        url: "/assets/image_salon.jpg",
+        width: 2000,
+        height: 1090,
+        alt: "Sorena, les bonnes clientes pour les centres esthétiques premium",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sorena — Remplissez votre agenda de clientes qualifiées",
+    title: "Sorena — Les bonnes clientes, pas plus de leads",
     description:
-      "Un système IA qui fait venir les bonnes clientes pour vos cures premium.",
-    images: ["/assets/image_salon.png"],
+      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures.",
+    images: ["/assets/image_salon.jpg"],
   },
 };
 
@@ -88,7 +89,7 @@ const jsonLd = {
       logo: `${SITE_URL}/assets/sorena-logo.png`,
       email: "contact@sorenaagency.com",
       description:
-        "Sorena met en place un système IA qui attire, qualifie et relance les bonnes clientes pour les centres esthétiques proposant des cures premium.",
+        "Sorena installe le système qui fait venir les bonnes clientes pour les centres esthétiques premium : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
       sameAs: [
         "https://www.instagram.com/sorenaagency",
         "https://www.facebook.com/share/1P38aCKRgs/",
@@ -105,13 +106,13 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       name: "Sorena Agency",
-      image: `${SITE_URL}/assets/image_salon.png`,
+      image: `${SITE_URL}/assets/image_salon.jpg`,
       url: SITE_URL,
-      email: "contact@sorenaagency.com",
+      email: "sofya@sorenaagency.com",
       priceRange: "€€€",
       areaServed: "FR",
       description:
-        "Acquisition de clientes qualifiées pour les centres esthétiques premium grâce à un système augmenté par l'IA.",
+        "Sorena fait venir les bonnes clientes pour les centres esthétiques premium : publicité ciblée (Meta, Instagram) et qualification par IA en coulisse, sans brader l'image du centre.",
     },
   ],
 };

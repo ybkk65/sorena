@@ -23,36 +23,20 @@ export function Fondatrice() {
           <div className="fondatrice-text">
             <p>Moi, c’est Sofya.</p>
             <p>
-              Vous avez ouvert votre centre par passion. Pour être libre. Pour
-              créer votre monde. Pour ce moment, à chaque fois, où une femme se
-              relève de votre table un peu plus belle, un peu plus vivante, et où
-              vous vous dites que c’est pour ça que vous êtes là.
+              Vous avez ouvert votre centre par passion, pour être libre, et pour
+              ce moment où une femme se relève de votre table un peu plus belle, un
+              peu plus sûre d’elle. Pas pour brader vos soins et attendre des
+              rendez-vous qui ne viennent pas.
             </p>
             <p>
-              Et puis il y a eu les autres soirs. Ceux où vous bradez encore vos
-              soins pour remplir une cabine vide. Où vous attendez des rendez-vous
-              qui ne viennent pas. Où, seule, vous vous demandez si vous avez eu
-              tort de croire à votre rêve. Ce travail que vous faites avec vos
-              mains, votre œil, votre cœur, réduit à un prix cassé.
-            </p>
-            <p>
-              Je connais ce vide. J’ai connu, moi aussi, le moment où tout
-              s’effondre, où l’on se demande s’il reste quelque chose à sauver.
-              J’ai choisi de tout reconstruire, et d’en faire ma liberté. C’est de
-              là qu’est née Sorena.
-            </p>
-            <p>
-              Et là où mes concurrents voient un marché, moi je vois des femmes,
-              parce que j’en suis une. Je sais ce que vous portez, parce que je
-              l’ai porté. Je sais ce que cherchent celles que vous recevez, se
-              sentir belles et libres dans leur peau, parce que je suis l’une
-              d’elles.
+              Là où mes concurrents voient un marché, moi je vois des femmes, parce
+              que j’en suis une. Et parce que j’ai dû, moi aussi, tout reconstruire
+              pour redevenir libre : c’est de là qu’est née Sorena.
             </p>
             <p>
               Alors je ne vends pas du volume. Je viens vous rendre ce pour quoi
-              vous avez commencé : les bonnes clientes, et votre liberté. Je ne
-              suis pas une agence de plus. Je suis celle qui se bat à vos côtés,
-              et qui ne vous lâche pas.
+              vous avez commencé : les bonnes clientes, et votre liberté. Je me bats
+              à vos côtés, et je ne vous lâche pas.
             </p>
           </div>
 

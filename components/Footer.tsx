@@ -70,6 +70,8 @@ export function Footer() {
               <ul>
                 <li><a href="/confidentialite">Confidentialité</a></li>
                 <li><a href="/cookies">Cookies</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">CGV</a></li>
               </ul>
             </div>
           </div>

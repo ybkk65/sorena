@@ -61,16 +61,8 @@ export function SiteEffects() {
       });
     }
 
-    const openForm = (e: Event) => {
-      e.preventDefault();
-      window.dispatchEvent(new CustomEvent("sorena:open-form"));
-    };
-    const openers = Array.from(document.querySelectorAll<HTMLElement>("[data-open-form]"));
-    openers.forEach((el) => el.addEventListener("click", openForm));
-
     return () => {
       window.removeEventListener("scroll", onScroll);
-      openers.forEach((el) => el.removeEventListener("click", openForm));
       document.querySelectorAll<HTMLElement>(".btn-primary, .btn-ghost").forEach((btn) => {
         const handlers = magneticHandlers.get(btn);
         if (handlers) {

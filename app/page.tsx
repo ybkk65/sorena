@@ -1,6 +1,5 @@
 import AgendaQuiSeRemplit from "@/components/AgendaQuiSeRemplit";
 import { Calendar } from "@/components/Calendar";
-import { ContactModal } from "@/components/ContactModal";
 import { CtaFinal } from "@/components/CtaFinal";
 import { Faq } from "@/components/Faq";
 import { Fondatrice } from "@/components/Fondatrice";
@@ -39,7 +38,6 @@ export default function Page() {
       <Calendar />
       <Footer />
 
-      <ContactModal />
       <MobileCta />
       <SiteEffects />
     </>

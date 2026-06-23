@@ -187,16 +187,16 @@ section { position: relative; }
 }
 
 .brand-mark{
-  width:36px;
-  height:36px;
-  border-radius:50%;
+  width:38px;
+  height:38px;
+  border-radius:10px;
 
   background-image:url("/assets/sorena-mark.png");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 
-  background-color:var(--bordeaux-night);
+  background-color:#4a0d14;
 
   border:1px solid var(--line-on-dark);
 

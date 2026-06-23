@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Instrument_Serif } from "next/font/google";
+import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
@@ -133,7 +134,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body data-tone="wine" data-accent="rose">{children}</body>
+      <body data-tone="wine" data-accent="rose">
+        {children}
+        <MetaPixel />
+      </body>
     </html>
   );
 }

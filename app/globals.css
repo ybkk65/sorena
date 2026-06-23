@@ -191,8 +191,8 @@ section { position: relative; }
   height:36px;
   border-radius:50%;
 
-  background-image:url("/assets/sorena-logo.png");
-  background-size:100% 100%;
+  background-image:url("/assets/sorena-mark.png");
+  background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 
@@ -830,7 +830,8 @@ section { position: relative; }
 .faq-item summary::-webkit-details-marker { display: none; }
 @media (max-width: 880px) {
   .faq-grid { grid-template-columns: 1fr; }
-  .faq-aside { position: static; }
+  .faq-aside { position: static; order: 2; }
+  .faq-list { order: 1; }
 }
 
 /* ============================================
@@ -4014,7 +4015,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
     padding-inline: clamp(22px, 6vw, 40px);
   }
   .fondatrice-body { grid-column: 1; order: 1; }
-  .fondatrice-art { grid-column: 1; order: 2; justify-content: flex-start; margin-top: 4px; }
+  .fondatrice-art { grid-column: 1; order: 2; justify-content: center; margin-top: 4px; }
   .fondatrice-kicker { margin-bottom: 16px; }
   .fondatrice-title { font-size: clamp(28px, 8vw, 38px); max-width: 100%; }
   .fondatrice-text {
@@ -4031,10 +4032,10 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
     margin-bottom: clamp(-70px, -15vw, -36px);
     -webkit-mask-image:
       linear-gradient(to bottom, #000 0%, #000 62%, transparent 92%),
-      radial-gradient(125% 125% at 42% 38%, #000 62%, transparent 100%);
+      radial-gradient(125% 125% at 50% 38%, #000 62%, transparent 100%);
     mask-image:
       linear-gradient(to bottom, #000 0%, #000 62%, transparent 92%),
-      radial-gradient(125% 125% at 42% 38%, #000 62%, transparent 100%);
+      radial-gradient(125% 125% at 50% 38%, #000 62%, transparent 100%);
   }
 }
 

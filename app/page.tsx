@@ -6,6 +6,7 @@ import { Faq } from "@/components/Faq";
 import { Fondatrice } from "@/components/Fondatrice";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
+import { Marquee } from "@/components/Marquee";
 import { MobileCta } from "@/components/MobileCta";
 import { Nav } from "@/components/Nav";
 import { Positionnement } from "@/components/Positionnement";
@@ -19,6 +20,8 @@ export default function Page() {
       <Nav />
       {/* 1. Hero — qu'est-ce que vous faites ? */}
       <Hero />
+      {/* Barre défilante des soins — permet aux centres de s'identifier */}
+      <Marquee />
       {/* 2. Le problème — est-ce que vous comprenez ma situation ? */}
       <Probleme />
       {/* 3. La solution — qu'est-ce qui est différent dans votre système ? */}

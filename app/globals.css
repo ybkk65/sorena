@@ -871,6 +871,14 @@ section { position: relative; }
   color: var(--rose-light); opacity: 0.82;
   margin-top: 28px; max-width: 46ch;
 }
+.cta-desc-accent {
+  margin-top: 14px;
+  opacity: 1;
+}
+.cta-desc-accent strong {
+  color: var(--rose);
+  font-weight: 600;
+}
 
 .cta-card {
   background: rgba(50, 12, 20, 0.65);

@@ -20,16 +20,20 @@ export function CtaFinal() {
           </span>
 
           <h2 className="cta-h2">
-            Faisons le point sur ce qui freine
+            Repartez avec un plan clair
             <br />
-            <em>vos résultats.</em>
+            pour <em>remplir votre agenda.</em>
           </h2>
 
           <p className="cta-desc">
-            Un regard extérieur sur votre situation : on analyse votre centre,
-            votre marché et vos cures, et on identifie le levier concret pour
-            faire venir les bonnes clientes. Vous repartez avec un plan clair,
+            On identifie ce qui empêche aujourd’hui les bonnes clientes de venir
+            jusqu’à vous, et on vous montre le levier concret pour y remédier.
+            Vous repartez avec une direction précise, applicable tout de suite —
             même si on ne travaille pas ensemble.
+          </p>
+
+          <p className="cta-desc cta-desc-accent">
+            <strong>C’est offert, et sans engagement.</strong>
           </p>
         </div>
 

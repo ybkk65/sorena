@@ -140,7 +140,10 @@ export default function AgendaQuiSeRemplit() {
         }
         .badge svg { width: 16px; height: 16px; flex: none; }
         .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; min-width: 680px; }
+        /* min() au lieu de 680px fixe : la grille ne dépasse jamais son conteneur
+           (donc jamais le viewport), sans dépendre d'une media query styled-jsx
+           (peu fiable ici). Large sur desktop, contenue sur mobile. */
+        .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; min-width: min(680px, 100%); }
         .col { display: flex; flex-direction: column; gap: 12px; }
         .day { text-align: center; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(244, 231, 223, 0.5); padding-bottom: 4px; }
         .slot { height: 54px; border-radius: 13px; display: flex; align-items: center; justify-content: center; font-size: 15px; }

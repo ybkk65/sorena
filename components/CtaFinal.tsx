@@ -28,7 +28,7 @@ export function CtaFinal() {
           <p className="cta-desc">
             On identifie ce qui empêche aujourd’hui les bonnes clientes de venir
             jusqu’à vous, et on vous montre le levier concret pour y remédier.
-            Vous repartez avec une direction précise, applicable tout de suite —
+            Vous repartez avec une direction précise, applicable tout de suite,
             même si on ne travaille pas ensemble.
           </p>
 

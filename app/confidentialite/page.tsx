@@ -36,8 +36,8 @@ export default function Confidentialite() {
 
       <h2>Sous-traitants</h2>
       <ul>
-        <li>Cal.com — prise de rendez-vous en ligne</li>
-        <li>Railway — hébergement du site</li>
+        <li>Cal.com : prise de rendez-vous en ligne</li>
+        <li>Railway : hébergement du site</li>
       </ul>
 
       <h2>Durée de conservation</h2>

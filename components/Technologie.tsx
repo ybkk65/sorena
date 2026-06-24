@@ -3,7 +3,7 @@ import { Arrow } from "./Arrow";
 const POINTS = [
   {
     title: "Réponse en quelques secondes, 24/7",
-    text: "Chaque demande reçoit une réponse en quelques secondes, à toute heure — même quand vous êtes en cabine, le soir ou le week-end.",
+    text: "Chaque demande reçoit une réponse en quelques secondes, à toute heure, même quand vous êtes en cabine, le soir ou le week-end.",
     icon: (
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M8.5 1.5 3 9h4l-1.5 5.5L13 7H9z" />
@@ -12,7 +12,7 @@ const POINTS = [
   },
   {
     title: "Pré-qualifie et relance au bon moment",
-    text: "L'IA trie les demandes, écarte le hors-cible et relance celles qui hésitent — jour et nuit — jusqu'au rendez-vous pris.",
+    text: "L'IA trie les demandes, écarte le hors-cible et relance celles qui hésitent, jour et nuit, jusqu'au rendez-vous pris.",
     icon: (
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9" />
@@ -49,7 +49,7 @@ export function Technologie() {
 
           <div className="approche-lead">
             <p>
-              Le même objectif — un agenda rempli de clientes qualifiées — mais un
+              Le même objectif, un agenda rempli de clientes qualifiées, mais un
               système qui ne dort jamais. En coulisses, une IA répond, pré-qualifie
               et relance chaque demande, jour et nuit, pour qu’aucune cliente
               potentielle ne vous échappe.

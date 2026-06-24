@@ -25,7 +25,7 @@ const NODES = [
   },
   {
     word: "Filtrer par IA",
-    cap: "Notre IA répond et qualifie chaque demande en quelques secondes, 24h/24. Seules les clientes sérieuses arrivent dans votre agenda — votre temps et votre image sont protégés.",
+    cap: "Notre IA répond et qualifie chaque demande en quelques secondes, 24h/24. Seules les clientes sérieuses arrivent dans votre agenda. Votre temps et votre image sont protégés.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3.5" y="5" width="17" height="16" rx="2.5" />
@@ -84,8 +84,8 @@ export function Methode() {
           </h2>
           <p className="methode-sub">
             On ne vous balance pas du volume pour disparaître ensuite. Au cœur du
-            système, une <strong>IA qui qualifie chaque demande 24h/24</strong> —
-            couplée à une publicité ciblée — pour n&apos;amener que les clientes qui
+            système, une <strong>IA qui qualifie chaque demande 24h/24</strong>,
+            couplée à une publicité ciblée, pour n&apos;amener que les clientes qui
             paient et qui viennent, sans toucher à votre image.
           </p>
         </div>

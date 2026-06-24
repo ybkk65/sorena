@@ -28,7 +28,7 @@ export function Fondatrice() {
             <p>
               Mon métier, c’est le marketing digital : ramener les bonnes
               personnes vers les bonnes mains. Et l’esthétique, je ne l’ai pas
-              choisie au hasard — c’est un monde que je connais de l’intérieur,
+              choisie au hasard. C’est un monde que je connais de l’intérieur,
               dont je suis moi-même cliente, et dont j’ai vu les coulisses de
               près. Je sais ce qu’il s’y joue, et ce qu’il en coûte de tenir un
               centre.

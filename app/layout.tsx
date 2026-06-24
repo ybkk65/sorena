@@ -21,11 +21,11 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sorena — Acquisition de clientes pour centres esthétiques premium",
+    default: "Sorena · Acquisition de clientes pour centres esthétiques premium",
     template: "%s · Sorena",
   },
   description:
-    "Des clientes qui viennent, paient le juste prix et reviennent. On installe le système qui les fait venir — sans brader votre image.",
+    "Des clientes qui viennent, paient le juste prix et reviennent. On installe le système qui les fait venir, sans brader votre image.",
   applicationName: "Sorena",
   keywords: [
     "clientes qualifiées centre esthétique",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sorena — Acquisition de clientes pour centres esthétiques premium",
+    title: "Sorena · Acquisition de clientes pour centres esthétiques premium",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures. Sans brader votre image.",
     url: SITE_URL,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sorena — Acquisition de clientes pour centres esthétiques premium",
+    title: "Sorena · Acquisition de clientes pour centres esthétiques premium",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures.",
     images: ["/assets/image_salon.jpg"],

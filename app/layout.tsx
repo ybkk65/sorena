@@ -21,7 +21,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sorena — Les bonnes clientes, pas plus de leads",
+    default: "Sorena — Acquisition de clientes pour centres esthétiques premium",
     template: "%s · Sorena",
   },
   description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sorena — Les bonnes clientes, pas plus de leads",
+    title: "Sorena — Acquisition de clientes pour centres esthétiques premium",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures. Sans brader votre image.",
     url: SITE_URL,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sorena — Les bonnes clientes, pas plus de leads",
+    title: "Sorena — Acquisition de clientes pour centres esthétiques premium",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures.",
     images: ["/assets/image_salon.jpg"],

@@ -37,9 +37,9 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Pas plus de leads, les bonnes. On installe le système qui les fait
-          venir, qualifiées et prêtes à investir dans vos cures, sans jamais
-          brader votre image.
+          Pendant que vous êtes en cabine, on attire les bonnes clientes, on les
+          relance et on les amène jusque dans votre agenda. Vous n&apos;avez plus
+          qu&apos;à les recevoir.
         </p>
 
         <div className="hero-cta">

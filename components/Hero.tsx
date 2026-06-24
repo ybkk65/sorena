@@ -25,13 +25,13 @@ export function Hero() {
         <h1 className="hero-h1">
           <span className="reveal-line">
             <span style={{ "--i": 0 } as React.CSSProperties}>
-              Des clientes qui viennent, qui paient le juste prix,
+              Nous remplissons votre <em>agenda.</em>
             </span>
           </span>
 
           <span className="reveal-line">
             <span style={{ "--i": 1 } as React.CSSProperties}>
-              et qui <em>reviennent.</em>
+              Vous restez en cabine.
             </span>
           </span>
         </h1>

@@ -47,7 +47,9 @@ body {
   background: var(--bordeaux-night);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  /* clip (et non hidden) : empêche le scroll horizontal sans créer de conteneur
+     de défilement, ce qui casserait position:fixed sur iOS (barre mobile CTA). */
+  overflow-x: clip;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }

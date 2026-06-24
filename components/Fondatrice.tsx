@@ -21,22 +21,27 @@ export function Fondatrice() {
           </h2>
 
           <div className="fondatrice-text">
-            <p>Moi, c’est Sofya.</p>
-            <p>
-              Vous avez ouvert votre centre par passion, pour être libre, et pour
-              ce moment où une femme se relève de votre table un peu plus belle, un
-              peu plus sûre d’elle. Pas pour brader vos soins et attendre des
-              rendez-vous qui ne viennent pas.
+            <p className="fondatrice-lead">
+              Moi, c’est Sofya. Et je ne travaille que pour des femmes qui ont
+              tout donné pour leur centre.
             </p>
             <p>
-              Là où mes concurrents voient un marché, moi je vois des femmes, parce
-              que j’en suis une. Et parce que j’ai dû, moi aussi, tout reconstruire
-              pour redevenir libre : c’est de là qu’est née Sorena.
+              Mon métier, c’est le marketing digital : ramener les bonnes
+              personnes vers les bonnes mains. Et l’esthétique, je ne l’ai pas
+              choisie au hasard — c’est un monde que je connais de l’intérieur,
+              dont je suis moi-même cliente, et dont j’ai vu les coulisses de
+              près. Je sais ce qu’il s’y joue, et ce qu’il en coûte de tenir un
+              centre.
             </p>
             <p>
-              Alors je ne vends pas du volume. Je viens vous rendre ce pour quoi
-              vous avez commencé : les bonnes clientes, et votre liberté. Je me bats
-              à vos côtés, et je ne vous lâche pas.
+              Vous avez ouvert par passion. Pour ce moment où une cliente se
+              relève de votre table un peu plus belle, un peu plus sûre d’elle.
+              Pas pour brader vos soins, ni pour fixer un agenda qui se vide.
+            </p>
+            <p>
+              Là où d’autres voient un marché, je vois des femmes, parce que j’en
+              suis une. Je viens vous rendre <em>vos bonnes clientes</em>, et le
+              repos d’un esprit qui ne compte plus ses fins de mois.
             </p>
           </div>
 

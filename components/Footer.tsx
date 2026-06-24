@@ -35,6 +35,12 @@ export function Footer() {
                   </svg>
                 </a>
 
+                <a href="https://www.linkedin.com/in/sorena-agency-9290bb416" aria-label="LinkedIn" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M3 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM2 6.5h2v7H2v-7zm4 0h2v1c.5-.7 1.3-1.2 2.5-1.2 1.8 0 2.5 1.3 2.5 3v4.2h-2V9.8c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v3.7H6v-7z" />
+                  </svg>
+                </a>
+
                 <a href="mailto:sofya@sorenaagency.com" aria-label="Email">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
                     <rect x="2" y="3" width="12" height="10" rx="1" />

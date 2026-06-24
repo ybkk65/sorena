@@ -4074,6 +4074,11 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   color: var(--bordeaux-night);
   opacity: 0.68;
 }
+.methode-sub strong {
+  color: var(--bordeaux-warm);
+  font-weight: 600;
+  opacity: 1;
+}
 
 /* ---- Parcours animé (méthode) ---- */
 .parcours {

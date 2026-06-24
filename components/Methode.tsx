@@ -6,7 +6,7 @@ import { Arrow } from "./Arrow";
 const NODES = [
   {
     word: "Attirer par la valeur",
-    cap: "Des campagnes géolocalisées sur Meta et Instagram qui mènent avec une offre de valeur (un bilan, un diagnostic offert), jamais une promo qui brade vos cures. Vous faites venir du monde sans casser vos prix ni votre image.",
+    cap: "Des campagnes géolocalisées sur Meta qui mènent avec une offre de valeur (un bilan, un diagnostic offert), jamais une promo qui brade vos cures. Vous faites venir du monde sans casser vos prix ni votre image.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M5 4v6a7 7 0 0 0 14 0V4" />
@@ -24,8 +24,8 @@ const NODES = [
     ),
   },
   {
-    word: "Filtrer",
-    cap: "En coulisse, une IA répond et qualifie chaque demande en quelques secondes, jour et nuit. Seules les clientes sérieuses arrivent dans votre agenda. Votre temps et votre image sont protégés.",
+    word: "Filtrer par IA",
+    cap: "Notre IA répond et qualifie chaque demande en quelques secondes, 24h/24. Seules les clientes sérieuses arrivent dans votre agenda — votre temps et votre image sont protégés.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3.5" y="5" width="17" height="16" rx="2.5" />
@@ -35,7 +35,7 @@ const NODES = [
   },
   {
     word: "Convertir & préserver",
-    cap: "Relances au bon moment orchestrées par l'IA, acompte à la réservation pour garantir la présence, ton premium et humain fidèle à votre image. Vous gardez la main dès que ça compte.",
+    cap: "Relances au bon moment orchestrées par notre IA, acompte à la réservation pour garantir la présence, ton premium et humain fidèle à votre image. Vous gardez la main dès que ça compte.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
@@ -83,10 +83,10 @@ export function Methode() {
             On fait venir les bonnes clientes, <em>étape par étape.</em>
           </h2>
           <p className="methode-sub">
-            On ne vous balance pas du volume pour disparaître ensuite. On installe
-            un système complet (publicité ciblée et IA de qualification en
-            coulisse) qui attire les clientes qui paient et qui viennent, et qui
-            garde votre image intacte.
+            On ne vous balance pas du volume pour disparaître ensuite. Au cœur du
+            système, une <strong>IA qui qualifie chaque demande 24h/24</strong> —
+            couplée à une publicité ciblée — pour n&apos;amener que les clientes qui
+            paient et qui viennent, sans toucher à votre image.
           </p>
         </div>
 

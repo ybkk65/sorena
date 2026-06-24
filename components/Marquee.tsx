@@ -10,8 +10,6 @@ const CURES = [
   "Anti-âge",
   "HydraFacial",
   "Microneedling",
-  "Jet Peel",
-  "Skin Treatments",
   "Cryothérapie",
   "Épilation laser",
 ];

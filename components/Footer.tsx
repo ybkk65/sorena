@@ -16,8 +16,8 @@ export function Footer() {
               </div>
 
               <p>
-                Pour les centres esthétiques qui veulent les bonnes clientes,
-                celles qui paient et qui reviennent.
+                Pour les centres esthétiques qui veulent un agenda rempli de
+                cures premium.
               </p>
 
               <div className="foot-socials">

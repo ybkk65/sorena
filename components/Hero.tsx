@@ -38,8 +38,9 @@ export function Hero() {
 
         <p className="hero-sub">
           Pendant que vous êtes en cabine, on attire les bonnes clientes, on les
-          relance et on les amène jusque dans votre agenda. Vous n&apos;avez plus
-          qu&apos;à les recevoir.
+          relance et on les amène jusque dans votre agenda.{" "}
+          <br className="hero-sub-br" />
+          Vous n&apos;avez plus qu&apos;à les recevoir.
         </p>
 
         <div className="hero-cta">

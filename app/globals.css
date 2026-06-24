@@ -407,6 +407,9 @@ section { position: relative; }
   transform:translateY(0);
 }
 
+/* Retour à la ligne dans le sous-titre : seulement sur mobile (harmonisation) */
+.hero-sub-br{ display:none; }
+
 .hero-cta{
   display:flex;
 
@@ -1245,6 +1248,7 @@ section { position: relative; }
   }
   .reveal-line > span { white-space: normal; }
   .hero-sub { font-size: 15.5px; line-height: 1.55; max-width: 100%; }
+  .hero-sub-br { display: inline; }
   /* Badge compact : petite pastille, pas une bande pleine largeur. */
   .hero-availability {
     font-size: 10.5px;

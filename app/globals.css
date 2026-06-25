@@ -13,7 +13,10 @@
   --rose-light: #f7dcd6;
   --cream: #efe1ca;
   --off-white: #f6efe6;
-  --white: #ffffff;
+  /* Blanc "chaud" : plus de blanc pur froid (qui durcissait le contraste avec
+     le bordeaux), tout en restant plus clair que --off-white pour que les
+     cartes ressortent bien sur les sections crème. */
+  --white: #fdf9f3;
 
   /* Type */
   --display: var(--font-instrument), "Cormorant Garamond", "Times New Roman", serif;
@@ -386,7 +389,7 @@ section { position: relative; }
 
   line-height:1.72;
 
-  color:rgba(255,255,255,.88);
+  color:rgba(248,242,233,.9);
 
   font-weight:400;
 

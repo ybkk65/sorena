@@ -6,7 +6,7 @@ export function Hero() {
     <section id="top" className="hero grain">
       <div className="hero-visual" aria-hidden="true">
         <Image
-          src="/assets/image_salon.jpg"
+          src="/assets/hero-room.jpg"
           alt=""
           fill
           priority

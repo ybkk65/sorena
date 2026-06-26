@@ -472,7 +472,7 @@ section { position: relative; }
   height:100%;
 
   object-fit:cover;
-  object-position:72% center;
+  object-position:center 38%;
 
   display:block;
 }
@@ -481,6 +481,7 @@ section { position: relative; }
   content:"";
   position:absolute;
   inset:0;
+  z-index:2;
 
   background:
   /* nappe sombre douce derrière le texte (gauche), qui se fond vers l'image */
@@ -1242,7 +1243,21 @@ section { position: relative; }
   .nav-actions .btn-primary { display: none; }
   .nav-actions { gap: 0; }
 
-  .hero { padding-block: 124px 64px; min-height: auto; }
+  /* Hero mobile immersif : la salle en grand, texte ancré en bas sur dégradé. */
+  .hero { padding-block: 92px 104px; min-height: 100svh; align-items: flex-end; }
+  .hero-visual img { object-position: 58% center; }
+  /* Dégradé bas -> haut pour la lisibilité du texte ancré en bas (remplace le
+     voile gauche pensé pour le desktop). */
+  .hero-visual::after {
+    background: linear-gradient(
+      to top,
+      rgba(18, 4, 8, 0.94) 0%,
+      rgba(18, 4, 8, 0.8) 24%,
+      rgba(18, 4, 8, 0.4) 50%,
+      rgba(18, 4, 8, 0.08) 74%,
+      rgba(18, 4, 8, 0) 100%
+    );
+  }
   /* minmax(0,1fr) + min-width:0 — sans ça, la colonne grid prend la largeur
      max-content du titre et déborde du viewport (titre/sous-titre rognés). */
   .hero-inner {

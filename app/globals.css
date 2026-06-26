@@ -20,6 +20,7 @@
 
   /* Type */
   --display: var(--font-instrument), "Cormorant Garamond", "Times New Roman", serif;
+  --brand: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
   --sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   --mono: var(--font-geist-mono), "JetBrains Mono", ui-monospace, monospace;
 
@@ -209,10 +210,10 @@ section { position: relative; }
 }
 
 .brand-name{
-  font-family:var(--sans);
-  font-size:15px;
+  font-family:var(--brand);
+  font-size:21px;
   font-weight:600;
-  letter-spacing:.28em;
+  letter-spacing:.2em;
   text-transform:uppercase;
   color:var(--off-white);
 }
@@ -1340,10 +1341,10 @@ section { position: relative; }
 /* Typography refresh — Geist for modern body */
 body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings: "ss01", "ss03", "cv01", "cv05"; }
 .brand-name {
-  font-family: var(--sans);
+  font-family: var(--brand);
   font-weight: 600;
-  letter-spacing: 0.18em;
-  font-size: 17px;
+  letter-spacing: 0.2em;
+  font-size: 21px;
   text-transform: uppercase;
 }
 .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.24em; }
@@ -4621,10 +4622,10 @@ inset 0 1px 0 rgba(255,255,255,.92);
 
 /* Logo / brand name */
 .brand-name {
-  font-family: var(--sans);
+  font-family: var(--brand);
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 0.22em;
+  font-size: 21px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 

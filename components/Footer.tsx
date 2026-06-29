@@ -21,7 +21,7 @@ export function Footer() {
               </p>
 
               <div className="foot-socials">
-                <a href="https://www.instagram.com/sorenaagency" aria-label="Instagram" target="_blank" rel="noopener">
+                <a href="https://www.instagram.com/sorena_esthetic" aria-label="Instagram" target="_blank" rel="noopener">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
                     <rect x="2" y="2" width="12" height="12" rx="3" />
                     <circle cx="8" cy="8" r="3" />

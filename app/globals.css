@@ -4874,3 +4874,10 @@ h1 em, h2 em, h3 em, h4 em,
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+
+/* Point de statut : rose statique (fini le vert pulsant vibe-codé) */
+.dot {
+  background: var(--rose);
+  box-shadow: none;
+  animation: none;
+}

@@ -7,7 +7,7 @@ const PAINS = [
 
 export function Probleme() {
   return (
-    <section className="section section-deep grain constat-section">
+    <section className="section section-deep constat-section">
       <div className="wrap">
         <div className="constat-head reveal on-dark">
           <span className="kicker">LE CONSTAT</span>
@@ -19,23 +19,18 @@ export function Probleme() {
           </h2>
         </div>
 
-        <div className="pain-grid">
+        <ol className="pain-list">
           {PAINS.map((p, i) => (
-            <div
+            <li
               key={p}
-              className="pain-card reveal"
-              style={{ "--rd": `${i * 0.08}s` } as React.CSSProperties}
+              className="pain-row reveal"
+              style={{ "--rd": `${i * 0.06}s` } as React.CSSProperties}
             >
-              <span className="pain-mark" aria-hidden="true">
-                <svg viewBox="0 0 12 12" fill="currentColor">
-                  <path d="M6 0l1.4 4.6L12 6l-4.6 1.4L6 12l-1.4-4.6L0 6l4.6-1.4z" />
-                </svg>
-              </span>
-
+              <span className="pain-num">{String(i + 1).padStart(2, "0")}</span>
               <p className="pain-text">{p}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
 
         <div className="constat-transition reveal">
           <span className="constat-transition-line" aria-hidden="true" />

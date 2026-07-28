@@ -13,22 +13,6 @@ const APPROACH = [
   },
 ];
 
-function Check() {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M3 8.5l3.5 3.5L13 4.5" />
-    </svg>
-  );
-}
-
 export function Approche() {
   return (
     <section id="approche" className="section section-cream approche-section">
@@ -61,11 +45,9 @@ export function Approche() {
         </div>
 
         <div className="approche-grid">
-          {APPROACH.map((a) => (
+          {APPROACH.map((a, i) => (
             <article key={a.title} className="approche-card reveal">
-              <span className="approche-card-icon" aria-hidden="true">
-                <Check />
-              </span>
+              <span className="approche-card-num">{String(i + 1).padStart(2, "0")}</span>
 
               <h3 className="approche-card-title">{a.title}</h3>
 

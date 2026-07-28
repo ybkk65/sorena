@@ -1,62 +1,79 @@
 import Image from "next/image";
 
 /**
- * Section 7 — La fondatrice (Sofya), incarnée par sa voix, sans visage.
- * Texte à gauche, image à droite. L'image (main gantée + carte scellée)
- * FLOTTE : fond de section = bordeaux exact de l'image (#3e0106), aucun cadre,
- * aucune ombre, aucune lumière ; un masque radial dissout les bords pour
- * qu'elle paraisse posée directement sur la page.
- * Styles dans globals.css (.fondatrice-*) pour un rendu SSR fiable et des
- * media queries qui s'appliquent réellement sur mobile.
+ * Section — La fondatrice (Sofya).
+ * Carte profil facon Instagram (avatar rond + lisere, nom + verifie + @handle
+ * + bio) puis note editoriale courte et exergue. Rendu magazine / agence.
+ * Styles dans globals.css (.fondatrice-*).
+ *
+ * Avatar : placeholder tant que /assets/sofya.jpg n'est pas fourni. Une fois la
+ * photo depos ee, remplacer <span class="fondatrice-avatar-ph"> par :
+ *   <Image src="/assets/sofya.jpg" alt="Sofya, fondatrice de Sorena" fill sizes="96px" />
  */
 export function Fondatrice() {
   return (
     <section id="fondatrice" className="fondatrice-section">
-      <div className="fondatrice-grid">
-        <div className="fondatrice-body reveal">
+      <div className="wrap">
+        <div className="fondatrice-inner reveal">
           <span className="kicker fondatrice-kicker">LA FONDATRICE</span>
 
-          <h2 className="fondatrice-title">
-            Vous n’avez pas commencé <em>pour ça.</em>
-          </h2>
+          <div className="fondatrice-card">
+            <span className="fondatrice-avatar">
+              <span className="fondatrice-avatar-inner">
+                <Image
+                  src="/assets/sofya.jpg"
+                  alt="Sofya, fondatrice de Sorena"
+                  fill
+                  sizes="120px"
+                />
+              </span>
+            </span>
+            <div className="fondatrice-id">
+              <span className="fondatrice-name">
+                Sofya
+                <svg className="fondatrice-verified" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="11" fill="currentColor" />
+                  <path
+                    d="M7 12.4l3.1 3.1L17 8"
+                    fill="none"
+                    stroke="#3e0106"
+                    strokeWidth="2.3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <a
+                className="fondatrice-handle"
+                href="https://www.instagram.com/sorena_esthetic"
+                target="_blank"
+                rel="noopener"
+              >
+                @sorena_esthetic
+              </a>
+              <span className="fondatrice-bio">Fondatrice de Sorena</span>
+            </div>
+          </div>
 
-          <div className="fondatrice-text">
-            <p className="fondatrice-lead">
-              Moi, c’est Sofya. Et je ne travaille que pour des femmes qui ont
-              tout donné pour leur centre.
-            </p>
+          <div className="fondatrice-note">
             <p>
-              Mon métier, c’est le marketing digital : ramener les bonnes
-              personnes vers les bonnes mains. Et l’esthétique, je ne l’ai pas
-              choisie au hasard. C’est un monde que je connais de l’intérieur,
-              dont je suis moi-même cliente, et dont j’ai vu les coulisses de
-              près. Je sais ce qu’il s’y joue, et ce qu’il en coûte de tenir un
-              centre.
+              Moi, c’est Sofya. Le marketing digital, c’est mon métier : amener
+              les bonnes personnes vers les bonnes mains. L’esthétique, c’est mon
+              monde. J’en suis cliente, j’en connais les coulisses.
             </p>
+
+            <blockquote className="fondatrice-quote">
+              Là où d’autres voient un marché, je vois des femmes. Parce que j’en
+              suis une.
+            </blockquote>
+
             <p>
-              Vous avez ouvert par passion. Pour ce moment où une cliente se
-              relève de votre table un peu plus belle, un peu plus sûre d’elle.
-              Pas pour brader vos soins, ni pour fixer un agenda qui se vide.
-            </p>
-            <p>
-              Là où d’autres voient un marché, je vois des femmes, parce que j’en
-              suis une. Je viens vous rendre <em>vos bonnes clientes</em>, et le
-              repos d’un esprit qui ne compte plus ses fins de mois.
+              Je viens vous rendre <em>vos bonnes clientes</em>, et votre liberté.
+              Ce n’est pas un service, c’est un engagement.
             </p>
           </div>
 
-          <p className="fondatrice-sign">Sofya</p>
-        </div>
-
-        <div className="fondatrice-art reveal">
-          <Image
-            src="/assets/fondatrice.jpg"
-            alt="Une main gantée tient une carte scellée d’un cachet de cire"
-            width={1178}
-            height={2055}
-            sizes="(max-width: 860px) 70vw, 460px"
-            className="fondatrice-img"
-          />
+          <p className="fondatrice-signoff">— Sofya</p>
         </div>
       </div>
     </section>

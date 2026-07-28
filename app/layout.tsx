@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { Instrument_Serif, Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
 
-// Polices auto-hébergées : zéro requête bloquante vers Google Fonts, pas de
-// FOUT, CLS réduit. Geist via le paquet officiel Vercel ; Instrument Serif
-// via next/font/google.
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument",
-  display: "swap",
-});
-
-// Serif raffiné pour le wordmark de marque (nav + footer).
+// Un seul serif couture pour tout : wordmark + titres. Cormorant Garamond,
+// élégant, contrasté, façon magazine — et x-height basse (rendu fin, pas
+// "énorme"). Geist (sans) via le paquet Vercel pour le corps et les labels.
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-cormorant",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -134,7 +126,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${GeistSans.variable} ${GeistMono.variable} ${instrumentSerif.variable} ${cormorant.variable}`}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}
     >
       <head>
         <script

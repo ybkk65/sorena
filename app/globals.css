@@ -203,9 +203,9 @@ section { position: relative; }
 
 .brand-name{
   font-family:var(--brand);
-  font-size:21px;
-  font-weight:400;
-  letter-spacing:.24em;
+  font-size:20px;
+  font-weight:300;
+  letter-spacing:.28em;
   text-transform:uppercase;
   color:var(--bordeaux-night);
 }
@@ -548,7 +548,7 @@ section { position: relative; }
 /* ============================================
    SECTION PRIMITIVES
 ============================================ */
-.section { padding-block: clamp(72px, 8.5vw, 120px); }
+.section { padding-block: clamp(92px, 10.5vw, 156px); }
 .section-light { background: var(--off-white); color: var(--bordeaux-night); }
 .section-dark { background: var(--bordeaux); color: var(--off-white); }
 .section-deep { background: var(--bordeaux-night); color: var(--off-white); }
@@ -1295,7 +1295,7 @@ section { position: relative; }
   .stat-label { font-size: 12px; }
   .hero-monogram { right: -40%; opacity: 0.07; width: 110vw; }
 
-  .section { padding-block: 72px; }
+  .section { padding-block: 84px; }
   .section-head { grid-template-columns: 1fr; gap: 20px; margin-bottom: 40px; }
   .section-title { font-size: clamp(34px, 9vw, 48px); line-height: 1.02; }
   .section-desc { font-size: 15px; line-height: 1.6; }
@@ -3159,8 +3159,8 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 .section-head-v2 {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-bottom: clamp(40px, 5vw, 64px);
+  gap: 20px;
+  margin-bottom: clamp(48px, 6vw, 84px);
   max-width: none;
 }
 .section-head-v2 .kicker { font-family: var(--mono); }

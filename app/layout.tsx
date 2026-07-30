@@ -9,7 +9,7 @@ const SITE_URL = "https://www.sorenaagency.com";
 // contraste modéré (pas "épais" comme un Didone), belle italique littéraire.
 const newsreader = Newsreader({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["300", "400", "500"],
   style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",

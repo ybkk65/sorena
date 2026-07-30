@@ -2,32 +2,32 @@ import { Arrow } from "./Arrow";
 
 const QUESTIONS = [
   {
-    q: "En quoi vous êtes différents des autres agences ?",
-    a: "Les autres vous livrent du volume : des leads, des chasseuses de promo, des no-shows. Nous, on vous amène les bonnes : qualifiées, à plein tarif, qui se présentent, via une offre de valeur et jamais une braderie. Le résultat que vous cherchez, sans cramer votre image.",
+    q: "En quoi êtes-vous différents des autres agences ?",
+    a: "La plupart livrent du volume : des contacts froids, des chercheuses de promotion, des rendez-vous manqués. Nous vous adressons les bonnes clientes — qualifiées, au juste prix, présentes — par une offre de valeur, jamais par la remise. Le résultat, sans jamais compromettre votre image.",
   },
   {
-    q: "J'ai déjà essayé la pub (ou une agence), sans résultat.",
-    a: "Le problème vient rarement de la pub, mais de ce qui se passe après le premier message : répondre vite, qualifier, relancer, garantir la présence. C'est précisément là qu'on travaille, là où les autres vous lâchent.",
+    q: "J'ai déjà essayé la publicité, ou une agence, sans résultat.",
+    a: "Le problème vient rarement de la publicité, mais de ce qui suit le premier message : répondre vite, qualifier, relancer, garantir la présence. C'est précisément là que nous intervenons, là où les autres s'arrêtent.",
   },
   {
-    q: "Est-ce que ça marche dans ma ville ?",
-    a: "Oui, des clientes prêtes à payer pour de beaux soins, il y en a partout. Ce qui compte, c'est l'offre et le ciblage, pas la taille de la ville. On vérifie votre zone précisément au diagnostic avant de s'engager.",
+    q: "Est-ce que cela fonctionne dans ma ville ?",
+    a: "Oui. Une clientèle prête à investir dans de beaux soins existe partout. Ce qui compte, c'est l'offre et le ciblage, non la taille de la ville. Nous étudions votre zone précisément lors du diagnostic, avant tout engagement.",
   },
   {
-    q: "Je ne suis pas marketeuse et je n'ai pas le temps de gérer ça.",
-    a: "Justement, vous ne gérez rien. On installe le système et on le fait tourner : pub, qualification, relances, acompte. De votre côté, vous voyez les bonnes clientes arriver dans votre agenda et vous faites vos soins.",
+    q: "Je ne suis pas marketeuse et je n'ai pas le temps de gérer cela.",
+    a: "C'est précisément notre rôle : vous ne gérez rien. Nous installons le système et le faisons vivre — publicité, qualification, relances, acompte. De votre côté, vous voyez les bonnes clientes arriver, et vous vous consacrez à vos soins.",
   },
   {
-    q: "Combien ça coûte ?",
-    a: "On en parle sans détour au diagnostic, aucun tarif caché, et le diagnostic est offert. Ce qui coûte vraiment cher, c'est un agenda à moitié vide et des cures bradées mois après mois.",
+    q: "Combien cela coûte-t-il ?",
+    a: "Nous en parlons ouvertement lors du diagnostic, sans tarif caché — et le diagnostic est offert. Ce qui coûte vraiment cher, c'est un agenda à moitié vide et des cures bradées, mois après mois.",
   },
   {
-    q: "Vous travaillez avec d'autres centres de ma zone ?",
-    a: "Non. Un seul centre par zone, rayon 10 km. Quand on s'engage avec vous, vos concurrentes locales n'ont pas accès au même système, vous n'investissez pas pour armer la boutique d'en face.",
+    q: "Travaillez-vous avec d'autres centres de ma zone ?",
+    a: "Non. Une seule maison par zone, dans un rayon de 10 km. Lorsque nous nous engageons à vos côtés, vos concurrentes n'ont pas accès au même système. Votre investissement reste le vôtre.",
   },
   {
     q: "Comment vous engagez-vous sur les résultats ?",
-    a: "On continue de travailler sans frais supplémentaires jusqu'à atteindre les objectifs fixés ensemble. On ne gagne que si vous gagnez, c'est aussi pour ça qu'on ne prend que les centres pour lesquels on est convaincus d'y arriver.",
+    a: "Nous poursuivons notre travail, sans frais supplémentaires, jusqu'à atteindre les objectifs fixés ensemble. Nous ne réussissons que si vous réussissez — c'est pourquoi nous ne retenons que les maisons pour lesquelles nous sommes convaincus d'y parvenir.",
   },
 ];
 
@@ -40,11 +40,11 @@ export function Faq() {
             className="kicker"
             style={{ color: "var(--bordeaux-warm)" }}
           >
-            FAQ
+            QUESTIONS FRÉQUENTES
           </span>
 
           <h2 className="section-title">
-            Vos questions, <em>avant qu&apos;on se parle.</em>
+            Vos questions, <em>avant de nous rencontrer.</em>
           </h2>
         </div>
 
@@ -57,8 +57,8 @@ export function Faq() {
               </h3>
 
               <p>
-                Dites-nous où vous en êtes avec votre centre, vos cures et votre
-                agenda. On vous répond directement, sans langue de bois.
+                Dites-nous où vous en êtes — votre centre, vos cures, votre
+                agenda. Nous vous répondons personnellement.
               </p>
 
               <a
@@ -74,7 +74,7 @@ export function Faq() {
               </a>
 
               <a className="faq-call-link" href="#agenda">
-                Préférez réserver un appel direct →
+                Vous préférez un échange direct →
               </a>
 
             </div>

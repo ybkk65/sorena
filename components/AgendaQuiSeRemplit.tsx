@@ -56,9 +56,9 @@ export default function AgendaQuiSeRemplit() {
             <em>les bonnes clientes arrivent.</em>
           </h2>
           <p className="sub">
-            Des clientes qualifiées, qui paient plein tarif et qui se présentent,
-            tombent dans votre agenda. Sans que vous gériez chaque échange à la
-            main.
+            Des clientes qualifiées, qui paient le juste prix et se présentent,
+            prennent place dans votre agenda. Sans que vous gériez le moindre
+            échange.
           </p>
         </div>
 

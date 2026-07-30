@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { Arrow } from "./Arrow";
 
 const SECTIONS = [
-  { id: "methode", label: "La méthode" },
-  { id: "positionnement", label: "Pour qui ?" },
+  { id: "methode", label: "Le protocole" },
+  { id: "positionnement", label: "La sélection" },
   { id: "fondatrice", label: "La fondatrice" },
-  { id: "faq", label: "FAQ" },
+  { id: "faq", label: "Questions" },
 ];
 
 export function Nav() {

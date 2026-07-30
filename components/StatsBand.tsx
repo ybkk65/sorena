@@ -3,10 +3,10 @@
  * Différenciateurs honnêtes de Sorena, sur crème.
  */
 const STATS = [
-  { num: "7 jours", label: "Mise en place du système" },
+  { num: "7 jours", label: "Installation du protocole" },
   { num: "24/7", label: "Qualification par IA" },
-  { num: "1 / zone", label: "Un seul centre par secteur" },
-  { num: "Offert", label: "Diagnostic stratégique" },
+  { num: "1 / zone", label: "Une seule maison par secteur" },
+  { num: "Offert", label: "Votre premier diagnostic" },
 ];
 
 export function StatsBand() {

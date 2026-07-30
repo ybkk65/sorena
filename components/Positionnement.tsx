@@ -3,15 +3,15 @@ import { Arrow } from "./Arrow";
 const BLOCKS = [
   {
     label: "Pour vous si",
-    text: "Vous voulez des clientes qui paient plein tarif, qui reviennent, et un flux régulier, sans diluer votre image.",
+    text: "Vous cherchez une clientèle qui paie le juste prix et qui revient, un flux régulier, et une image préservée.",
   },
   {
-    label: "L'approche",
-    text: "Un bon système ne repose jamais que sur la pub. Il demande une offre claire, un parcours de rendez-vous solide et une vraie collaboration. On construit avec vous.",
+    label: "Notre exigence",
+    text: "Un système durable ne repose jamais sur la seule publicité. Il demande une offre claire, un parcours de réservation solide et une vraie collaboration. Nous le bâtissons avec vous.",
   },
   {
     label: "Pas pour vous si",
-    text: "Votre seul objectif est « plus de demandes » au volume, peu importe lesquelles. Là, dix agences font ça mieux que nous.",
+    text: "Vous cherchez du volume, peu importe la qualité. D'autres le feront mieux que nous.",
   },
 ];
 
@@ -38,10 +38,10 @@ export function Positionnement() {
         <div className="posi-split reveal">
           <div className="posi-head-col">
             <span className="kicker posi-eyebrow" style={{ color: "var(--bordeaux-warm)" }}>
-              POUR QUI
+              LA SÉLECTION
             </span>
             <h2 className="posi-h2">
-              On ne travaille pas avec <em>tous les centres.</em>
+              Nous ne travaillons pas avec <em>tous les centres.</em>
             </h2>
           </div>
 
@@ -62,8 +62,8 @@ export function Positionnement() {
 
         <div className="posi-foot reveal">
           <p className="posi-closing">
-            Si vous voulez les bonnes clientes plutôt que du volume, le diagnostic
-            offert est probablement votre prochaine étape.
+            Si vous préférez les bonnes clientes au volume, le diagnostic offert
+            est votre prochaine étape.
           </p>
           <a className="btn btn-dark posi-cta" href="#agenda">
             Réserver mon diagnostic offert

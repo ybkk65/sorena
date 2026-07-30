@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sorena · Acquisition de clientes pour centres esthétiques premium",
+    default: "Sorena · Acquisition de clientes pour centres esthétiques d'exception",
     template: "%s · Sorena",
   },
   description:
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   keywords: [
     "clientes qualifiées centre esthétique",
     "remplir agenda institut de beauté",
-    "acquisition clientes cures premium",
+    "acquisition clientes cures d'exception",
     "publicité Meta Instagram esthétique",
     "agence marketing centre esthétique",
     "qualification IA prise de rendez-vous",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sorena · Acquisition de clientes pour centres esthétiques premium",
+    title: "Sorena · Acquisition de clientes pour centres esthétiques d'exception",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures. Sans brader votre image.",
     url: SITE_URL,
@@ -66,13 +66,13 @@ export const metadata: Metadata = {
         url: "/assets/image_salon.jpg",
         width: 2000,
         height: 1090,
-        alt: "Sorena, les bonnes clientes pour les centres esthétiques premium",
+        alt: "Sorena, les bonnes clientes pour les centres esthétiques d'exception",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sorena · Acquisition de clientes pour centres esthétiques premium",
+    title: "Sorena · Acquisition de clientes pour centres esthétiques d'exception",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures.",
     images: ["/assets/image_salon.jpg"],
@@ -90,7 +90,7 @@ const jsonLd = {
       logo: `${SITE_URL}/assets/sorena-logo.png`,
       email: "contact@sorenaagency.com",
       description:
-        "Sorena installe le système qui fait venir les bonnes clientes pour les centres esthétiques premium : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
+        "Sorena installe le système qui fait venir les bonnes clientes pour les centres esthétiques d'exception : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
       sameAs: [
         "https://www.instagram.com/sorena_esthetic",
         "https://www.facebook.com/share/1P38aCKRgs/",
@@ -113,7 +113,7 @@ const jsonLd = {
       priceRange: "€€€",
       areaServed: "FR",
       description:
-        "Sorena fait venir les bonnes clientes pour les centres esthétiques premium : publicité ciblée (Meta, Instagram) et qualification par IA en coulisse, sans brader l'image du centre.",
+        "Sorena fait venir les bonnes clientes pour les centres esthétiques d'exception : publicité ciblée (Meta, Instagram) et qualification par IA en coulisse, sans brader l'image du centre.",
     },
   ],
 };

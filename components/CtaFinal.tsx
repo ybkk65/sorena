@@ -26,10 +26,10 @@ export function CtaFinal() {
           </h2>
 
           <p className="cta-desc">
-            On identifie ce qui empêche aujourd’hui les bonnes clientes de venir
-            jusqu’à vous, et on vous montre le levier concret pour y remédier.
-            Vous repartez avec une direction précise, applicable tout de suite,
-            même si on ne travaille pas ensemble.
+            Nous identifions ce qui empêche aujourd’hui les bonnes clientes de
+            venir jusqu’à vous, et nous vous montrons le levier concret pour y
+            remédier. Vous repartez avec une direction précise, applicable
+            immédiatement — même si nous ne travaillons pas ensemble.
           </p>
 
           <p className="cta-desc cta-desc-accent">
@@ -53,7 +53,7 @@ export function CtaFinal() {
             </li>
             <li>
               <span aria-hidden="true">2</span>
-              On analyse votre centre, votre marché et vos cures.
+              Nous étudions votre centre, votre marché et vos cures.
             </li>
             <li>
               <span aria-hidden="true">3</span>

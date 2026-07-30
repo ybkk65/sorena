@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section id="top" className="hero-split">
       <div className="hero-split-text">
-        <span className="hero-eyebrow">Acquisition · Centres esthétiques premium</span>
+        <span className="hero-eyebrow">Acquisition de clientèle · Centres esthétiques d&apos;exception</span>
 
         <h1 className="hero-split-title">
           Nous remplissons votre <em>agenda.</em>
@@ -14,9 +14,9 @@ export function Hero() {
         </h1>
 
         <p className="hero-split-sub">
-          Pendant que vous êtes en cabine, on attire les bonnes clientes, on les
-          relance et on les amène jusque dans votre agenda. Vous n&apos;avez plus
-          qu&apos;à les recevoir.
+          Pendant que vous êtes en cabine, nous attirons les bonnes clientes,
+          les accompagnons et les amenons jusqu&apos;à votre agenda. Vous
+          n&apos;avez plus qu&apos;à les recevoir.
         </p>
 
         <a className="hero-split-cta" href="#agenda">

@@ -16,8 +16,8 @@ export function Footer() {
               </div>
 
               <p>
-                Pour les centres esthétiques qui veulent un agenda rempli de
-                cures premium.
+                Pour les centres esthétiques d’exception qui veulent un agenda
+                rempli de belles clientes.
               </p>
 
               <div className="foot-socials">
@@ -51,11 +51,11 @@ export function Footer() {
             </div>
 
             <div className="foot-col">
-              <h4>Agence</h4>
+              <h4>La maison</h4>
               <ul>
-                <li><a href="#methode">La solution</a></li>
+                <li><a href="#methode">Le protocole</a></li>
                 <li><a href="#resultat">Le résultat</a></li>
-                <li><a href="#positionnement">Pour qui ?</a></li>
+                <li><a href="#positionnement">La sélection</a></li>
                 <li><a href="#agenda">Réserver mon diagnostic offert</a></li>
               </ul>
             </div>

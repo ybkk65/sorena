@@ -123,7 +123,7 @@ export default function AgendaQuiSeRemplit() {
           margin-top: clamp(44px, 5vw, 68px);
           background: rgba(244, 231, 223, 0.035);
           border: 1px solid rgba(244, 231, 223, 0.1);
-          border-radius: 16px;
+          border-radius: 4px;
           padding: clamp(22px, 3vw, 34px) clamp(22px, 3vw, 34px) clamp(20px, 2.6vw, 28px);
         }
         .card-head {
@@ -149,7 +149,7 @@ export default function AgendaQuiSeRemplit() {
           text-transform: uppercase; color: rgba(244, 231, 223, 0.4); padding-bottom: 6px;
         }
         .slot {
-          height: 46px; border-radius: 9px; display: flex;
+          height: 46px; border-radius: 2px; display: flex;
           align-items: center; justify-content: center; font-size: 13.5px;
         }
         .slot.empty { border: 1px solid rgba(244, 231, 223, 0.08); }
@@ -163,7 +163,7 @@ export default function AgendaQuiSeRemplit() {
           font-size: 12.5px; letter-spacing: 0.04em; color: rgba(244, 231, 223, 0.38);
         }
         @media (max-width: 640px) {
-          .card { padding: 18px 14px 16px; border-radius: 14px; }
+          .card { padding: 18px 14px 16px; border-radius: 4px; }
           .card-head { margin-bottom: 18px; flex-wrap: wrap; }
           /* Le calendrier tient dans l'écran : plus de scroll horizontal */
           .scroll { overflow-x: visible; }
@@ -171,7 +171,7 @@ export default function AgendaQuiSeRemplit() {
           .col { gap: 5px; }
           .day { font-size: 8.5px; letter-spacing: 0.06em; padding-bottom: 3px; }
           .slot {
-            height: 40px; border-radius: 8px; font-size: 10px;
+            height: 40px; border-radius: 2px; font-size: 10px;
             padding: 0 1px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
           }
         }

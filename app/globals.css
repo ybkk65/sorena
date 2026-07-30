@@ -102,11 +102,11 @@ section { position: relative; }
 .btn {
   position: relative;
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 26px;
-  border-radius: 999px;
+  padding: 16px 28px;
+  border-radius: 2px;
   font-family: var(--sans);
-  font-weight: 500; font-size: 14px;
-  letter-spacing: 0.005em;
+  font-weight: 500; font-size: 13.5px;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   transition: transform .4s cubic-bezier(.2,.8,.2,1), background .4s ease, color .4s ease, border-color .4s ease, box-shadow .4s ease;
   will-change: transform;
@@ -120,12 +120,10 @@ section { position: relative; }
 .btn-primary {
   background: var(--rose);
   color: var(--bordeaux-night);
-  box-shadow: 0 8px 28px rgba(240,200,192,.18), inset 0 0 0 1px rgba(255,255,255,.4);
 }
 .btn-primary:hover {
   background: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(240,200,192,.28), inset 0 0 0 1px rgba(255,255,255,.6);
+  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -175,9 +173,9 @@ section { position: relative; }
   align-items:center;
   justify-content:space-between;
   gap: 24px;
-  max-width: 1320px;
+  max-width: var(--maxw);
   margin: 0 auto;
-  padding: 14px clamp(20px, 4vw, 56px);
+  padding: 14px var(--pad);
 }
 
 .brand{
@@ -752,7 +750,7 @@ section { position: relative; }
   position: relative;
   isolation: isolate;
   color: var(--off-white);
-  border-radius: 22px;
+  border-radius: 4px;
   padding: 34px;
   display: flex; flex-direction: column; gap: 16px;
   background: linear-gradient(158deg, rgba(31, 7, 13, 0.86) 0%, rgba(74, 22, 32, 0.72) 100%);
@@ -811,7 +809,7 @@ section { position: relative; }
 .faq-list { display: flex; flex-direction: column; gap: 8px; }
 .faq-item {
   border: 1px solid var(--line-on-light);
-  border-radius: 14px;
+  border-radius: 3px;
   background: var(--white);
   transition: border-color .3s, background .3s;
   overflow: hidden;
@@ -893,7 +891,7 @@ section { position: relative; }
   background: rgba(50, 12, 20, 0.65);
   backdrop-filter: blur(12px);
   border: 1px solid var(--line-on-dark);
-  border-radius: 22px;
+  border-radius: 4px;
   padding: 40px;
   display: flex; flex-direction: column; gap: 18px;
   box-shadow: 0 24px 80px rgba(0,0,0,0.3);
@@ -1318,7 +1316,7 @@ section { position: relative; }
   .cta-inner { padding-block: 80px; gap: 40px; }
   .cta-h2 { font-size: clamp(40px, 11vw, 56px); }
   .cta-desc { font-size: 15.5px; margin-top: 22px; }
-  .cta-card { padding: 28px 24px; border-radius: 20px; }
+  .cta-card { padding: 28px 24px; border-radius: 4px; }
   .cta-card h3 { font-size: 26px; }
   .cta-card .row { font-size: 13.5px; }
   .cta-card .full-btn { padding: 18px; font-size: 14.5px; min-height: 56px; }
@@ -2304,7 +2302,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   gap: 8px;
   align-self: flex-start;
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: 2px;
   background: rgba(240,200,192,0.08);
   border: 1px solid var(--line-on-dark);
   font-family: var(--mono);
@@ -2453,7 +2451,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 }
 .cal-frame .cal-embed { min-height: 720px; }
 @media (max-width: 720px) {
-  .cal-frame { border-radius: 18px; }
+  .cal-frame { border-radius: 4px; }
   .cal-frame .cal-embed { min-height: 900px; }
 }
 .calendar-grid {
@@ -3923,7 +3921,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   padding: clamp(26px, 3vw, 38px) clamp(28px, 3.2vw, 44px);
   border: 1px solid rgba(74, 22, 32, 0.16);
   border-left: 2px solid var(--bordeaux-warm);
-  border-radius: 16px;
+  border-radius: 3px;
   background: rgba(92, 26, 38, 0.025);
 }
 .posi-closing {

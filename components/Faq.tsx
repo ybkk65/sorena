@@ -3,7 +3,7 @@ import { Arrow } from "./Arrow";
 const QUESTIONS = [
   {
     q: "En quoi êtes-vous différents des autres agences ?",
-    a: "La plupart livrent du volume : des contacts froids, des chercheuses de promotion, des rendez-vous manqués. Nous vous adressons les bonnes clientes — qualifiées, au juste prix, présentes — par une offre de valeur, jamais par la remise. Le résultat, sans jamais compromettre votre image.",
+    a: "La plupart livrent du volume : des contacts froids, des chercheuses de promotion, des rendez-vous manqués. Nous vous adressons les bonnes clientes, qualifiées, au juste prix et présentes, par une offre de valeur, jamais par la remise. Le résultat, sans jamais compromettre votre image.",
   },
   {
     q: "J'ai déjà essayé la publicité, ou une agence, sans résultat.",
@@ -15,11 +15,11 @@ const QUESTIONS = [
   },
   {
     q: "Je ne suis pas marketeuse et je n'ai pas le temps de gérer cela.",
-    a: "C'est précisément notre rôle : vous ne gérez rien. Nous installons le système et le faisons vivre — publicité, qualification, relances, acompte. De votre côté, vous voyez les bonnes clientes arriver, et vous vous consacrez à vos soins.",
+    a: "C'est précisément notre rôle : vous ne gérez rien. Nous installons le système et le faisons vivre : publicité, qualification, relances, acompte. De votre côté, vous voyez les bonnes clientes arriver, et vous vous consacrez à vos soins.",
   },
   {
     q: "Combien cela coûte-t-il ?",
-    a: "Nous en parlons ouvertement lors du diagnostic, sans tarif caché — et le diagnostic est offert. Ce qui coûte vraiment cher, c'est un agenda à moitié vide et des cures bradées, mois après mois.",
+    a: "Nous en parlons ouvertement lors du diagnostic, sans tarif caché, et le diagnostic est offert. Ce qui coûte vraiment cher, c'est un agenda à moitié vide et des cures bradées, mois après mois.",
   },
   {
     q: "Travaillez-vous avec d'autres centres de ma zone ?",
@@ -27,7 +27,7 @@ const QUESTIONS = [
   },
   {
     q: "Comment vous engagez-vous sur les résultats ?",
-    a: "Nous poursuivons notre travail, sans frais supplémentaires, jusqu'à atteindre les objectifs fixés ensemble. Nous ne réussissons que si vous réussissez — c'est pourquoi nous ne retenons que les maisons pour lesquelles nous sommes convaincus d'y parvenir.",
+    a: "Nous poursuivons notre travail, sans frais supplémentaires, jusqu'à atteindre les objectifs fixés ensemble. Nous ne réussissons que si vous réussissez ; c'est pourquoi nous ne retenons que les maisons pour lesquelles nous sommes convaincus d'y parvenir.",
   },
 ];
 
@@ -57,7 +57,7 @@ export function Faq() {
               </h3>
 
               <p>
-                Dites-nous où vous en êtes — votre centre, vos cures, votre
+                Dites-nous où vous en êtes : votre centre, vos cures, votre
                 agenda. Nous vous répondons personnellement.
               </p>
 

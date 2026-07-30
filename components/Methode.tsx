@@ -6,7 +6,7 @@ import { Arrow } from "./Arrow";
 const NODES = [
   {
     word: "Attirer par la valeur",
-    cap: "Des campagnes ciblées dans votre zone, portées par une invitation de valeur — un bilan, une première consultation — jamais une promotion qui dévalue vos soins. Vous attirez sans jamais brader.",
+    cap: "Des campagnes ciblées dans votre zone, portées par une invitation de valeur (un bilan, une première consultation), jamais une promotion qui dévalue vos soins. Vous attirez sans jamais brader.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M5 4v6a7 7 0 0 0 14 0V4" />

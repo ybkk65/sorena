@@ -29,7 +29,7 @@ export function CtaFinal() {
             Nous identifions ce qui empêche aujourd’hui les bonnes clientes de
             venir jusqu’à vous, et nous vous montrons le levier concret pour y
             remédier. Vous repartez avec une direction précise, applicable
-            immédiatement — même si nous ne travaillons pas ensemble.
+            immédiatement, même si nous ne travaillons pas ensemble.
           </p>
 
           <p className="cta-desc cta-desc-accent">

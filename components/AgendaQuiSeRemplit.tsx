@@ -131,7 +131,7 @@ export default function AgendaQuiSeRemplit() {
           margin-bottom: clamp(20px, 2.6vw, 28px); gap: 16px;
         }
         .card-head h3 {
-          font-family: var(--display); font-weight: 500;
+          font-family: var(--display); font-weight: 400;
           font-size: clamp(18px, 2vw, 22px); color: #f4e7df; letter-spacing: -0.005em;
         }
         .badge {

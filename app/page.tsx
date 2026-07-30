@@ -12,7 +12,6 @@ import { Positionnement } from "@/components/Positionnement";
 import { Probleme } from "@/components/Probleme";
 import { SiteEffects } from "@/components/SiteEffects";
 import { Methode } from "@/components/Methode";
-import { Confiance } from "@/components/Confiance";
 import { StatsBand } from "@/components/StatsBand";
 
 export default function Page() {
@@ -21,8 +20,6 @@ export default function Page() {
       <Nav />
       {/* 1. Hero — qu'est-ce que vous faites ? */}
       <Hero />
-      {/* Bande confiance — spécialités accompagnées (façon "trusted by") */}
-      <Confiance />
       {/* Barre défilante des soins — permet aux centres de s'identifier */}
       <Marquee />
       {/* 2. Le problème — est-ce que vous comprenez ma situation ? */}

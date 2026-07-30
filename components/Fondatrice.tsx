@@ -1,79 +1,41 @@
 import Image from "next/image";
 
 /**
- * Section — La fondatrice (Sofya).
- * Carte profil facon Instagram (avatar rond + lisere, nom + verifie + @handle
- * + bio) puis note editoriale courte et exergue. Rendu magazine / agence.
- * Styles dans globals.css (.fondatrice-*).
- *
- * Avatar : placeholder tant que /assets/sofya.jpg n'est pas fourni. Une fois la
- * photo depos ee, remplacer <span class="fondatrice-avatar-ph"> par :
- *   <Image src="/assets/sofya.jpg" alt="Sofya, fondatrice de Sorena" fill sizes="96px" />
+ * Section fondatrice — éditoriale : portrait + une phrase forte + signature.
+ * Fini la carte "profil Insta". Le portrait utilise sofya.jpg (placeholder
+ * esthéticienne pour l'instant, à remplacer par un vrai portrait de Sofya).
  */
 export function Fondatrice() {
   return (
-    <section id="fondatrice" className="fondatrice-section">
-      <div className="wrap">
-        <div className="fondatrice-inner reveal">
-          <span className="kicker fondatrice-kicker">LA FONDATRICE</span>
+    <section id="fondatrice" className="founder">
+      <div className="wrap founder-grid">
+        <div className="founder-portrait reveal">
+          <Image
+            src="/assets/sofya.jpg"
+            alt="Sofya, fondatrice de Sorena"
+            width={560}
+            height={700}
+            sizes="(max-width: 860px) 78vw, 460px"
+          />
+        </div>
 
-          <div className="fondatrice-card">
-            <span className="fondatrice-avatar">
-              <span className="fondatrice-avatar-inner">
-                <Image
-                  src="/assets/sofya.jpg"
-                  alt="Sofya, fondatrice de Sorena"
-                  fill
-                  sizes="120px"
-                />
-              </span>
-            </span>
-            <div className="fondatrice-id">
-              <span className="fondatrice-name">
-                Sofya
-                <svg className="fondatrice-verified" viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="12" r="11" fill="currentColor" />
-                  <path
-                    d="M7 12.4l3.1 3.1L17 8"
-                    fill="none"
-                    stroke="#3e0106"
-                    strokeWidth="2.3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <a
-                className="fondatrice-handle"
-                href="https://www.instagram.com/sorena_esthetic"
-                target="_blank"
-                rel="noopener"
-              >
-                @sorena_esthetic
-              </a>
-              <span className="fondatrice-bio">Fondatrice de Sorena</span>
-            </div>
-          </div>
+        <div className="founder-body reveal">
+          <span className="kicker founder-kicker">La fondatrice</span>
 
-          <div className="fondatrice-note">
-            <p>
-              Moi, c’est Sofya. Le marketing digital, c’est mon métier : amener
-              les bonnes personnes vers les bonnes mains. L’esthétique, c’est mon
-              monde. J’en suis cliente, j’en connais les coulisses.
-            </p>
+          <p className="founder-statement">
+            Là où d’autres voient un marché, je vois des femmes. Parce que j’en
+            suis une.
+          </p>
 
-            <blockquote className="fondatrice-quote">
-              Là où d’autres voient un marché, je vois des femmes. Parce que j’en
-              suis une.
-            </blockquote>
+          <p className="founder-bio">
+            Moi, c’est Sofya. Le marketing, c’est mon métier ; l’esthétique, mon
+            monde. Je viens vous rendre vos bonnes clientes, et votre liberté.
+          </p>
 
-            <p>
-              Je viens vous rendre <em>vos bonnes clientes</em>, et votre liberté.
-              Ce n’est pas un service, c’est un engagement.
-            </p>
-          </div>
-
-          <p className="fondatrice-signoff">— Sofya</p>
+          <p className="founder-sign">
+            Sofya
+            <span>Fondatrice de Sorena</span>
+          </p>
         </div>
       </div>
     </section>

@@ -11,11 +11,11 @@ export function Fondatrice() {
       <div className="wrap founder-grid">
         <div className="founder-portrait reveal">
           <Image
-            src="/assets/sofya.jpg"
+            src="/assets/sofya-full.jpg"
             alt="Sofya, fondatrice de Sorena"
-            width={560}
-            height={700}
-            sizes="(max-width: 860px) 78vw, 460px"
+            width={736}
+            height={1308}
+            sizes="(max-width: 860px) 82vw, 400px"
           />
         </div>
 

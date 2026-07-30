@@ -27,8 +27,8 @@
   --mono: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 
   /* Layout */
-  --maxw: 1320px;
-  --pad: clamp(20px, 4vw, 56px);
+  --maxw: 1180px;
+  --pad: clamp(22px, 5vw, 88px);
 
   /* Lines */
   --line-on-dark: rgba(240, 200, 192, 0.14);
@@ -1353,9 +1353,9 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 }
 .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.24em; }
 
-.section-title { font-size: clamp(38px, 5.2vw, 78px); line-height: 1.0; }
+.section-title { font-size: clamp(32px, 3.8vw, 54px); line-height: 1.0; }
 .section-title em { font-style: italic; }
-.cta-h2 { font-size: clamp(44px, 6.5vw, 88px); line-height: 1.0; }
+.cta-h2 { font-size: clamp(34px, 4.2vw, 56px); line-height: 1.0; }
 
 /* ============================================
    NAV v2 — burger + dot
@@ -2399,7 +2399,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 .calendar-head .kicker { color: var(--bordeaux-warm); }
 .calendar-title {
   font-family: var(--display);
-  font-size: clamp(40px, 5.5vw, 72px);
+  font-size: clamp(32px, 3.9vw, 50px);
   line-height: 0.98;
   letter-spacing: -0.025em;
   color: var(--bordeaux-night);
@@ -3853,7 +3853,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   max-width: 13ch;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(36px, 4.8vw, 62px);
+  font-size: clamp(30px, 3.5vw, 48px);
   line-height: 1.04;
   letter-spacing: -0.018em;
   color: var(--bordeaux-night);
@@ -3996,7 +3996,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(30px, 3.6vw, 52px);
+  font-size: clamp(26px, 2.8vw, 40px);
   line-height: 1.12;
   letter-spacing: -0.015em;
   color: var(--off-white, #f6ecdc);
@@ -4049,7 +4049,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(36px, 5.2vw, 68px);
+  font-size: clamp(30px, 3.7vw, 50px);
   line-height: 1.04;
   letter-spacing: -0.015em;
   color: var(--bordeaux-night);
@@ -4252,7 +4252,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(32px, 4.4vw, 56px);
+  font-size: clamp(28px, 3.3vw, 44px);
   line-height: 1.08;
   letter-spacing: -0.015em;
   color: var(--off-white);
@@ -4410,7 +4410,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   margin-top: 18px;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(42px, 5.1vw, 76px);
+  font-size: clamp(32px, 3.6vw, 52px);
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--bordeaux-night);
@@ -4717,7 +4717,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(40px, 4.6vw, 74px);
+  font-size: clamp(34px, 3.5vw, 56px);
   line-height: 1.05;
   letter-spacing: -0.012em;
   color: var(--bordeaux-night);
@@ -4881,7 +4881,7 @@ h1 em, h2 em, h3 em, h4 em,
 .stat-num {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(34px, 4vw, 58px);
+  font-size: clamp(28px, 3vw, 44px);
   line-height: 1;
   letter-spacing: -0.015em;
   color: var(--bordeaux-night);

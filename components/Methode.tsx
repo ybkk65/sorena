@@ -35,7 +35,7 @@ const NODES = [
   },
   {
     word: "Convertir & préserver",
-    cap: "Relances au bon moment orchestrées par notre IA, acompte à la réservation pour garantir la présence, ton premium et humain fidèle à votre image. Vous gardez la main dès que ça compte.",
+    cap: "Relances au bon moment orchestrées par notre IA, acompte à la réservation pour garantir la présence, un ton premium et humain fidèle à votre image. Vous gardez la main dès que ça compte.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />

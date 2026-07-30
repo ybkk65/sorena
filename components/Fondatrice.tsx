@@ -28,8 +28,9 @@ export function Fondatrice() {
           </p>
 
           <p className="founder-bio">
-            Moi, c’est Sofya. Le marketing, c’est mon métier ; l’esthétique, mon
-            monde. Je viens vous rendre vos bonnes clientes, et votre liberté.
+            Moi, c’est Sofya. Le digital est mon métier, l’esthétique mon monde,
+            dont je suis cliente. Je ne remplis pas les agendas au volume : je
+            vous ramène les bonnes clientes, celles qui paient et qui reviennent.
           </p>
 
           <p className="founder-sign">

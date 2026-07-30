@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Hanken_Grotesk } from "next/font/google";
+import { Newsreader, Hanken_Grotesk } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
 
-// Serif couture pour wordmark + titres : Bodoni Moda, Didone haute-contraste
-// façon maison de mode (masthead magazine). Distinctif, luxe affirmé.
-const bodoni = Bodoni_Moda({
+// Serif éditorial pour wordmark + titres : Newsreader. Jambages fins,
+// contraste modéré (pas "épais" comme un Didone), belle italique littéraire.
+const newsreader = Newsreader({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
@@ -132,7 +132,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${hanken.variable} ${bodoni.variable}`}
+      className={`${hanken.variable} ${newsreader.variable}`}
     >
       <head>
         <script

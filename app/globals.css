@@ -19,8 +19,8 @@
   --white: #fdf9f3;
 
   /* Type */
-  --display: var(--font-display), "Bodoni Moda", "Didot", "Times New Roman", serif;
-  --brand: var(--font-display), "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --display: var(--font-display), "Newsreader", Georgia, "Times New Roman", serif;
+  --brand: var(--font-display), "Newsreader", Georgia, "Times New Roman", serif;
   --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   /* Labels/kickers : sans raffiné tracké (plus de monospace "code / vibe-codé").
      Le token garde son nom pour éviter une refonte, mais pointe vers le sans. */
@@ -3964,7 +3964,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: clamp(36px, 6vw, 96px);
-  align-items: center;
+  align-items: start;
 }
 .founder-portrait {
   position: relative;
@@ -3986,7 +3986,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 .founder-body {
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 3vw, 36px);
+  gap: clamp(18px, 2vw, 24px);
   max-width: 620px;
 }
 .founder-kicker { color: var(--rose); display: inline-flex; }
@@ -4009,7 +4009,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   color: rgba(244, 230, 216, 0.78);
 }
 .founder-sign {
-  margin: 0;
+  margin: clamp(8px, 1.4vw, 16px) 0 0;
   display: flex;
   flex-direction: column;
   gap: 5px;

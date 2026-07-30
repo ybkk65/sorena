@@ -22,16 +22,28 @@ export function Fondatrice() {
         <div className="founder-body reveal">
           <span className="kicker founder-kicker">La fondatrice</span>
 
-          <p className="founder-statement">
-            Là où d’autres voient un marché, je vois des femmes. Parce que j’en
-            suis une.
+          <p className="founder-statement">Moi, c’est Sofya.</p>
+
+          <p className="founder-bio">
+            J’aurais pu monter cette agence pour n’importe qui. Je l’ai montée
+            pour les centres, les cliniques et les cabinets esthétiques. Rien
+            d’autre.
           </p>
 
           <p className="founder-bio">
-            Moi, c’est Sofya. Le digital est mon métier ; l’esthétique, mon
-            monde, dont je suis cliente. Je ne remplis pas les agendas au
-            volume. Je vous adresse les bonnes clientes, celles qui paient et
-            qui reviennent.
+            J’ai été cliente avant d’être prestataire. Ce que vous rendez à une
+            femme, ce n’est pas un soin : c’est la façon dont elle se regardera
+            demain matin.
+          </p>
+
+          <p className="founder-bio">
+            On vous vend pourtant du volume, des coûts par lead, des taux de
+            clic. Comme si votre travail tenait dans une colonne de tableur.
+          </p>
+
+          <p className="founder-bio">
+            Je ne vous amène pas du monde. Je vous amène les femmes qui viennent
+            pour vous, et qui reviennent.
           </p>
 
           <p className="founder-sign">

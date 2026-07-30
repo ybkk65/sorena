@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Hanken_Grotesk } from "next/font/google";
+import { Bodoni_Moda, Hanken_Grotesk } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
 
-// Serif couture pour wordmark + titres : Cormorant Garamond, élégant,
-// contrasté, façon magazine, x-height basse (rendu fin, pas "énorme").
-const cormorant = Cormorant_Garamond({
+// Serif couture pour wordmark + titres : Bodoni Moda, Didone haute-contraste
+// façon maison de mode (masthead magazine). Distinctif, luxe affirmé.
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
@@ -132,7 +132,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${hanken.variable} ${cormorant.variable}`}
+      className={`${hanken.variable} ${bodoni.variable}`}
     >
       <head>
         <script

@@ -19,8 +19,8 @@
   --white: #fdf9f3;
 
   /* Type */
-  --display: var(--font-display), "Cormorant Garamond", "Times New Roman", serif;
-  --brand: var(--font-display), "Cormorant Garamond", "Times New Roman", serif;
+  --display: var(--font-display), "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --brand: var(--font-display), "Bodoni Moda", "Didot", "Times New Roman", serif;
   --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   /* Labels/kickers : sans raffiné tracké (plus de monospace "code / vibe-codé").
      Le token garde son nom pour éviter une refonte, mais pointe vers le sans. */

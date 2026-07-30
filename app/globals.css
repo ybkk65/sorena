@@ -21,10 +21,10 @@
   /* Type */
   --display: var(--font-display), "Cormorant Garamond", "Times New Roman", serif;
   --brand: var(--font-display), "Cormorant Garamond", "Times New Roman", serif;
-  --sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   /* Labels/kickers : sans raffiné tracké (plus de monospace "code / vibe-codé").
      Le token garde son nom pour éviter une refonte, mais pointe vers le sans. */
-  --mono: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --mono: var(--font-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 
   /* Layout */
   --maxw: 1180px;

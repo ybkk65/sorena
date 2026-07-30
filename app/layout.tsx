@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond, Hanken_Grotesk } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
 
-// Un seul serif couture pour tout : wordmark + titres. Cormorant Garamond,
-// élégant, contrasté, façon magazine — et x-height basse (rendu fin, pas
-// "énorme"). Geist (sans) via le paquet Vercel pour le corps et les labels.
+// Serif couture pour wordmark + titres : Cormorant Garamond, élégant,
+// contrasté, façon magazine, x-height basse (rendu fin, pas "énorme").
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-display",
+  display: "swap",
+});
+
+// Corps + labels : Hanken Grotesk. Grotesque raffiné et chaleureux, plus
+// signé qu'un Geist/Inter générique — casse le rendu "template IA".
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -126,7 +132,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}
+      className={`${hanken.variable} ${cormorant.variable}`}
     >
       <head>
         <script

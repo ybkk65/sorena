@@ -4802,64 +4802,21 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
 .hero-split-media img { object-fit: cover; }
 
 @media (max-width: 900px) {
-  /* Hero mobile immersif : image plein écran + texte en surimpression bas.
-     Première impression "waouh" au lieu d'un simple empilement texte/image. */
-  .hero-split {
-    position: relative;
-    grid-template-columns: 1fr;
-    min-height: 100svh;
-    background: var(--bordeaux-night);
-  }
-  .hero-split-media {
-    position: absolute;
-    inset: 0;
-    order: 0;
-    min-height: 0;
-    height: 100%;
-    z-index: 0;
-  }
-  .hero-split-media img { object-position: 58% 50%; }
-  /* Dégradé pour la lisibilité du texte clair sur l'image */
-  .hero-split-media::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(20, 6, 10, 0.32) 0%,
-      rgba(20, 6, 10, 0.10) 24%,
-      rgba(20, 6, 10, 0.38) 48%,
-      rgba(20, 6, 10, 0.72) 74%,
-      rgba(20, 6, 10, 0.94) 100%
-    );
-  }
+  /* Hero mobile = desktop adapté : texte foncé sur crème (ultra lisible) en
+     haut, puis l'image en dessous. Empilement du split desktop. */
+  .hero-split { grid-template-columns: 1fr; min-height: 0; }
   .hero-split-text {
-    position: relative;
-    z-index: 2;
     order: 1;
-    justify-content: flex-end;
-    min-height: 100svh;
-    gap: 20px;
-    padding: clamp(110px, 18vh, 160px) 24px calc(104px + env(safe-area-inset-bottom, 0px));
+    justify-content: flex-start;
+    gap: clamp(18px, 4vw, 26px);
+    padding: clamp(104px, 15vh, 132px) 24px clamp(40px, 7vh, 56px);
   }
-  .hero-eyebrow { color: var(--rose); }
-  .hero-split-title {
-    color: var(--off-white);
-    font-size: clamp(34px, 9.2vw, 50px);
-    line-height: 1.08;
+  .hero-split-title { font-size: clamp(32px, 8.6vw, 46px); }
+  .hero-split-media {
+    order: 2;
+    min-height: 62svh;
+    border-top: 1px solid rgba(74, 22, 32, 0.08);
   }
-  .hero-split-title em { color: var(--rose); }
-  .hero-split-sub {
-    color: var(--off-white);
-    opacity: 0.86;
-    max-width: 34ch;
-  }
-  .hero-split-cta {
-    color: var(--off-white);
-    border-color: rgba(246, 239, 230, 0.6);
-    font-size: 15px;
-  }
-  .hero-split-cta:hover { color: var(--rose); border-color: var(--rose); }
 }
 
 /* ---- Nav : version claire pleine largeur (burger + menu mobile) ---- */

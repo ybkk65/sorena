@@ -19,8 +19,8 @@
   --white: #fdf9f3;
 
   /* Type */
-  --display: var(--font-display), "EB Garamond", Georgia, "Times New Roman", serif;
-  --brand: var(--font-display), "EB Garamond", Georgia, "Times New Roman", serif;
+  --display: var(--font-display), "Jost", "Futura", "Century Gothic", sans-serif;
+  --brand: var(--font-display), "Jost", "Futura", "Century Gothic", sans-serif;
   --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   /* Labels/kickers : sans raffiné tracké (plus de monospace "code / vibe-codé").
      Le token garde son nom pour éviter une refonte, mais pointe vers le sans. */
@@ -202,10 +202,10 @@ section { position: relative; }
 }
 
 .brand-name{
-  font-family:var(--sans);
-  font-size:18px;
+  font-family:var(--brand);
+  font-size:19px;
   font-weight:300;
-  letter-spacing:.34em;
+  letter-spacing:.36em;
   text-transform:uppercase;
   color:var(--bordeaux-night);
 }

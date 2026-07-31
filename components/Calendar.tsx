@@ -74,11 +74,12 @@ export function Calendar() {
     if (target && target.childElementCount === 0) {
       ns("inline", {
         elementOrSelector: `#${CAL_ELEMENT_ID}`,
-        config: { layout: "month_view" },
+        config: { layout: "month_view", theme: "light" },
         calLink: CAL_LINK,
       });
 
       ns("ui", {
+        theme: "light",
         hideEventTypeDetails: false,
         layout: "month_view",
         cssVarsPerTheme: { light: { "cal-brand": "#4a1620" } },

@@ -98,7 +98,7 @@ const jsonLd = {
       description:
         "Sorena installe le système qui fait venir les bonnes clientes pour les centres esthétiques d'exception : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
       sameAs: [
-        "https://www.instagram.com/sorena_esthetic",
+        "https://www.instagram.com/sorenaa.agency/",
         "https://www.facebook.com/share/1P38aCKRgs/",
       ],
     },

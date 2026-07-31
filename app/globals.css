@@ -4558,8 +4558,8 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 0.01em;
-    color: var(--bordeaux-night);
-    background: var(--rose);
+    color: var(--off-white);
+    background: var(--bordeaux);
     box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.28);
 
     transform: translateY(0);
@@ -4572,7 +4572,7 @@ body { font-family: var(--sans); letter-spacing: -0.005em; font-feature-settings
   }
 
   .mobile-cta:active {
-    background: var(--rose-deep);
+    background: var(--bordeaux-night);
   }
 
   .mobile-cta-icon {

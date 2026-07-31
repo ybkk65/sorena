@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Hanken_Grotesk } from "next/font/google";
+import { EB_Garamond, Hanken_Grotesk, Cormorant_Garamond } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
@@ -12,6 +12,14 @@ const garamond = EB_Garamond({
   weight: ["400", "500"],
   style: ["normal", "italic"],
   variable: "--font-display",
+  display: "swap",
+});
+
+// Serif ultra-fin (poids 300) réservé au grand "Sorena" décoratif du footer.
+const cormorantThin = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300"],
+  variable: "--font-thin",
   display: "swap",
 });
 
@@ -135,7 +143,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${hanken.variable} ${garamond.variable}`}
+      className={`${hanken.variable} ${garamond.variable} ${cormorantThin.variable}`}
     >
       <head>
         <script

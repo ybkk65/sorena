@@ -1085,11 +1085,12 @@ section { position: relative; }
   padding-bottom: 0;
 }
 .foot-wordmark-text {
-  font-family: var(--display);
-  font-weight: 400; font-style: italic;
-  font-size: clamp(140px, 26vw, 460px);
+  /* Serif ultra-fin (Cormorant 300) : traits légers, plus aucun effet "gras". */
+  font-family: var(--font-thin), "Cormorant Garamond", var(--display);
+  font-weight: 300; font-style: italic;
+  font-size: clamp(150px, 27vw, 480px);
   line-height: 0.78;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--rose);
   opacity: 0.10;
   user-select: none;

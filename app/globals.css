@@ -54,6 +54,51 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+/* ============================================
+   BANDE IMAGE ÉDITORIALE — respiration pleine largeur
+============================================ */
+.editorial-band {
+  position: relative;
+  width: 100%;
+  height: clamp(440px, 66vh, 680px);
+  overflow: hidden;
+  background: var(--bordeaux-night);
+}
+.editorial-band-img { object-fit: cover; object-position: 62% 50%; }
+.editorial-band-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 6, 10, 0.06) 0%,
+    rgba(20, 6, 10, 0) 38%,
+    rgba(20, 6, 10, 0.16) 66%,
+    rgba(20, 6, 10, 0.62) 100%
+  );
+}
+.editorial-band-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: clamp(28px, 4vw, 56px) var(--pad);
+  max-width: 620px;
+  color: var(--off-white);
+}
+.editorial-band-caption .kicker { color: var(--rose); margin-bottom: 14px; }
+.editorial-band-caption p {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+@media (max-width: 640px) {
+  .editorial-band { height: clamp(380px, 58vh, 520px); }
+  .editorial-band-img { object-position: 66% 50%; }
+}
+
 /* Le clip horizontal est porté par la coque du contenu, PAS par body/html :
    sur iOS, un overflow sur body/html cale les position:fixed sur le document
    (la barre mobile "se détache" et flotte au milieu au scroll). La coque

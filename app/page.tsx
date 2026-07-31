@@ -10,6 +10,7 @@ import { MobileCta } from "@/components/MobileCta";
 import { Nav } from "@/components/Nav";
 import { Positionnement } from "@/components/Positionnement";
 import { Probleme } from "@/components/Probleme";
+import { EditorialImage } from "@/components/EditorialImage";
 import { SiteEffects } from "@/components/SiteEffects";
 import { Methode } from "@/components/Methode";
 import { StatsBand } from "@/components/StatsBand";
@@ -31,6 +32,8 @@ export default function Page() {
         <Probleme />
         {/* 3. La solution — qu'est-ce qui est différent dans votre système ? */}
         <Methode />
+        {/* Respiration éditoriale — image pleine largeur */}
+        <EditorialImage />
         {/* 4. L'outcome — à quoi ressemble le résultat ? */}
         <AgendaQuiSeRemplit />
         {/* Bande stats — grands chiffres différenciateurs */}

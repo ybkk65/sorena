@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Jost, Hanken_Grotesk } from "next/font/google";
+import { EB_Garamond, Hanken_Grotesk } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
 
-// Sans chic pour wordmark + titres : Jost. Sans géométrique élégant (esprit
-// Futura), fin et couture, distinct du grotesque Hanken du corps.
-const jost = Jost({
+// Serif fin et délicat pour wordmark + titres : EB Garamond. Traits légers,
+// old-style élégant, bien plus fin que Newsreader/Bodoni.
+const garamond = EB_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
 });
@@ -131,7 +132,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${hanken.variable} ${jost.variable}`}
+      className={`${hanken.variable} ${garamond.variable}`}
     >
       <head>
         <script

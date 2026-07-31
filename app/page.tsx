@@ -18,28 +18,34 @@ export default function Page() {
   return (
     <>
       <Nav />
-      {/* 1. Hero — qu'est-ce que vous faites ? */}
-      <Hero />
-      {/* Barre défilante des soins — permet aux centres de s'identifier */}
-      <Marquee />
-      {/* 2. Le problème — est-ce que vous comprenez ma situation ? */}
-      <Probleme />
-      {/* 3. La solution — qu'est-ce qui est différent dans votre système ? */}
-      <Methode />
-      {/* 4. L'outcome — à quoi ressemble le résultat ? */}
-      <AgendaQuiSeRemplit />
-      {/* Bande stats — grands chiffres différenciateurs */}
-      <StatsBand />
-      {/* 5. Le positionnement — est-ce que c'est pour moi ? */}
-      <Positionnement />
-      {/* 7. La fondatrice — Sofya, sans visage */}
-      <Fondatrice />
-      {/* Objections — avant le passage à l'action */}
-      <Faq />
-      {/* 6. CTA final — quelle est la prochaine étape ? */}
-      <CtaFinal />
-      <Calendar />
-      <Footer />
+
+      {/* Coque du contenu : porte le clip horizontal (anti-scroll latéral) SANS
+          englober les éléments fixes (Nav, MobileCta) — sinon leur position:fixed
+          se cale sur le document au lieu du viewport sur iOS (barre qui "flotte"). */}
+      <div className="page-shell">
+        {/* 1. Hero — qu'est-ce que vous faites ? */}
+        <Hero />
+        {/* Barre défilante des soins — permet aux centres de s'identifier */}
+        <Marquee />
+        {/* 2. Le problème — est-ce que vous comprenez ma situation ? */}
+        <Probleme />
+        {/* 3. La solution — qu'est-ce qui est différent dans votre système ? */}
+        <Methode />
+        {/* 4. L'outcome — à quoi ressemble le résultat ? */}
+        <AgendaQuiSeRemplit />
+        {/* Bande stats — grands chiffres différenciateurs */}
+        <StatsBand />
+        {/* 5. Le positionnement — est-ce que c'est pour moi ? */}
+        <Positionnement />
+        {/* 7. La fondatrice — Sofya, sans visage */}
+        <Fondatrice />
+        {/* Objections — avant le passage à l'action */}
+        <Faq />
+        {/* 6. CTA final — quelle est la prochaine étape ? */}
+        <CtaFinal />
+        <Calendar />
+        <Footer />
+      </div>
 
       <MobileCta />
       <SiteEffects />

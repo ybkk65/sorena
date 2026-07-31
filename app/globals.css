@@ -1087,9 +1087,11 @@ section { position: relative; }
 .foot-wordmark-text {
   font-family: var(--display);
   font-weight: 400; font-style: italic;
-  font-size: clamp(140px, 26vw, 460px);
+  /* Même traitement que le wordmark de la nav : capitales, serif EB Garamond. */
+  text-transform: uppercase;
+  font-size: clamp(96px, 19vw, 300px);
   line-height: 0.78;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--rose);
   opacity: 0.10;
   user-select: none;

@@ -1098,6 +1098,11 @@ section { position: relative; }
   padding-bottom: 0;
   transform: translateY(8%);
 }
+/* Mobile : "Sorena" doit tenir entier (plus de découpe sur les côtés). */
+@media (max-width: 760px) {
+  .foot-wordmark { overflow: visible; }
+  .foot-wordmark-text { font-size: clamp(58px, 26vw, 112px); letter-spacing: 0.04em; }
+}
 .foot-wordmark::before { display: none; }
 .foot-wordmark::after {
   content: "";

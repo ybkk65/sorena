@@ -16,7 +16,7 @@ export function CtaFinal() {
               display: "inline-flex",
             }}
           >
-            DIAGNOSTIC · 30 MIN · OFFERT
+            DIAGNOSTIC · 20 MIN · OFFERT
           </span>
 
           <h2 className="cta-h2">
@@ -49,7 +49,7 @@ export function CtaFinal() {
           <ol className="cta-steps">
             <li>
               <span aria-hidden="true">1</span>
-              Vous réservez votre créneau (30 min, offert).
+              Vous réservez votre créneau (20 min, offert).
             </li>
             <li>
               <span aria-hidden="true">2</span>

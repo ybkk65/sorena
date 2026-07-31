@@ -95,7 +95,7 @@ export function Calendar() {
         <div className="calendar-head reveal">
 
           <span className="kicker">
-            30 MINUTES • SANS ENGAGEMENT
+            20 MINUTES • SANS ENGAGEMENT
           </span>
 
           <h2 className="calendar-title">

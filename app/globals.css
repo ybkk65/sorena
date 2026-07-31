@@ -238,9 +238,11 @@ section { position: relative; }
 
   background-image:url("/assets/sorena-mark.png");
   /* Zoom sur le symbole doré : l'image source a une marge bordeaux autour,
-     background-size >100% recadre pour agrandir le monogramme. */
+     background-size >100% recadre pour agrandir le monogramme.
+     Le symbole est ~7,5px trop bas dans la source → position Y à 58% pour
+     le recentrer verticalement (horizontalement il est déjà centré). */
   background-size:150%;
-  background-position:center;
+  background-position:50% 58%;
   background-repeat:no-repeat;
 
   background-color:#4a0d14;

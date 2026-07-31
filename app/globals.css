@@ -19,8 +19,8 @@
   --white: #fdf9f3;
 
   /* Type */
-  --display: var(--font-display), "Newsreader", Georgia, "Times New Roman", serif;
-  --brand: var(--font-display), "Newsreader", Georgia, "Times New Roman", serif;
+  --display: var(--font-display), "EB Garamond", Georgia, "Times New Roman", serif;
+  --brand: var(--font-display), "EB Garamond", Georgia, "Times New Roman", serif;
   --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   /* Labels/kickers : sans raffiné tracké (plus de monospace "code / vibe-codé").
      Le token garde son nom pour éviter une refonte, mais pointe vers le sans. */
@@ -203,9 +203,9 @@ section { position: relative; }
 
 .brand-name{
   font-family:var(--brand);
-  font-size:20px;
-  font-weight:300;
-  letter-spacing:.28em;
+  font-size:21px;
+  font-weight:400;
+  letter-spacing:.3em;
   text-transform:uppercase;
   color:var(--bordeaux-night);
 }

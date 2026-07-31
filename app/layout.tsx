@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Newsreader, Hanken_Grotesk } from "next/font/google";
+import { EB_Garamond, Hanken_Grotesk } from "next/font/google";
 import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const SITE_URL = "https://www.sorenaagency.com";
 
-// Serif éditorial pour wordmark + titres : Newsreader. Jambages fins,
-// contraste modéré (pas "épais" comme un Didone), belle italique littéraire.
-const newsreader = Newsreader({
+// Serif fin et délicat pour wordmark + titres : EB Garamond. Traits légers,
+// old-style élégant, bien plus fin que Newsreader/Bodoni.
+const garamond = EB_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"],
   style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
@@ -132,7 +132,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${hanken.variable} ${newsreader.variable}`}
+      className={`${hanken.variable} ${garamond.variable}`}
     >
       <head>
         <script

@@ -16,8 +16,8 @@ export function Footer() {
               </div>
 
               <p>
-                Pour les centres esthétiques d’exception qui veulent un agenda
-                rempli de belles clientes.
+                Pour les centres, cliniques et cabinets esthétiques qui
+                préfèrent les bonnes clientes au volume.
               </p>
 
               <div className="foot-socials">
@@ -64,8 +64,8 @@ export function Footer() {
               <h4>Contact</h4>
               <ul>
                 <li>
-                  <a href="mailto:contact@sorenaagency.com">
-                    contact@sorenaagency.com
+                  <a href="mailto:sofya@sorenaagency.com">
+                    sofya@sorenaagency.com
                   </a>
                 </li>
               </ul>

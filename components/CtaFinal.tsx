@@ -53,7 +53,7 @@ export function CtaFinal() {
             </li>
             <li>
               <span aria-hidden="true">2</span>
-              Nous étudions votre centre, votre marché et vos cures.
+              Nous étudions votre structure, votre marché et vos cures.
             </li>
             <li>
               <span aria-hidden="true">3</span>

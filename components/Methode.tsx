@@ -43,6 +43,17 @@ const NODES = [
       </svg>
     ),
   },
+  {
+    word: "Notre engagement",
+    cap: "Nous fixons ensemble un objectif de rendez-vous avant de démarrer. Tant qu'il n'est pas atteint, nous poursuivons sans frais supplémentaires.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5" />
+        <circle cx="12" cy="12" r="4.5" />
+        <circle cx="12" cy="12" r="0.6" fill="currentColor" />
+      </svg>
+    ),
+  },
 ];
 
 export function Methode() {
@@ -95,7 +106,7 @@ export function Methode() {
           ref={parcoursRef}
           className={`parcours${active ? " is-active" : ""}`}
           role="list"
-          aria-label="Les quatre étapes de la méthode Sorena"
+          aria-label="Les cinq étapes de la méthode Sorena"
         >
           <div className="parcours-line" aria-hidden="true">
             <span className="parcours-line-fill" />

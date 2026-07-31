@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section id="top" className="hero-split">
       <div className="hero-split-text">
-        <span className="hero-eyebrow">Acquisition de clientèle · Centres esthétiques d&apos;exception</span>
+        <span className="hero-eyebrow">Acquisition de clientèle · Centres, cliniques et cabinets esthétiques</span>
 
         <h1 className="hero-split-title">
           Nous remplissons votre <em>agenda.</em>

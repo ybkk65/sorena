@@ -41,7 +41,7 @@ export function Positionnement() {
               LA SÉLECTION
             </span>
             <h2 className="posi-h2">
-              Nous ne travaillons pas avec <em>tous les centres.</em>
+              Nous ne travaillons pas avec <em>toutes les maisons.</em>
             </h2>
           </div>
 

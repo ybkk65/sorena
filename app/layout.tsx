@@ -27,11 +27,11 @@ const hanken = Hanken_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sorena · Acquisition de clientes pour centres esthétiques d'exception",
+    default: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
     template: "%s · Sorena",
   },
   description:
-    "Des clientes qui viennent, paient le juste prix et reviennent. On installe le système qui les fait venir, sans brader votre image.",
+    "Des clientes qui viennent, paient le juste prix et reviennent. Nous installons le système qui les fait venir, sans brader votre image.",
   applicationName: "Sorena",
   keywords: [
     "clientes qualifiées centre esthétique",
@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     "publicité Meta Instagram esthétique",
     "agence marketing centre esthétique",
     "qualification IA prise de rendez-vous",
+    "acquisition patientèle médecine esthétique",
+    "marketing cabinet esthétique",
+    "épilation laser médecin publicité",
     "Sorena",
   ],
   authors: [{ name: "Sorena Agency" }],
@@ -60,9 +63,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sorena · Acquisition de clientes pour centres esthétiques d'exception",
+    title: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
     description:
-      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures. Sans brader votre image.",
+      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures et vos actes.",
     url: SITE_URL,
     siteName: "Sorena",
     locale: "fr_FR",
@@ -72,15 +75,15 @@ export const metadata: Metadata = {
         url: "/assets/image_salon.jpg",
         width: 2000,
         height: 1090,
-        alt: "Sorena, les bonnes clientes pour les centres esthétiques d'exception",
+        alt: "Sorena, les bonnes clientes pour les centres, cliniques et cabinets esthétiques",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sorena · Acquisition de clientes pour centres esthétiques d'exception",
+    title: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
     description:
-      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures.",
+      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures et vos actes.",
     images: ["/assets/image_salon.jpg"],
   },
 };
@@ -94,9 +97,9 @@ const jsonLd = {
       name: "Sorena Agency",
       url: SITE_URL,
       logo: `${SITE_URL}/assets/sorena-logo.png`,
-      email: "contact@sorenaagency.com",
+      email: "sofya@sorenaagency.com",
       description:
-        "Sorena installe le système qui fait venir les bonnes clientes pour les centres esthétiques d'exception : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
+        "Sorena installe le système qui fait venir les bonnes clientes pour les centres, cliniques et cabinets esthétiques : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
       sameAs: [
         "https://www.instagram.com/sorenaa.agency/",
         "https://www.facebook.com/share/1P38aCKRgs/",
@@ -119,7 +122,7 @@ const jsonLd = {
       priceRange: "€€€",
       areaServed: "FR",
       description:
-        "Sorena fait venir les bonnes clientes pour les centres esthétiques d'exception : publicité ciblée (Meta, Instagram) et qualification par IA en coulisse, sans brader l'image du centre.",
+        "Sorena fait venir les bonnes clientes pour les centres, cliniques et cabinets esthétiques : publicité ciblée (Meta, Instagram) et qualification par IA en coulisse, sans brader l'image du centre.",
     },
   ],
 };

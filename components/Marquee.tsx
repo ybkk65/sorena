@@ -2,6 +2,7 @@ import { Fragment } from "react";
 
 const CURES = [
   "Cures minceur",
+  "Épilation laser",
   "Cryolipolyse",
   "Radiofréquence",
   "Lipocavitation",
@@ -11,7 +12,6 @@ const CURES = [
   "HydraFacial",
   "Microneedling",
   "Cryothérapie",
-  "Épilation laser",
 ];
 
 function Track() {

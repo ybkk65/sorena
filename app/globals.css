@@ -202,10 +202,10 @@ section { position: relative; }
 }
 
 .brand-name{
-  font-family:var(--brand);
-  font-size:21px;
-  font-weight:400;
-  letter-spacing:.3em;
+  font-family:var(--sans);
+  font-size:18px;
+  font-weight:300;
+  letter-spacing:.34em;
   text-transform:uppercase;
   color:var(--bordeaux-night);
 }

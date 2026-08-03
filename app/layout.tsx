@@ -80,10 +80,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/image_salon.jpg",
-        width: 2000,
-        height: 1090,
-        alt: "Sorena, les bonnes clientes pour les centres, cliniques et cabinets esthétiques",
+        url: "/assets/og-sorena.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
       },
     ],
   },
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
     description:
       "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures et vos actes.",
-    images: ["/assets/image_salon.jpg"],
+    images: ["/assets/og-sorena.jpg"],
   },
 };
 

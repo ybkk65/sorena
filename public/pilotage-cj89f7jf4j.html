@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#2E0D16">
+<title>Le Centre de Pilotage</title>
+<style>
+:root{
+  --fond:#2E0D16; --panneau:#3D1220; --clair:#4A1826; --bordure:#5C2233;
+  --champagne:#E8D5B5; --sombre:#C9AE85; --or:#D4B98C; --ivoire:#F5EDE0;
+  --rouge:#B3455A; --vert:#8FA98B;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+body{background:var(--fond);color:var(--ivoire);font-family:'Montserrat','Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:70px}
+.serif{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif}
+header{text-align:center;padding:32px 20px 20px}
+.kicker{font-size:10px;letter-spacing:4px;color:var(--sombre);margin-bottom:8px}
+h1{font-family:Georgia,serif;font-size:32px;font-weight:400;line-height:1.1}
+.tagline{font-family:Georgia,serif;font-style:italic;font-size:15px;color:var(--sombre);margin-top:6px}
+nav{display:flex;justify-content:center;gap:8px;margin:6px 0 24px;padding:0 16px}
+nav button{padding:8px 16px;border-radius:20px;cursor:pointer;border:1px solid var(--bordure);background:transparent;color:var(--sombre);font-size:12px;letter-spacing:.5px;font-family:inherit}
+nav button.on{border-color:var(--or);background:rgba(212,185,140,.14);color:var(--champagne)}
+main{max-width:560px;margin:0 auto;padding:0 16px}
+.card{background:var(--panneau);border:1px solid var(--bordure);border-radius:12px;padding:22px 18px;margin-bottom:14px}
+.card.alert{border-color:var(--rouge)}
+.card.win{border-color:var(--vert)}
+.date-line{font-size:11px;letter-spacing:2px;color:var(--or);text-transform:uppercase;margin-bottom:18px}
+.section{margin-bottom:26px}
+.section h2{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:20px;color:var(--champagne);border-bottom:1px solid var(--bordure);padding-bottom:6px;margin-bottom:4px}
+.sub{font-size:11px;color:var(--sombre);margin-bottom:12px;line-height:1.5}
+.lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sombre);margin-bottom:6px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.row>div{flex:1;min-width:70px}
+input[type=number],input[type=text],textarea{background:var(--clair);border:1px solid var(--bordure);color:var(--ivoire);border-radius:6px;padding:10px 12px;font-size:15px;width:100%;font-family:inherit;outline:none}
+input::placeholder,textarea::placeholder{color:#7A5566}
+textarea{resize:vertical;line-height:1.5}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button,.tgl{flex:1;min-width:80px;padding:10px 6px;border-radius:6px;cursor:pointer;border:1px solid var(--bordure);background:var(--clair);color:var(--sombre);font-size:11px;line-height:1.3;font-family:inherit;transition:all .15s}
+.seg button.on,.tgl.on{border-color:var(--or);background:rgba(212,185,140,.16);color:var(--champagne)}
+.tgl{min-width:100px;padding:12px 8px;font-size:12px}
+.prayers{display:flex;gap:6px}
+.prayers button{flex:1;padding:10px 0;border-radius:6px;cursor:pointer;border:1px solid var(--bordure);background:var(--clair);color:var(--sombre);font-size:13px;font-family:inherit}
+.prayers button.on{border-color:var(--or);background:rgba(212,185,140,.16);color:var(--champagne)}
+input[type=range]{width:100%;accent-color:var(--or)}
+.range-lbl{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;color:var(--sombre);margin-top:6px}
+.save{width:100%;padding:15px;border-radius:8px;cursor:pointer;background:var(--or);border:none;color:var(--fond);font-size:13px;letter-spacing:2px;font-weight:600;font-family:inherit;transition:background .2s}
+.save.ok{background:var(--vert)}
+.err{margin-top:10px;color:var(--rouge);font-size:12px;text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:var(--panneau);border:1px solid var(--bordure);border-radius:12px;padding:16px 14px}
+.stat.alert{border-color:var(--rouge)}
+.stat .v{font-family:Georgia,serif;font-size:30px;margin:4px 0 2px}
+.stat.alert .v{color:var(--rouge)}
+.stat .s{font-size:10px;color:var(--sombre);font-style:italic}
+.gauge-track{position:relative;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--rouge),var(--sombre),var(--vert));opacity:.9}
+.gauge-dot{position:absolute;top:-5px;width:20px;height:20px;border-radius:50%;background:var(--ivoire);border:3px solid var(--fond);box-shadow:0 0 0 1px var(--or)}
+.fun-row{margin-bottom:10px}
+.fun-head{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px}
+.fun-track{height:8px;border-radius:4px;background:var(--clair);overflow:hidden}
+.fun-bar{height:100%;border-radius:4px;background:var(--or);transition:width .4s}
+.fun-bar.last{background:var(--vert)}
+.hist{background:var(--panneau);border:1px solid var(--bordure);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.hist.win{border-color:var(--vert)}
+.hist-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.hist-date{font-size:12px;letter-spacing:1px;color:var(--or);text-transform:uppercase}
+.hist-carb{font-size:11px}
+.hist-body{font-size:12px;display:flex;gap:12px;flex-wrap:wrap;line-height:1.9}
+.hist-body .pipe{color:var(--or)}
+.hist-note{font-family:Georgia,serif;font-style:italic;font-size:15px;color:var(--sombre);margin-top:8px;line-height:1.4}
+.empty{text-align:center;padding:40px 20px;font-family:Georgia,serif;font-style:italic;font-size:17px;color:var(--sombre);line-height:1.6}
+.export-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.export-bar button,.export-bar label{flex:1;min-width:110px;padding:11px 8px;border-radius:6px;cursor:pointer;border:1px solid var(--bordure);background:var(--clair);color:var(--champagne);font-size:11px;letter-spacing:.5px;font-family:inherit;text-align:center}
+.export-bar button:hover,.export-bar label:hover{border-color:var(--or)}
+.footnote{font-size:10px;color:var(--sombre);text-align:center;margin-top:14px;line-height:1.6;font-style:italic}
+.review{background:var(--panneau);border:1px solid var(--bordure);border-radius:12px;padding:18px 20px;font-family:Georgia,serif;font-style:italic;font-size:15px;color:var(--sombre);line-height:1.6;margin-top:14px}
+h3.big{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:22px;color:var(--champagne);margin-bottom:4px}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">BUILDING PHASE</div>
+  <h1>Le Centre de Pilotage</h1>
+  <div class="tagline">Chaque journée est un vote.</div>
+</header>
+<nav>
+  <button data-tab="jour" class="on">Aujourd'hui</button>
+  <button data-tab="semaine">7 jours</button>
+  <button data-tab="historique">Historique</button>
+</nav>
+<main id="app"></main>
+
+<script>
+"use strict";
+const KEY = "sorena-dashboard-v1";
+
+const emptyEntry = () => ({
+  dm:"",appels:"",relances:"",
+  reponses:"",r1Book:"",r1Fait:"",r2:"",closes:"",cash:"",
+  constructionMin:"",constructionSur:"",
+  anglaisMin:"",anglaisType:"",
+  blocSacre:false,prieres:0,constitution:false,
+  sommeil:"",sportType:"rien",sportMin:"",lumiere:false,nourriture:1,eau:false,
+  carburant:3,rumination:1,scroll:1,couvreFeu:false,
+  connexion:false,journal:false,note:""
+});
+
+const todayKey = () => {
+  const d = new Date();
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+};
+const fmtDate = k => {
+  const [y,m,d] = k.split("-").map(Number);
+  return new Date(y,m-1,d).toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"short"});
+};
+const num = v => { const n = parseFloat(v); return isNaN(n)?0:n; };
+
+let entries = {};
+try { const raw = localStorage.getItem(KEY); if (raw) entries = JSON.parse(raw).entries || {}; } catch(e){}
+let form = Object.assign(emptyEntry(), entries[todayKey()] || {});
+let tab = "jour";
+let savedFlash = false;
+
+function persist(){
+  try { localStorage.setItem(KEY, JSON.stringify({entries})); return true; }
+  catch(e){ return false; }
+}
+
+function lastNDays(n){
+  const cutoff = new Date(); cutoff.setDate(cutoff.getDate()-n);
+  return Object.keys(entries).sort().reverse()
+    .filter(k => new Date(k) >= cutoff)
+    .map(k => Object.assign({key:k}, entries[k]));
+}
+
+const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+/* ---------- RENDU ---------- */
+
+function numField(label, field, step){
+  return `<div><div class="lbl">${label}</div><input type="number" min="0" step="${step||1}" inputmode="decimal" placeholder="0" value="${esc(form[field])}" data-f="${field}"></div>`;
+}
+function toggle(label, field){
+  return `<button type="button" class="tgl ${form[field]?"on":""}" data-t="${field}">${form[field]?"✓ ":""}${label}</button>`;
+}
+function segments(field, options){
+  return `<div class="seg">` + options.map(([v,l]) =>
+    `<button type="button" class="${String(form[field])===String(v)?"on":""}" data-s="${field}" data-v="${v}">${l}</button>`
+  ).join("") + `</div>`;
+}
+
+function renderJour(){
+  return `<div class="card">
+    <div class="date-line">${fmtDate(todayKey())}</div>
+
+    <div class="section"><h2>Le tunnel — émis</h2>
+      <div class="sub">Ce que tu contrôles à 100%. C'est ici que se joue tout le reste.</div>
+      <div class="row">${numField("DM","dm")}${numField("Appels","appels")}${numField("Relances","relances")}</div>
+    </div>
+
+    <div class="section"><h2>Le tunnel — pipeline</h2>
+      <div class="sub">Ce que le marché renvoie. De la réponse à la signature, chaque stage compte.</div>
+      <div class="row">${numField("Réponses","reponses")}${numField("R1 bookés","r1Book")}${numField("R1 faits","r1Fait")}</div>
+      <div class="row">${numField("R2 faits","r2")}${numField("Closes","closes")}${numField("Cash (€)","cash",50)}</div>
+    </div>
+
+    <div class="section"><h2>La forge</h2>
+      <div class="sub">Aiguiser la lame : copywriting, closing, systèmes, contenu.</div>
+      <div class="row">
+        <div style="flex:0 0 120px">${numField("Minutes","constructionMin",15).replace(/^<div>/,"").replace(/<\/div>$/,"")}</div>
+        <div style="flex:1;min-width:150px"><div class="lbl">Sur quoi ?</div><input type="text" placeholder="closing, script DM, site…" value="${esc(form.constructionSur)}" data-f="constructionSur"></div>
+      </div>
+    </div>
+
+    <div class="section"><h2>L'anglais</h2>
+      <div class="sub">Bilingue n'est pas un talent, c'est un volume d'heures. La scène que tu vises parle anglais.</div>
+      <div class="row">
+        <div style="flex:0 0 120px">${numField("Minutes","anglaisMin",5).replace(/^<div>/,"").replace(/<\/div>$/,"")}</div>
+        <div style="flex:1;min-width:180px"><div class="lbl">Mode principal</div>${segments("anglaisType",[["ecoute","Écoute"],["parle","Parlé"],["lu","Lu / écrit"]])}</div>
+      </div>
+    </div>
+
+    <div class="section"><h2>Le spirituel</h2>
+      <div class="sub">Le socle. Avant les écrans, avant le monde.</div>
+      <div class="row">${toggle("Bloc sacré du matin","blocSacre")}${toggle("Constitution relue","constitution")}</div>
+      <div class="lbl">Prières accomplies</div>
+      <div class="prayers">${[0,1,2,3,4,5].map(n=>`<button type="button" class="${form.prieres===n?"on":""}" data-s="prieres" data-v="${n}">${n}</button>`).join("")}</div>
+    </div>
+
+    <div class="section"><h2>Le corps</h2>
+      <div class="sub">L'infrastructure biologique de l'ambition.</div>
+      <div class="row">${numField("Sommeil (h)","sommeil",0.5)}${numField("Sport (min)","sportMin",5)}</div>
+      <div class="lbl">Type d'entraînement</div>
+      <div style="margin-bottom:12px">${segments("sportType",[["rien","Repos"],["marche","Marche"],["cardio","Cardio"],["muscu","Renfo"]])}</div>
+      <div class="lbl">Nourriture du jour</div>
+      <div style="margin-bottom:12px">${segments("nourriture",[[2,"Réelle & propre"],[1,"Correcte"],[0,"Chaotique"]])}</div>
+      <div class="row">${toggle("Lumière du jour","lumiere")}${toggle("Bien hydratée","eau")}</div>
+    </div>
+
+    <div class="section"><h2>Le mental</h2>
+      <div class="sub">Les variables invisibles — celles qui décident de tout.</div>
+      <div class="lbl">Aujourd'hui, j'ai agi depuis…</div>
+      <input type="range" min="1" max="5" step="1" value="${form.carburant}" data-r="carburant">
+      <div class="range-lbl"><span style="${form.carburant<=2?"color:var(--rouge)":""}">LA BLESSURE</span><span style="${form.carburant>=4?"color:var(--vert)":""}">LA VISION</span></div>
+      <div style="height:14px"></div>
+      <div class="lbl">Pensées retournées vers le passé</div>
+      <div style="margin-bottom:12px">${segments("rumination",[[0,"Presque aucune"],[1,"Quelques-unes"],[2,"Beaucoup"]])}</div>
+      <div class="lbl">Scroll passif</div>
+      <div style="margin-bottom:12px">${segments("scroll",[[0,"Presque zéro"],[1,"Modéré"],[2,"Excessif"]])}</div>
+      ${toggle("Couvre-feu mental respecté (pas de business 1h avant de dormir)","couvreFeu")}
+    </div>
+
+    <div class="section"><h2>La ventilation</h2>
+      <div class="sub">L'isolement dégrade le jugement. Le lien réel est une pièce du système, pas une faiblesse.</div>
+      ${toggle("Un vrai contact humain aujourd'hui (hors business)","connexion")}
+    </div>
+
+    <div class="section"><h2>La boîte noire</h2>
+      <div class="sub">15 minutes de journal, une phrase ici. C'est ton livre qui s'écrit.</div>
+      <div style="margin-bottom:10px">${toggle("Journal du soir fait","journal")}</div>
+      <textarea rows="2" placeholder="Ce que cette journée m'a appris…" data-f="note">${esc(form.note)}</textarea>
+    </div>
+
+    <button class="save ${savedFlash?"ok":""}" id="saveBtn">${savedFlash?"✓ VOTE ENREGISTRÉ":"ENREGISTRER LE VOTE DU JOUR"}</button>
+    <div class="err" id="err"></div>
+  </div>`;
+}
+
+function statCard(label, value, sub, alert){
+  return `<div class="stat ${alert?"alert":""}"><div class="lbl">${label}</div><div class="v">${value}</div><div class="s">${sub}</div></div>`;
+}
+
+function renderSemaine(){
+  const w = lastNDays(7);
+  const sum = f => w.reduce((s,e)=>s+num(e[f]),0);
+  const totDM=sum("dm"), totAp=sum("appels"), totRel=sum("relances");
+  const totEmis=totDM+totAp+totRel;
+  const totRep=sum("reponses"), totR1B=sum("r1Book"), totR1F=sum("r1Fait");
+  const totR2=sum("r2"), totCl=sum("closes"), totCash=sum("cash");
+  const soms = w.map(e=>num(e.sommeil)).filter(n=>n>0);
+  const somMoy = soms.length ? (soms.reduce((a,b)=>a+b,0)/soms.length).toFixed(1) : "—";
+  const carbs = w.map(e=>e.carburant).filter(Boolean);
+  const carbMoy = carbs.length ? carbs.reduce((a,b)=>a+b,0)/carbs.length : null;
+  const pct = (a,b)=> b>0 ? Math.round(a/b*100)+"%" : "—";
+  const stages = [
+    ["Émis",totEmis,null],["Réponses",totRep,pct(totRep,totEmis)],
+    ["R1 bookés",totR1B,pct(totR1B,totRep)],["R1 faits",totR1F,pct(totR1F,totR1B)],
+    ["R2",totR2,pct(totR2,totR1F)],["Closes",totCl,pct(totCl,totR2)]
+  ];
+  const maxF = Math.max(totEmis,1);
+  const cnt = f => w.filter(f).length;
+  const sacre=cnt(e=>e.blocSacre), lum=cnt(e=>e.lumiere), cf=cnt(e=>e.couvreFeu),
+        conn=cnt(e=>e.connexion), scrEx=cnt(e=>e.scroll===2), rumF=cnt(e=>e.rumination===2),
+        propre=cnt(e=>e.nourriture===2), jour=cnt(e=>e.journal),
+        sportS=cnt(e=>e.sportType&&e.sportType!=="rien"),
+        forgeJ=cnt(e=>num(e.constructionMin)>0), angJ=cnt(e=>num(e.anglaisMin)>0),
+        angParle=cnt(e=>num(e.anglaisMin)>0&&e.anglaisType==="parle");
+  const priMoy = w.length ? (w.reduce((s,e)=>s+(e.prieres||0),0)/w.length).toFixed(1) : "—";
+
+  return `
+  <div class="card">
+    <h3 class="big">La migration</h3>
+    <div class="sub" style="margin-bottom:18px">D'où vient ton énergie cette semaine — la seule courbe qui compte vraiment.</div>
+    <div class="gauge-track">${carbMoy?`<div class="gauge-dot" style="left:calc(${(carbMoy-1)/4*100}% - 10px)"></div>`:""}</div>
+    <div class="range-lbl" style="margin-top:12px"><span>BLESSURE</span><span>VISION</span></div>
+    ${!carbMoy?`<div class="sub" style="margin-top:12px;font-style:italic">Remplis tes premières journées pour voir la jauge bouger.</div>`:""}
+  </div>
+
+  <div class="card">
+    <h3 class="big">Le tunnel</h3>
+    <div class="sub" style="margin-bottom:18px">Du premier DM à la signature — 7 derniers jours, avec les taux de conversion.</div>
+    ${stages.map(([l,v,c],i)=>`
+      <div class="fun-row">
+        <div class="fun-head"><span style="color:var(--champagne);letter-spacing:1px">${l}</span><span style="color:var(--sombre)">${v}${c?` · ${c}`:""}</span></div>
+        <div class="fun-track"><div class="fun-bar ${i===stages.length-1?"last":""}" style="width:${Math.max(v/maxF*100, v>0?4:0)}%"></div></div>
+      </div>`).join("")}
+    <div style="display:flex;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--bordure)">
+      <span class="lbl" style="margin:0">Cash encaissé</span>
+      <span class="serif" style="font-family:Georgia,serif;font-size:24px;color:${totCash>0?"var(--vert)":"var(--ivoire)"}">${totCash.toLocaleString("fr-FR")} €</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    ${statCard("Volume émis",totEmis,`${totDM} DM · ${totAp} appels · ${totRel} relances`)}
+    ${statCard("Sommeil moyen",somMoy==="—"?"—":somMoy+"h","l'infrastructure",somMoy!=="—"&&parseFloat(somMoy)<6.5)}
+    ${statCard("Blocs sacrés",sacre+"/7","jours honorés")}
+    ${statCard("Prières / jour",priMoy,"moyenne sur la semaine")}
+    ${statCard("Anglais",angJ+"/7",`${sum("anglaisMin")} min · ${angParle}j de parlé`, w.length>=5&&angJ>=4&&angParle===0)}
+    ${statCard("La forge",forgeJ+"/7",`${sum("constructionMin")} min à aiguiser la lame`)}
+    ${statCard("Sport",sportS+"×",`${sum("sportMin")} min au total`)}
+    ${statCard("Nourriture propre",propre+"/7","jours « réelle & propre »")}
+    ${statCard("Lumière du jour",lum+"/7","sortie réelle")}
+    ${statCard("Couvre-feu",cf+"/7","soirs respectés")}
+    ${statCard("Ventilation",conn+"/7","vrais contacts humains", w.length>=5&&conn===0)}
+    ${statCard("Scroll excessif",scrEx,"jours de fuite",scrEx>=3)}
+    ${statCard("Rumination forte",rumF,"jours tournés vers le passé",rumF>=3)}
+    ${statCard("Journal tenu",jour+"/7","la matière du livre")}
+  </div>
+
+  <div class="review">Revue du dimanche : cette semaine, ai-je agi depuis la vision ou depuis la blessure ? Et si personne ne connaissait jamais mon nom, mon travail de cette semaine aurait-il quand même valu la peine ?</div>`;
+}
+
+function renderHistorique(){
+  const sorted = Object.keys(entries).sort().reverse();
+  let html = `
+  <div class="export-bar">
+    <button id="expCsv">⬇ Export CSV (Sheets)</button>
+    <button id="expJson">⬇ Sauvegarde JSON</button>
+    <label for="impJson">⬆ Importer JSON<input type="file" id="impJson" accept=".json" style="display:none"></label>
+  </div>`;
+  if(!sorted.length){
+    html += `<div class="empty">Aucun vote enregistré pour l'instant.<br>Ton premier jour commence aujourd'hui.</div>`;
+    return html;
+  }
+  html += sorted.map(k=>{
+    const e = Object.assign(emptyEntry(), entries[k]);
+    const emis = num(e.dm)+num(e.appels)+num(e.relances);
+    const carb = e.carburant||3;
+    const carbTxt = carb>=4?"vision":carb<=2?"blessure":"entre-deux";
+    const carbCol = carb>=4?"var(--vert)":carb<=2?"var(--rouge)":"var(--sombre)";
+    const sport = e.sportType&&e.sportType!=="rien"?`${e.sportType} ${num(e.sportMin)?e.sportMin+"'":""}`:"repos";
+    const pipe = [
+      num(e.reponses)?`${e.reponses} rép.`:null,
+      num(e.r1Book)?`${e.r1Book} R1 bookés`:null,
+      num(e.r1Fait)?`${e.r1Fait} R1 faits`:null,
+      num(e.r2)?`${e.r2} R2`:null,
+      num(e.closes)?`${e.closes} CLOSE ✦`:null,
+      num(e.cash)?`${num(e.cash).toLocaleString("fr-FR")} €`:null
+    ].filter(Boolean).join(" · ");
+    return `<div class="hist ${num(e.closes)>0?"win":""}">
+      <div class="hist-head"><span class="hist-date">${fmtDate(k)}</span><span class="hist-carb" style="color:${carbCol}">${carbTxt}</span></div>
+      <div class="hist-body">
+        <span>${emis} émis</span>
+        ${pipe?`<span class="pipe">${pipe}</span>`:""}
+        ${num(e.anglaisMin)>0?`<span>🇬🇧 ${e.anglaisMin}'${e.anglaisType==="parle"?" parlé":e.anglaisType==="ecoute"?" écoute":e.anglaisType==="lu"?" lu":""}</span>`:""}
+        ${num(e.constructionMin)>0?`<span>⚒ ${e.constructionMin}'${e.constructionSur?" "+esc(e.constructionSur):""}</span>`:""}
+        <span>${e.sommeil?e.sommeil+"h 🌙":"— 🌙"}</span>
+        <span>${e.prieres||0}/5 🤲</span>
+        <span>${sport}</span>
+        <span>${e.nourriture===2?"propre":e.nourriture===0?"chaotique":"correcte"} 🍽</span>
+        <span>${e.blocSacre?"✓":"✗"} sacré</span>
+        <span>${e.couvreFeu?"✓":"✗"} couvre-feu</span>
+        <span>${e.connexion?"✓":"✗"} lien</span>
+        <span>${e.journal?"✓":"✗"} journal</span>
+      </div>
+      ${e.note?`<div class="hist-note">« ${esc(e.note)} »</div>`:""}
+    </div>`;
+  }).join("");
+  html += `<div class="footnote">Tes données vivent dans ce navigateur, sur cet appareil.<br>Chaque dimanche : Export CSV pour la revue, Sauvegarde JSON par sécurité.</div>`;
+  return html;
+}
+
+/* ---------- EXPORTS ---------- */
+
+const CSV_COLS = [
+  ["date","Date"],["dm","DM"],["appels","Appels"],["relances","Relances"],
+  ["reponses","Réponses"],["r1Book","R1 bookés"],["r1Fait","R1 faits"],["r2","R2"],["closes","Closes"],["cash","Cash €"],
+  ["constructionMin","Forge min"],["constructionSur","Forge sur"],
+  ["anglaisMin","Anglais min"],["anglaisType","Anglais mode"],
+  ["blocSacre","Bloc sacré"],["constitution","Constitution"],["prieres","Prières"],
+  ["sommeil","Sommeil h"],["sportType","Sport type"],["sportMin","Sport min"],
+  ["nourriture","Nourriture"],["lumiere","Lumière"],["eau","Hydratation"],
+  ["carburant","Carburant 1-5"],["rumination","Rumination 0-2"],["scroll","Scroll 0-2"],["couvreFeu","Couvre-feu"],
+  ["connexion","Lien humain"],["journal","Journal"],["note","Note"]
+];
+
+function csvCell(v){
+  if(typeof v==="boolean") return v?"1":"0";
+  const s = String(v==null?"":v);
+  return /[";\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
+}
+
+function download(name, content, type){
+  const blob = new Blob([content],{type});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},200);
+}
+
+function exportCsv(){
+  const keys = Object.keys(entries).sort();
+  const head = CSV_COLS.map(c=>csvCell(c[1])).join(";");
+  const rows = keys.map(k=>{
+    const e = Object.assign(emptyEntry(), entries[k]);
+    return CSV_COLS.map(([f])=> f==="date" ? k : csvCell(e[f])).join(";");
+  });
+  download(`pilotage-${todayKey()}.csv`, "\uFEFF"+[head,...rows].join("\n"), "text/csv;charset=utf-8");
+}
+
+function exportJson(){
+  download(`pilotage-sauvegarde-${todayKey()}.json`, JSON.stringify({entries},null,2), "application/json");
+}
+
+function importJson(file){
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const data = JSON.parse(r.result);
+      const imported = data.entries || {};
+      const n = Object.keys(imported).length;
+      if(!n){ alert("Fichier vide ou invalide."); return; }
+      if(confirm(`Importer ${n} journées ? Elles fusionneront avec celles de cet appareil.`)){
+        entries = Object.assign({}, entries, imported);
+        persist();
+        form = Object.assign(emptyEntry(), entries[todayKey()] || {});
+        render();
+      }
+    } catch(e){ alert("Fichier invalide."); }
+  };
+  r.readAsText(file);
+}
+
+/* ---------- ÉVÉNEMENTS ---------- */
+
+const app = document.getElementById("app");
+
+function render(){
+  app.innerHTML = tab==="jour" ? renderJour() : tab==="semaine" ? renderSemaine() : renderHistorique();
+}
+
+document.querySelector("nav").addEventListener("click", e=>{
+  const b = e.target.closest("button[data-tab]"); if(!b) return;
+  tab = b.dataset.tab;
+  document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on", x===b));
+  render();
+});
+
+app.addEventListener("input", e=>{
+  const t = e.target;
+  if(t.dataset.f !== undefined) form[t.dataset.f] = t.value;
+  if(t.dataset.r !== undefined){ form[t.dataset.r] = parseInt(t.value); 
+    const wrap = t.parentElement.querySelector(".range-lbl");
+    if(wrap){ const [a,b]=wrap.children;
+      a.style.color = form.carburant<=2?"var(--rouge)":"";
+      b.style.color = form.carburant>=4?"var(--vert)":""; } }
+});
+
+app.addEventListener("click", e=>{
+  const tg = e.target.closest(".tgl");
+  if(tg){ form[tg.dataset.t] = !form[tg.dataset.t];
+    tg.classList.toggle("on", form[tg.dataset.t]);
+    tg.textContent = (form[tg.dataset.t]?"✓ ":"") + tg.textContent.replace(/^✓ /,"");
+    return; }
+  const sg = e.target.closest("[data-s]");
+  if(sg){ const f = sg.dataset.s; let v = sg.dataset.v;
+    if(f==="nourriture"||f==="rumination"||f==="scroll"||f==="prieres") v = parseInt(v);
+    form[f] = v;
+    sg.parentElement.querySelectorAll("[data-s]").forEach(x=>x.classList.toggle("on", x===sg));
+    return; }
+  if(e.target.id==="saveBtn"){
+    entries[todayKey()] = Object.assign({}, form);
+    if(persist()){ savedFlash = true; render(); setTimeout(()=>{savedFlash=false; if(tab==="jour") render();},2500); }
+    else document.getElementById("err").textContent = "La sauvegarde a échoué (stockage indisponible dans ce navigateur).";
+    return; }
+  if(e.target.id==="expCsv"){ exportCsv(); return; }
+  if(e.target.id==="expJson"){ exportJson(); return; }
+});
+
+app.addEventListener("change", e=>{
+  if(e.target.id==="impJson" && e.target.files.length) importJson(e.target.files[0]);
+});
+
+render();
+</script>
+</body>
+</html>

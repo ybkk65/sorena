@@ -88,12 +88,34 @@ h3.big{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:22p
   <button data-tab="jour" class="on">Aujourd'hui</button>
   <button data-tab="semaine">7 jours</button>
   <button data-tab="historique">Historique</button>
+  <button data-tab="params" title="Paramètres" style="min-width:38px">⚙</button>
 </nav>
 <main id="app"></main>
 
 <script>
 "use strict";
 const KEY = "sorena-dashboard-v1";
+const CONFIG_KEY = "sorena-dashboard-config-v1";
+
+const DEFAULT_CONFIG = {
+  supplements: [
+    {id:"fer", label:"Fer"},
+    {id:"cortisol", label:"Cortisol Calm"},
+    {id:"magnesium", label:"Magnésium"},
+    {id:"zinc", label:"Zinc"},
+    {id:"omega3", label:"Oméga 3"}
+  ],
+  sportTypes: [
+    {id:"leg", label:"Leg day"},
+    {id:"upper", label:"Upper body"},
+    {id:"cardio", label:"Cardio"},
+    {id:"walk", label:"Walk"}
+  ]
+};
+
+const slug = s => s.toString().toLowerCase()
+  .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+  .replace(/[^a-z0-9]+/g,"").slice(0,20) || "x"+Date.now();
 
 const emptyEntry = () => ({
   dm:"",appels:"",relances:"",
@@ -102,6 +124,7 @@ const emptyEntry = () => ({
   anglaisMin:"",anglaisType:"",
   blocSacre:false,prieres:0,constitution:false,
   sommeil:"",sportType:"rien",sportMin:"",lumiere:false,nourriture:1,eau:false,
+  supplements:{},
   carburant:3,rumination:1,scroll:1,couvreFeu:false,
   connexion:false,journal:false,note:""
 });
@@ -118,12 +141,41 @@ const num = v => { const n = parseFloat(v); return isNaN(n)?0:n; };
 
 let entries = {};
 try { const raw = localStorage.getItem(KEY); if (raw) entries = JSON.parse(raw).entries || {}; } catch(e){}
-let form = Object.assign(emptyEntry(), entries[todayKey()] || {});
+
+// Migration : anciens champs supFer / supCortisol / supMagnesium / supZinc / supOmega3 → supplements{}
+const OLD_SUPS = {supFer:"fer", supCortisol:"cortisol", supMagnesium:"magnesium", supZinc:"zinc", supOmega3:"omega3"};
+Object.keys(entries).forEach(k => {
+  const e = entries[k];
+  if(!e.supplements || typeof e.supplements !== "object") e.supplements = {};
+  Object.keys(OLD_SUPS).forEach(oldKey => {
+    if(oldKey in e){
+      if(e[oldKey]) e.supplements[OLD_SUPS[oldKey]] = true;
+      delete e[oldKey];
+    }
+  });
+});
+
+// Config utilisateur (compléments et types de sport modifiables)
+let config;
+try {
+  const raw = localStorage.getItem(CONFIG_KEY);
+  config = raw ? JSON.parse(raw) : JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+  if(!config.supplements) config.supplements = DEFAULT_CONFIG.supplements.slice();
+  if(!config.sportTypes) config.sportTypes = DEFAULT_CONFIG.sportTypes.slice();
+} catch(e){ config = JSON.parse(JSON.stringify(DEFAULT_CONFIG)); }
+
+let activeDate = todayKey();
+let form = Object.assign(emptyEntry(), entries[activeDate] || {});
+if(!form.supplements || typeof form.supplements !== "object") form.supplements = {};
 let tab = "jour";
 let savedFlash = false;
 
 function persist(){
   try { localStorage.setItem(KEY, JSON.stringify({entries})); return true; }
+  catch(e){ return false; }
+}
+function persistConfig(){
+  try { localStorage.setItem(CONFIG_KEY, JSON.stringify(config)); return true; }
   catch(e){ return false; }
 }
 
@@ -144,6 +196,10 @@ function numField(label, field, step){
 function toggle(label, field){
   return `<button type="button" class="tgl ${form[field]?"on":""}" data-t="${field}">${form[field]?"✓ ":""}${label}</button>`;
 }
+function supToggle(s){
+  const on = !!(form.supplements && form.supplements[s.id]);
+  return `<button type="button" class="tgl ${on?"on":""}" data-sup="${esc(s.id)}">${on?"✓ ":""}${esc(s.label)}</button>`;
+}
 function segments(field, options){
   return `<div class="seg">` + options.map(([v,l]) =>
     `<button type="button" class="${String(form[field])===String(v)?"on":""}" data-s="${field}" data-v="${v}">${l}</button>`
@@ -152,7 +208,12 @@ function segments(field, options){
 
 function renderJour(){
   return `<div class="card">
-    <div class="date-line">${fmtDate(todayKey())}</div>
+    <div class="date-line" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <button id="prevDay" title="Jour précédent" style="background:var(--clair);border:1px solid var(--bordure);color:var(--champagne);width:32px;height:32px;border-radius:6px;cursor:pointer;font-size:16px;font-family:inherit">‹</button>
+      <input type="date" id="dateSel" value="${activeDate}" max="${todayKey()}" style="background:var(--clair);border:1px solid var(--bordure);color:var(--champagne);padding:6px 10px;border-radius:6px;font-family:inherit;font-size:12px;letter-spacing:1px;color-scheme:dark">
+      <button id="nextDay" title="Jour suivant" style="background:var(--clair);border:1px solid var(--bordure);color:var(--champagne);width:32px;height:32px;border-radius:6px;cursor:pointer;font-size:16px;font-family:inherit">›</button>
+      <span style="flex:1;text-align:right;color:var(--sombre);font-size:11px">${activeDate===todayKey()?"AUJOURD'HUI":fmtDate(activeDate).toUpperCase()}</span>
+    </div>
 
     <div class="section"><h2>Le tunnel — émis</h2>
       <div class="sub">Ce que tu contrôles à 100%. C'est ici que se joue tout le reste.</div>
@@ -192,10 +253,12 @@ function renderJour(){
       <div class="sub">L'infrastructure biologique de l'ambition.</div>
       <div class="row">${numField("Sommeil (h)","sommeil",0.5)}${numField("Sport (min)","sportMin",5)}</div>
       <div class="lbl">Type d'entraînement</div>
-      <div style="margin-bottom:12px">${segments("sportType",[["rien","Repos"],["marche","Marche"],["cardio","Cardio"],["muscu","Renfo"]])}</div>
+      <div style="margin-bottom:12px">${segments("sportType", config.sportTypes.map(s=>[s.id,s.label]).concat([["rien","Repos"]]))}</div>
       <div class="lbl">Nourriture du jour</div>
       <div style="margin-bottom:12px">${segments("nourriture",[[2,"Réelle & propre"],[1,"Correcte"],[0,"Chaotique"]])}</div>
       <div class="row">${toggle("Lumière du jour","lumiere")}${toggle("Bien hydratée","eau")}</div>
+      ${config.supplements.length ? `<div class="lbl" style="margin-top:12px">Compléments pris aujourd'hui</div>
+      <div class="row" style="margin-bottom:0">${config.supplements.map(s=>supToggle(s)).join("")}</div>` : ""}
     </div>
 
     <div class="section"><h2>Le mental</h2>
@@ -303,7 +366,18 @@ function renderSemaine(){
 
 function renderHistorique(){
   const sorted = Object.keys(entries).sort().reverse();
+  const url = localStorage.getItem(SYNC_KEY) || "";
   let html = `
+  <div class="card" style="padding:18px">
+    <h3 class="big" style="font-size:19px">Connexion Google Sheet</h3>
+    <div class="sub">Colle ici l'URL de ton script (voir les étapes d'installation). Ensuite, chaque vote enregistré part automatiquement dans le Sheet.</div>
+    <input type="text" id="syncUrl" placeholder="https://script.google.com/macros/s/…/exec" value="${esc(url)}" style="margin-bottom:10px">
+    <div class="export-bar" style="margin-bottom:0">
+      <button id="syncSave">Enregistrer l'URL</button>
+      <button id="syncAll">⟳ Tout envoyer au Sheet</button>
+    </div>
+    <div class="sub" id="syncMsg" style="margin:8px 0 0;text-align:center"></div>
+  </div>
   <div class="export-bar">
     <button id="expCsv">⬇ Export CSV (Sheets)</button>
     <button id="expJson">⬇ Sauvegarde JSON</button>
@@ -328,8 +402,8 @@ function renderHistorique(){
       num(e.closes)?`${e.closes} CLOSE ✦`:null,
       num(e.cash)?`${num(e.cash).toLocaleString("fr-FR")} €`:null
     ].filter(Boolean).join(" · ");
-    return `<div class="hist ${num(e.closes)>0?"win":""}">
-      <div class="hist-head"><span class="hist-date">${fmtDate(k)}</span><span class="hist-carb" style="color:${carbCol}">${carbTxt}</span></div>
+    return `<div class="hist ${num(e.closes)>0?"win":""}" data-edit="${k}" style="cursor:pointer" title="Cliquer pour modifier ce jour">
+      <div class="hist-head"><span class="hist-date">${fmtDate(k)}</span><span class="hist-carb" style="color:${carbCol}">${carbTxt} ✎</span></div>
       <div class="hist-body">
         <span>${emis} émis</span>
         ${pipe?`<span class="pipe">${pipe}</span>`:""}
@@ -351,9 +425,41 @@ function renderHistorique(){
   return html;
 }
 
+/* ---------- SYNC GOOGLE SHEET ---------- */
+
+const SYNC_KEY = "sorena-sheet-url";
+
+function buildRows(){
+  const cols = getCsvCols();
+  return Object.keys(entries).sort().map(k=>{
+    const e = Object.assign(emptyEntry(), entries[k]);
+    return cols.map(([f])=>{
+      if(f==="date") return k;
+      const v = getCellValue(e, f);
+      return typeof v==="boolean" ? (v?1:0) : (v==null?"":v);
+    });
+  });
+}
+
+function syncToSheet(silent){
+  const url = localStorage.getItem(SYNC_KEY);
+  if(!url) return;
+  if(!navigator.onLine){ if(!silent) setSyncMsg("Hors ligne — la data reste en local, elle partira au prochain vote connecté."); return; }
+  try {
+    fetch(url, {
+      method:"POST", mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body: JSON.stringify({headers: getCsvCols().map(c=>c[1]), rows: buildRows()})
+    }).then(()=>{ if(!silent) setSyncMsg("✓ Envoyé au Sheet ("+Object.keys(entries).length+" journées). Vérifie l'onglet Data."); })
+      .catch(()=>{ if(!silent) setSyncMsg("Échec de l'envoi — vérifie l'URL et ta connexion."); });
+  } catch(e){ if(!silent) setSyncMsg("URL invalide."); }
+}
+
+function setSyncMsg(m){ const el = document.getElementById("syncMsg"); if(el) el.textContent = m; }
+
 /* ---------- EXPORTS ---------- */
 
-const CSV_COLS = [
+const CSV_STATIC_COLS = [
   ["date","Date"],["dm","DM"],["appels","Appels"],["relances","Relances"],
   ["reponses","Réponses"],["r1Book","R1 bookés"],["r1Fait","R1 faits"],["r2","R2"],["closes","Closes"],["cash","Cash €"],
   ["constructionMin","Forge min"],["constructionSur","Forge sur"],
@@ -364,6 +470,31 @@ const CSV_COLS = [
   ["carburant","Carburant 1-5"],["rumination","Rumination 0-2"],["scroll","Scroll 0-2"],["couvreFeu","Couvre-feu"],
   ["connexion","Lien humain"],["journal","Journal"],["note","Note"]
 ];
+
+// Colonnes CSV : statiques + un col par complément (config + historiques rencontrés)
+function getCsvCols(){
+  const supIds = new Set(config.supplements.map(s=>s.id));
+  const supLabels = {};
+  config.supplements.forEach(s => { supLabels[s.id] = s.label; });
+  Object.values(entries).forEach(e => {
+    if(e && e.supplements){
+      Object.keys(e.supplements).forEach(id => {
+        supIds.add(id);
+        if(!supLabels[id]) supLabels[id] = id.charAt(0).toUpperCase()+id.slice(1);
+      });
+    }
+  });
+  const supCols = Array.from(supIds).map(id => ["sup:"+id, supLabels[id] || id]);
+  return CSV_STATIC_COLS.concat(supCols);
+}
+
+function getCellValue(entry, field){
+  if(field.indexOf("sup:")===0){
+    const id = field.slice(4);
+    return !!(entry.supplements && entry.supplements[id]);
+  }
+  return entry[field];
+}
 
 function csvCell(v){
   if(typeof v==="boolean") return v?"1":"0";
@@ -381,11 +512,12 @@ function download(name, content, type){
 }
 
 function exportCsv(){
+  const cols = getCsvCols();
   const keys = Object.keys(entries).sort();
-  const head = CSV_COLS.map(c=>csvCell(c[1])).join(";");
+  const head = cols.map(c=>csvCell(c[1])).join(";");
   const rows = keys.map(k=>{
     const e = Object.assign(emptyEntry(), entries[k]);
-    return CSV_COLS.map(([f])=> f==="date" ? k : csvCell(e[f])).join(";");
+    return cols.map(([f])=> f==="date" ? k : csvCell(getCellValue(e, f))).join(";");
   });
   download(`pilotage-${todayKey()}.csv`, "\uFEFF"+[head,...rows].join("\n"), "text/csv;charset=utf-8");
 }
@@ -405,7 +537,7 @@ function importJson(file){
       if(confirm(`Importer ${n} journées ? Elles fusionneront avec celles de cet appareil.`)){
         entries = Object.assign({}, entries, imported);
         persist();
-        form = Object.assign(emptyEntry(), entries[todayKey()] || {});
+        form = Object.assign(emptyEntry(), entries[activeDate] || {});
         render();
       }
     } catch(e){ alert("Fichier invalide."); }
@@ -417,8 +549,42 @@ function importJson(file){
 
 const app = document.getElementById("app");
 
+function renderParams(){
+  const listRow = (label, id, kind) => `<div style="display:flex;align-items:center;gap:8px;background:var(--panneau);border:1px solid var(--bordure);border-radius:6px;padding:8px 12px;margin-bottom:6px">
+    <span style="flex:1;color:var(--ivoire);font-size:14px">${esc(label)}</span>
+    <button data-del="${kind}" data-id="${esc(id)}" title="Supprimer" style="background:transparent;border:none;color:var(--sombre);cursor:pointer;font-size:18px;padding:0 4px">×</button>
+  </div>`;
+
+  return `<div class="card">
+    <h3 class="big">Paramètres</h3>
+    <div class="sub" style="margin-bottom:24px">Ajuste tes listes personnelles. Le reste du cockpit reste figé, comme prévu.</div>
+
+    <div class="section" style="margin-bottom:32px">
+      <h2>Mes compléments</h2>
+      <div class="sub">Les toggles qui apparaissent dans "Le corps" chaque jour.</div>
+      <div style="margin-bottom:14px">${config.supplements.map(s => listRow(s.label, s.id, "sup")).join("") || `<div class="sub" style="font-style:italic">Aucun complément pour l'instant.</div>`}</div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="newSupLabel" placeholder="Ajouter (ex. Vitamine D)" maxlength="30" style="flex:1">
+        <button id="addSup" style="background:var(--or);color:var(--fond);border:none;border-radius:6px;padding:0 18px;font-family:inherit;font-weight:600;font-size:12px;letter-spacing:1px;cursor:pointer">+ AJOUTER</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Mes types de sport</h2>
+      <div class="sub">Les options qui apparaissent dans "Type d'entraînement". "Repos" reste toujours disponible.</div>
+      <div style="margin-bottom:14px">${config.sportTypes.map(s => listRow(s.label, s.id, "sport")).join("") || `<div class="sub" style="font-style:italic">Aucun type pour l'instant.</div>`}</div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="newSportLabel" placeholder="Ajouter (ex. Yoga)" maxlength="20" style="flex:1">
+        <button id="addSport" style="background:var(--or);color:var(--fond);border:none;border-radius:6px;padding:0 18px;font-family:inherit;font-weight:600;font-size:12px;letter-spacing:1px;cursor:pointer">+ AJOUTER</button>
+      </div>
+    </div>
+
+    <div class="sub" style="margin-top:24px;font-style:italic;text-align:center">Supprimer un élément le retire des futurs votes. Les anciens votes qui l'utilisaient restent intacts.</div>
+  </div>`;
+}
+
 function render(){
-  app.innerHTML = tab==="jour" ? renderJour() : tab==="semaine" ? renderSemaine() : renderHistorique();
+  app.innerHTML = tab==="jour" ? renderJour() : tab==="semaine" ? renderSemaine() : tab==="params" ? renderParams() : renderHistorique();
 }
 
 document.querySelector("nav").addEventListener("click", e=>{
@@ -440,10 +606,21 @@ app.addEventListener("input", e=>{
 
 app.addEventListener("click", e=>{
   const tg = e.target.closest(".tgl");
-  if(tg){ form[tg.dataset.t] = !form[tg.dataset.t];
+  if(tg){
+    if(tg.dataset.sup){
+      if(!form.supplements || typeof form.supplements !== "object") form.supplements = {};
+      const id = tg.dataset.sup;
+      form.supplements[id] = !form.supplements[id];
+      const on = form.supplements[id];
+      tg.classList.toggle("on", on);
+      tg.textContent = (on?"✓ ":"") + tg.textContent.replace(/^✓ /,"");
+      return;
+    }
+    form[tg.dataset.t] = !form[tg.dataset.t];
     tg.classList.toggle("on", form[tg.dataset.t]);
     tg.textContent = (form[tg.dataset.t]?"✓ ":"") + tg.textContent.replace(/^✓ /,"");
-    return; }
+    return;
+  }
   const sg = e.target.closest("[data-s]");
   if(sg){ const f = sg.dataset.s; let v = sg.dataset.v;
     if(f==="nourriture"||f==="rumination"||f==="scroll"||f==="prieres") v = parseInt(v);
@@ -451,17 +628,86 @@ app.addEventListener("click", e=>{
     sg.parentElement.querySelectorAll("[data-s]").forEach(x=>x.classList.toggle("on", x===sg));
     return; }
   if(e.target.id==="saveBtn"){
-    entries[todayKey()] = Object.assign({}, form);
-    if(persist()){ savedFlash = true; render(); setTimeout(()=>{savedFlash=false; if(tab==="jour") render();},2500); }
+    entries[activeDate] = Object.assign({}, form);
+    if(persist()){ savedFlash = true; syncToSheet(true); render(); setTimeout(()=>{savedFlash=false; if(tab==="jour") render();},2500); }
     else document.getElementById("err").textContent = "La sauvegarde a échoué (stockage indisponible dans ce navigateur).";
     return; }
   if(e.target.id==="expCsv"){ exportCsv(); return; }
   if(e.target.id==="expJson"){ exportJson(); return; }
+  if(e.target.id==="syncSave"){
+    const u = document.getElementById("syncUrl").value.trim();
+    if(u && !/^https:\/\/script\.google\.com\//.test(u)){ setSyncMsg("L'URL doit commencer par https://script.google.com/…"); return; }
+    localStorage.setItem(SYNC_KEY, u);
+    setSyncMsg(u ? "✓ URL enregistrée. Chaque vote partira automatiquement au Sheet." : "URL effacée — synchronisation désactivée.");
+    return; }
+  if(e.target.id==="syncAll"){ setSyncMsg("Envoi…"); syncToSheet(false); return; }
+  if(e.target.id==="prevDay"){ shiftDate(-1); return; }
+  if(e.target.id==="nextDay"){ shiftDate(1); return; }
+  if(e.target.id==="addSup"){
+    const inp = document.getElementById("newSupLabel");
+    const label = (inp.value||"").trim();
+    if(!label) return;
+    let id = slug(label); let base=id, k=2;
+    while(config.supplements.some(s=>s.id===id)) id = base+k++;
+    config.supplements.push({id, label});
+    persistConfig(); render();
+    return;
+  }
+  if(e.target.id==="addSport"){
+    const inp = document.getElementById("newSportLabel");
+    const label = (inp.value||"").trim();
+    if(!label) return;
+    let id = slug(label); let base=id, k=2;
+    if(id==="rien") id="rien2";
+    while(config.sportTypes.some(s=>s.id===id) || id==="rien") id = base+k++;
+    config.sportTypes.push({id, label});
+    persistConfig(); render();
+    return;
+  }
+  const del = e.target.closest("[data-del]");
+  if(del){
+    const kind = del.dataset.del, id = del.dataset.id;
+    if(kind==="sup") config.supplements = config.supplements.filter(s=>s.id!==id);
+    if(kind==="sport") config.sportTypes = config.sportTypes.filter(s=>s.id!==id);
+    persistConfig(); render();
+    return;
+  }
+  const editRow = e.target.closest("[data-edit]");
+  if(editRow){
+    activeDate = editRow.dataset.edit;
+    form = Object.assign(emptyEntry(), entries[activeDate] || {});
+    if(!form.supplements) form.supplements = {};
+    tab = "jour";
+    document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on", x.dataset.tab==="jour"));
+    render();
+    window.scrollTo({top:0, behavior:"smooth"});
+    return;
+  }
 });
 
 app.addEventListener("change", e=>{
   if(e.target.id==="impJson" && e.target.files.length) importJson(e.target.files[0]);
+  if(e.target.id==="dateSel"){
+    const v = e.target.value;
+    if(v && v <= todayKey()){
+      activeDate = v;
+      form = Object.assign(emptyEntry(), entries[activeDate] || {});
+      render();
+    }
+  }
 });
+
+function shiftDate(days){
+  const [y,m,d] = activeDate.split("-").map(Number);
+  const dt = new Date(y, m-1, d);
+  dt.setDate(dt.getDate() + days);
+  const target = dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");
+  if(target <= todayKey()){
+    activeDate = target;
+    form = Object.assign(emptyEntry(), entries[activeDate] || {});
+    render();
+  }
+}
 
 render();
 </script>

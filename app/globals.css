@@ -1073,6 +1073,14 @@ section { position: relative; }
   letter-spacing: 0.04em;
   position: relative; z-index: 2;
 }
+.foot-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(240,200,192,0.4);
+  transition: text-decoration-color .2s ease;
+}
+.foot-credit a:hover { text-decoration-color: currentColor; }
 
 .foot-wordmark {
   position: relative;

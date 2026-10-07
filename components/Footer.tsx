@@ -92,6 +92,12 @@ export function Footer() {
             <span>
               © {new Date().getFullYear()} Sorena Agency · Tous droits réservés.
             </span>
+            <span className="foot-credit">
+              Site réalisé par{" "}
+              <a href="https://www.niyya-agency.com" target="_blank" rel="noopener">
+                Niyya Agency
+              </a>
+            </span>
           </div>
         </div>
       </footer>

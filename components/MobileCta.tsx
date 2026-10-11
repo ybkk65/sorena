@@ -3,45 +3,52 @@
 import { useEffect, useState } from "react";
 
 /**
- * Barre d'action fixe en bas d'écran, visible uniquement en mode mobile/tel.
- * Met en avant la prise de rendez-vous en permanence pendant le scroll.
- * Se masque automatiquement quand l'agenda (le calendrier de réservation)
- * est à l'écran : la barre devient redondante à cet endroit.
+ * Barre d'action collée en bas d'écran (téléphone). Elle se retire tant
+ * qu'un élément portant déjà l'action est visible : bouton du hero,
+ * calculateur (la barre recouvrirait ses curseurs), agenda, pied de page.
  */
+const MASQUER_SUR = ["#cta-hero", "#calcul", "#agenda", "footer"] as const;
+
 export function MobileCta() {
-  const [hidden, setHidden] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const target = document.getElementById("agenda");
-    if (!target) return;
+    const cibles = MASQUER_SUR.flatMap((s) => Array.from(document.querySelectorAll(s)));
+    if (cibles.length === 0) {
+      setVisible(true);
+      return;
+    }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setHidden(entry.isIntersecting),
-      { rootMargin: "0px 0px -35% 0px", threshold: 0 }
-    );
+    let enVue: ReadonlySet<Element> = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      enVue = entries.reduce<ReadonlySet<Element>>(
+        (courant, e) =>
+          e.isIntersecting
+            ? new Set([...courant, e.target])
+            : new Set([...courant].filter((el) => el !== e.target)),
+        enVue
+      );
+      setVisible(enVue.size === 0);
+    });
 
-    observer.observe(target);
+    cibles.forEach((c) => observer.observe(c));
     return () => observer.disconnect();
   }, []);
 
   return (
-    <a
-      className={`mobile-cta ${hidden ? "is-hidden" : ""}`}
-      href="#agenda"
-      aria-hidden={hidden}
-    >
-      <span className="mobile-cta-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4.5" width="18" height="16" rx="2.5" />
-          <path d="M3 9h18M8 2.5v4M16 2.5v4" />
-        </svg>
+    <div className={`mobile-cta${visible ? "" : " is-hidden"}`} aria-hidden={!visible}>
+      <span className="mobile-cta-texte">
+        <strong>Diagnostic offert de votre zone</strong>
+        <small>30 min · sans engagement</small>
       </span>
-
-      <span className="mobile-cta-label">Diagnostic offert</span>
-
-      <svg className="mobile-cta-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-        <path d="M3 8h10M9 4l4 4-4 4" />
-      </svg>
-    </a>
+      <a
+        className="mobile-cta-btn"
+        href="#agenda"
+        data-cta="barre-collante"
+        tabIndex={visible ? undefined : -1}
+      >
+        Réserver
+      </a>
+    </div>
   );
 }

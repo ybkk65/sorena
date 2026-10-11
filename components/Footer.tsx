@@ -1,4 +1,10 @@
+import Link from "next/link";
+import { landingsByKind } from "@/content/registry";
+
 export function Footer() {
+  const metiers = landingsByKind("metier");
+  const leviers = landingsByKind("service");
+
   return (
     <>
       <div className="footer-blend" aria-hidden="true" />
@@ -51,33 +57,49 @@ export function Footer() {
             </div>
 
             <div className="foot-col">
-              <h4>La maison</h4>
+              <h3>La maison</h3>
               <ul>
-                <li><a href="#methode">Le protocole</a></li>
-                <li><a href="#resultat">Le résultat</a></li>
-                <li><a href="#positionnement">La sélection</a></li>
+                <li><Link href="/#methode">Le protocole</Link></li>
+                <li><Link href="/a-propos">À propos</Link></li>
+                <li><Link href="/ressources">Ressources</Link></li>
+                <li><Link href="/#faq">Questions fréquentes</Link></li>
                 <li><a href="#agenda">Réserver mon diagnostic offert</a></li>
               </ul>
             </div>
 
             <div className="foot-col">
-              <h4>Contact</h4>
+              <h3>Pour qui</h3>
+              <ul>
+                {metiers.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/${p.slug}`}>{p.cardTitle}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="foot-col">
+              <h3>Les leviers</h3>
+              <ul>
+                {leviers.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/${p.slug}`}>{p.cardTitle}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="foot-col">
+              <h3>Contact</h3>
               <ul>
                 <li>
                   <a href="mailto:sofya@sorenaagency.com">
                     sofya@sorenaagency.com
                   </a>
                 </li>
-              </ul>
-            </div>
-
-            <div className="foot-col">
-              <h4>Légal</h4>
-              <ul>
-                <li><a href="/confidentialite">Confidentialité</a></li>
-                <li><a href="/cookies">Cookies</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">CGV</a></li>
+                <li><Link href="/mentions-legales">Mentions légales</Link></li>
+                <li><Link href="/confidentialite">Confidentialité</Link></li>
+                <li><Link href="/cookies">Cookies</Link></li>
               </ul>
             </div>
           </div>

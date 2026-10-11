@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Hanken_Grotesk, Cormorant_Garamond } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
 import { MetaPixel } from "@/components/MetaPixel";
+import { FOUNDER } from "@/lib/seo";
+import {
+  CONTACT_EMAIL,
+  ORGANIZATION_ID,
+  SITE_NAME,
+  SITE_URL,
+  SOCIAL_LINKS,
+  WEBSITE_ID,
+} from "@/lib/site";
 import "./globals.css";
-
-const SITE_URL = "https://www.sorenaagency.com";
+import "./subpages.css";
+import "./conversion.css";
 
 // Serif fin et délicat pour wordmark + titres : EB Garamond. Traits légers,
 // old-style élégant, bien plus fin que Newsreader/Bodoni.
@@ -21,6 +31,8 @@ const cormorantThin = Cormorant_Garamond({
   weight: ["300"],
   variable: "--font-thin",
   display: "swap",
+  // Purement décoratif (footer) : pas de préchargement.
+  preload: false,
 });
 
 // Corps + labels : Hanken Grotesk. Grotesque raffiné et chaleureux, plus
@@ -32,33 +44,23 @@ const hanken = Hanken_Grotesk({
   display: "swap",
 });
 
+const JS_FLAG_SCRIPT = "document.documentElement.classList.add('js')";
+
+const HOME_TITLE = "Agence marketing esthétique pour centres et instituts · Sorena";
+const HOME_DESCRIPTION =
+  "Sorena, agence d'acquisition de clientèle pour centres esthétiques, instituts et cabinets : publicité locale, qualification par IA, acompte. Diagnostic offert.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
-    template: "%s · Sorena",
+    default: HOME_TITLE,
+    template: `%s · ${SITE_NAME}`,
   },
-  description:
-    "Des clientes qui viennent, paient le juste prix et reviennent. Nous installons le système qui les fait venir, sans brader votre image.",
-  applicationName: "Sorena",
-  keywords: [
-    "clientes qualifiées centre esthétique",
-    "remplir agenda institut de beauté",
-    "acquisition clientes cures d'exception",
-    "publicité Meta Instagram esthétique",
-    "agence marketing centre esthétique",
-    "qualification IA prise de rendez-vous",
-    "acquisition patientèle médecine esthétique",
-    "marketing cabinet esthétique",
-    "épilation laser médecin publicité",
-    "Sorena",
-  ],
+  description: HOME_DESCRIPTION,
+  applicationName: SITE_NAME,
   authors: [{ name: "Sorena Agency" }],
   creator: "Sorena Agency",
   publisher: "Sorena Agency",
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -71,11 +73,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
+    title: HOME_TITLE,
     description:
-      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures et vos actes.",
+      "Pas plus de demandes : les bonnes. Des clientes qualifiées, fidèles, prêtes à investir dans vos cures et vos soins.",
     url: SITE_URL,
-    siteName: "Sorena",
+    siteName: SITE_NAME,
     locale: "fr_FR",
     type: "website",
     images: [
@@ -83,54 +85,52 @@ export const metadata: Metadata = {
         url: "/assets/og-sorena.jpg",
         width: 1200,
         height: 630,
-        alt: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
+        alt: "Sorena, agence marketing esthétique",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sorena · Acquisition de clientèle pour centres, cliniques et cabinets esthétiques",
+    title: HOME_TITLE,
     description:
-      "Pas plus de leads, les bonnes : qualifiées, fidèles, prêtes à investir dans vos cures et vos actes.",
+      "Pas plus de demandes : les bonnes. Des clientes qualifiées, fidèles, prêtes à investir dans vos cures et vos soins.",
     images: ["/assets/og-sorena.jpg"],
   },
 };
 
-const jsonLd = {
+const siteSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
-      "@id": `${SITE_URL}/#organization`,
+      "@id": ORGANIZATION_ID,
       name: "Sorena Agency",
+      alternateName: SITE_NAME,
       url: SITE_URL,
       logo: `${SITE_URL}/assets/sorena-logo.png`,
-      email: "sofya@sorenaagency.com",
+      image: `${SITE_URL}/assets/og-sorena.jpg`,
+      email: CONTACT_EMAIL,
       description:
-        "Sorena installe le système qui fait venir les bonnes clientes pour les centres, cliniques et cabinets esthétiques : publicité ciblée et qualification par IA en coulisse, sans brader votre image.",
-      sameAs: [
-        "https://www.instagram.com/sorenaa.agency/",
-        "https://www.facebook.com/share/1P38aCKRgs/",
+        "Agence marketing esthétique : Sorena fait venir les bonnes clientes dans les centres esthétiques, instituts de beauté et cabinets, grâce à une publicité locale ciblée, une qualification des demandes par IA et un acompte à la réservation.",
+      founder: FOUNDER,
+      areaServed: { "@type": "Country", name: "France" },
+      knowsAbout: [
+        "Marketing pour instituts de beauté",
+        "Publicité Facebook et Instagram",
+        "Acquisition de clientèle esthétique",
+        "Rendez-vous non honorés",
+        "Épilation laser",
+        "Cures minceur",
       ],
+      sameAs: [...SOCIAL_LINKS],
     },
     {
       "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
+      "@id": WEBSITE_ID,
       url: SITE_URL,
-      name: "Sorena",
+      name: SITE_NAME,
       inLanguage: "fr-FR",
-      publisher: { "@id": `${SITE_URL}/#organization` },
-    },
-    {
-      "@type": "ProfessionalService",
-      name: "Sorena Agency",
-      image: `${SITE_URL}/assets/image_salon.jpg`,
-      url: SITE_URL,
-      email: "sofya@sorenaagency.com",
-      priceRange: "€€€",
-      areaServed: "FR",
-      description:
-        "Sorena fait venir les bonnes clientes pour les centres, cliniques et cabinets esthétiques : publicité ciblée (Meta, Instagram) et qualification par IA en coulisse, sans brader l'image du centre.",
+      publisher: { "@id": ORGANIZATION_ID },
     },
   ],
 };
@@ -144,12 +144,13 @@ export default function RootLayout({
     <html
       lang="fr"
       className={`${hanken.variable} ${garamond.variable} ${cormorantThin.variable}`}
+      suppressHydrationWarning
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {/* Pose la classe "js" avant le premier rendu : les animations .reveal
+            ne masquent le contenu que si le JavaScript s'exécute. */}
+        <script dangerouslySetInnerHTML={{ __html: JS_FLAG_SCRIPT }} />
+        <JsonLd data={siteSchema} />
       </head>
       <body data-tone="wine" data-accent="rose">
         {children}

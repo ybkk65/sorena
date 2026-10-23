@@ -164,7 +164,7 @@ export function Calendar() {
 
           <div className="calendar-head-aside">
             <p className="calendar-sub">
-              En 30 minutes, nous étudions votre zone, vos soins et votre agenda. Vous
+              Nous étudions votre zone, vos soins et votre agenda. Vous
               repartez avec un plan clair, même si nous ne travaillons pas ensemble.
             </p>
             <p className="calendar-sofya">

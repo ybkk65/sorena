@@ -436,7 +436,7 @@ section[id] { scroll-margin-top: 130px; }
 .cs-reglage strong { font-weight: 500; text-align: right; }
 
 /* ============================================
-   PROTOCOLE (grille)
+   SYSTÈME (grille)
 ============================================ */
 .mg-grille {
   list-style: none; margin: 0; padding: 0;
@@ -455,16 +455,18 @@ section[id] { scroll-margin-top: 130px; }
 .mg-texte h3 { font-family: var(--display); font-weight: 400; font-size: clamp(23px, 2.1vw, 29px); line-height: 1.12; }
 .mg-texte p { margin-top: 10px; max-width: 46ch; font-size: 15px; line-height: 1.6; color: var(--texte-doux); }
 
-.mg-tuile.mg-t-objectif {
+/* Carte vedette (l'assistante) : en tête, sur toute la largeur. */
+.mg-tuile.is-vedette {
   grid-column: 1 / -1; flex-direction: row-reverse; align-items: center;
   gap: clamp(28px, 5vw, 72px);
-  margin-top: clamp(24px, 3vw, 40px); padding-top: clamp(40px, 4vw, 56px);
-  border-top: 1px solid var(--champagne-soft);
+  margin-bottom: clamp(24px, 3vw, 40px); padding-bottom: clamp(40px, 4vw, 56px);
+  border-bottom: 1px solid var(--champagne-soft);
 }
-.mg-t-objectif .mg-visuel { flex: 1.1; height: auto; min-height: 220px; }
-.mg-t-objectif .mg-texte { flex: 1; padding: 0; }
-.mg-t-objectif .mg-texte h3 { font-size: clamp(30px, 3.4vw, 48px); line-height: 1.05; letter-spacing: -0.015em; }
-.mg-t-objectif .mg-texte p { font-size: 16px; }
+.is-vedette .mg-visuel { flex: 1.1; height: auto; min-height: 300px; }
+.is-vedette .mg-texte { flex: 1; padding: 0; }
+.is-vedette .mg-texte h3 { font-size: clamp(30px, 3.4vw, 48px); line-height: 1.05; letter-spacing: -0.015em; }
+.is-vedette .mg-texte p { font-size: 16px; }
+.is-vedette .mg-chat { max-width: 360px; }
 
 .mg-annonces { display: flex; align-items: flex-end; gap: 14px; width: 100%; max-width: 580px; }
 .mg-annonce {
@@ -479,7 +481,6 @@ section[id] { scroll-margin-top: 130px; }
   background: linear-gradient(160deg, var(--bordeaux-soft), var(--bordeaux-night));
   color: var(--off-white);
 }
-.mg-annonce:nth-child(3) .mg-annonce-visuel { background: linear-gradient(160deg, #b0907a, var(--bordeaux)); }
 .mg-annonce-visuel img { object-fit: cover; }
 .mg-annonce-visuel::after {
   content: ""; position: absolute; inset: 0;
@@ -488,30 +489,12 @@ section[id] { scroll-margin-top: 130px; }
 .mg-annonce-titre, .mg-annonce-sous { position: relative; z-index: 1; }
 .mg-annonce-titre { font-family: var(--display); font-size: 18px; line-height: 1.1; }
 .mg-annonce-sous { margin-top: 4px; font-size: 10px; opacity: .8; }
+.mg-annonces.is-seule { justify-content: center; }
+.mg-annonces.is-seule .mg-annonce { flex: none; width: 180px; }
+.mg-annonces.is-seule .mg-annonce-visuel { aspect-ratio: 4 / 3.6; }
 .mg-annonce-cta {
   display: block; padding: 9px 14px;
   font-size: 9.5px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--bordeaux-night);
-}
-
-.mg-radar { position: relative; width: 190px; height: 190px; }
-.mg-radar-ring { position: absolute; border-radius: 50%; border: 1px dashed rgba(184, 151, 106, 0.5); }
-.mg-radar-ring.r1 { inset: 0; border-style: solid; border-color: var(--champagne); background: rgba(240, 200, 192, 0.14); }
-.mg-radar-ring.r2 { inset: 32px; }
-.mg-radar-ring.r3 { inset: 64px; }
-.mg-radar-centre {
-  position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px;
-  border-radius: 50%; background: var(--bordeaux-warm); box-shadow: 0 0 0 7px rgba(92, 26, 38, 0.12);
-}
-.mg-radar-pt { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--champagne); }
-.mg-radar-pt.p1 { left: 28%; top: 30%; }
-.mg-radar-pt.p2 { left: 70%; top: 26%; }
-.mg-radar-pt.p3 { left: 64%; top: 70%; }
-.mg-radar-pt.p4 { left: 24%; top: 66%; }
-.mg-radar-tag {
-  position: absolute; right: -40px; top: -4px;
-  padding: 5px 11px;
-  font-size: 9.5px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
-  background: var(--bordeaux-night); color: var(--rose-light); white-space: nowrap;
 }
 
 .mg-chat { width: 100%; max-width: 300px; }
@@ -532,6 +515,10 @@ section[id] { scroll-margin-top: 130px; }
   border: 1px solid var(--champagne-soft); font-size: 11px; color: var(--bordeaux-warm);
 }
 
+.mg-demande {
+  width: 100%; max-width: 260px; display: grid; gap: 12px;
+  padding: 20px 22px; border: 1px solid var(--champagne-soft);
+}
 .mg-resa { width: 100%; max-width: 290px; display: grid; gap: 10px; }
 .mg-resa-titre { font-family: var(--display); font-size: 21px; }
 .mg-resa-ligne {
@@ -557,13 +544,6 @@ section[id] { scroll-margin-top: 130px; }
 .mg-relance-quand { font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--bordeaux-warm); }
 .mg-relance-quoi { font-family: var(--display); font-size: 16px; }
 
-.mg-obj-carte { width: 100%; max-width: 460px; }
-.mg-objectif-tete { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
-.mg-exemple { font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--texte-discret); }
-.mg-jauge { margin: 20px 0 14px; height: 2px; background: rgba(74, 22, 32, 0.1); }
-.mg-jauge span { display: block; height: 100%; width: 68%; background: var(--bordeaux-warm); }
-.mg-objectif-pied { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--texte-doux); }
-.mg-objectif-tag { font-style: italic; font-family: var(--display); font-size: 15px; color: var(--bordeaux-warm); }
 
 /* ============================================
    FAQ — deux colonnes, lignes à filet
@@ -677,13 +657,12 @@ section[id] { scroll-margin-top: 130px; }
 }
 @media (max-width: 680px) {
   .mg-grille { grid-template-columns: 1fr; }
-  .mg-tuile.mg-t-objectif { flex-direction: column; align-items: stretch; }
+  .mg-tuile.is-vedette { flex-direction: column; align-items: stretch; }
+  .is-vedette .mg-visuel { min-height: 0; height: 250px; }
   .cv-actions { flex-direction: column; align-items: stretch; }
   .cv-btn { justify-content: center; white-space: normal; text-align: center; padding: 18px 20px; letter-spacing: .14em; }
   .cv-btn-sec { align-self: center; }
   .calc-carte { padding: 24px 18px; }
-  .mg-radar-tag { right: -8px; }
-  .mg-annonce:nth-child(3) { display: none; }
   .mg-annonce-titre { font-size: 16px; }
   .mg-annonce-titre, .mg-annonce-sous { overflow-wrap: normal; hyphens: none; }
   .hero-engagements { grid-template-columns: repeat(3, 1fr); gap: 0 14px; }

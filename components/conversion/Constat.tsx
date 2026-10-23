@@ -2,7 +2,7 @@ import { SectionHead } from "./SectionHead";
 
 /**
  * Le constat : trois situations, chacune MONTRÉE par un schéma, puis la
- * bascule vers le protocole.
+ * bascule vers le système.
  *
  * ⚠️ DES SCHÉMAS, PAS DES DONNÉES : aucune valeur, aucun axe chiffré. Rose
  * pour ce qui ne va pas ; la bascule seule annonce la suite de la page.
@@ -128,7 +128,7 @@ export function Constat() {
               réservation.
             </p>
             <a className="cs-bascule-lien" href="#methode">
-              Voir le protocole
+              Voir le système
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                 <path d="M8 3v10M4 9l4 4 4-4" />
               </svg>

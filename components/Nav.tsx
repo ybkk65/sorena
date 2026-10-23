@@ -15,7 +15,7 @@ interface NavLink {
 const LINKS: readonly NavLink[] = [
   { href: "/#calcul", label: "Calculateur", sectionId: "calcul" },
   { href: "/#constat", label: "Constat", sectionId: "constat" },
-  { href: "/#methode", label: "Protocole", sectionId: "methode" },
+  { href: "/#methode", label: "Système", sectionId: "methode" },
   { href: "/#faq", label: "Questions", sectionId: "faq" },
 ];
 

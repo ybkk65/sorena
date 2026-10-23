@@ -16,12 +16,12 @@ interface LandingTemplateProps {
   page: LandingPage;
 }
 
-/** Gabarit des pages métiers (« Pour qui ») et services (« Le protocole »). */
+/** Gabarit des pages métiers (« Pour qui ») et services (« Le système »). */
 export function LandingTemplate({ page }: LandingTemplateProps) {
   const crumbParent =
     page.kind === "metier"
       ? { name: "Pour qui", path: "/#pour-qui" }
-      : { name: "Le protocole", path: "/#methode" };
+      : { name: "Le système", path: "/#methode" };
 
   return (
     <SubpageShell>
@@ -46,7 +46,7 @@ export function LandingTemplate({ page }: LandingTemplateProps) {
                   <Arrow />
                 </a>
                 <Link className="lp-link" href="/#methode">
-                  Découvrir le protocole
+                  Découvrir le système
                 </Link>
               </div>
             </div>

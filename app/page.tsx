@@ -22,7 +22,7 @@ export const metadata: Metadata = {
  *
  * Cinq blocs, textes courts : hero (rendez-vous en premier), calculateur juste
  * dessous (accroche de la visiteuse froide, qui se termine aussi sur le
- * rendez-vous), constat, protocole, FAQ, puis clôture + agenda Cal.com.
+ * rendez-vous), constat, système, FAQ, puis clôture + agenda Cal.com.
  * Le maillage vers les pages métiers passe par le footer.
  *
  * ⚠️ Les ids de section sont ceux des liens de la nav (Nav.tsx) et des

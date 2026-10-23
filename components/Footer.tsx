@@ -22,12 +22,12 @@ export function Footer() {
               </div>
 
               <p>
-                Pour les centres, cliniques et cabinets esthétiques qui
+                Pour les centres et cabinets esthétiques qui
                 préfèrent les bonnes clientes au volume.
               </p>
 
               <div className="foot-socials">
-                <a href="https://www.instagram.com/sorenaa.agency/" aria-label="Instagram" target="_blank" rel="noopener">
+                <a href="https://www.instagram.com/sorenaagency/" aria-label="Instagram" target="_blank" rel="noopener">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
                     <rect x="2" y="2" width="12" height="12" rx="3" />
                     <circle cx="8" cy="8" r="3" />
@@ -59,7 +59,7 @@ export function Footer() {
             <div className="foot-col">
               <h3>La maison</h3>
               <ul>
-                <li><Link href="/#methode">Le protocole</Link></li>
+                <li><Link href="/#methode">Le système</Link></li>
                 <li><Link href="/a-propos">À propos</Link></li>
                 <li><Link href="/ressources">Ressources</Link></li>
                 <li><Link href="/#faq">Questions fréquentes</Link></li>
@@ -113,12 +113,6 @@ export function Footer() {
           <div className="foot-base">
             <span>
               © {new Date().getFullYear()} Sorena Agency · Tous droits réservés.
-            </span>
-            <span className="foot-credit">
-              Site réalisé par{" "}
-              <a href="https://www.niyya-agency.com" target="_blank" rel="noopener">
-                Niyya Agency
-              </a>
             </span>
           </div>
         </div>

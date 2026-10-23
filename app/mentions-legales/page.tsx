@@ -30,33 +30,21 @@ export default function MentionsLegales() {
         Le site <a href={SITE_URL}>sorenaagency.com</a> est édité par :
       </p>
       <ul>
-        <li>{EDITOR.name}</li>
-        <li>{EDITOR.legalForm}</li>
-        <li>Siège : {EDITOR.address}</li>
-        <li>Immatriculation : {EDITOR.registration}</li>
-        <li>TVA : {EDITOR.vat}</li>
+        {/* Masqués en attendant les informations : remettre ici
+            EDITOR.name, EDITOR.legalForm, Siège, Immatriculation et TVA. */}
         <li>
           Contact : <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         </li>
       </ul>
 
-      <h2>Directeur de la publication</h2>
-      <p>{EDITOR.publicationDirector}</p>
+      {/* Masqué en attendant le nom : remettre le titre « Directeur de la
+          publication » suivi de EDITOR.publicationDirector. */}
 
       <h2>Hébergeur</h2>
       <p>
         Railway Corporation, 548 Market St PMB 68956, San Francisco, CA 94104,
         États-Unis. Téléphone : +1 (415) 707-7675.
         Site : <a href="https://railway.com" target="_blank" rel="noopener">railway.com</a>
-      </p>
-
-      <h2>Conception du site</h2>
-      <p>
-        Site réalisé par{" "}
-        <a href="https://www.niyya-agency.com" target="_blank" rel="noopener">
-          Niyya Agency
-        </a>
-        .
       </p>
 
       <h2>Propriété intellectuelle</h2>

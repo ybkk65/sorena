@@ -45,6 +45,10 @@ function VisuelRappelVeille() {
   return (
     <ol className="mg-relances" aria-hidden="true">
       <li>
+        <span className="mg-relance-quand">À la réservation</span>
+        <span className="mg-relance-quoi">Acompte versé</span>
+      </li>
+      <li>
         <span className="mg-relance-quand">La veille</span>
         <span className="mg-relance-quoi">Rappel de votre soin demain</span>
       </li>
@@ -88,7 +92,7 @@ const TUILES = [
     cle: "absences",
     visuel: <VisuelRappelVeille />,
     titre: "Moins d’absences",
-    detail: "Un rappel part la veille de chaque rendez‑vous.",
+    detail: "Un acompte à la réservation, puis un rappel la veille de chaque rendez‑vous.",
   },
 ];
 

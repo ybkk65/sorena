@@ -12,10 +12,10 @@ export function Hero() {
   return (
     <section id="top" className="hero-split">
       <div className="hero-split-text">
-        {/* Le surtitre fait partie du H1 : il porte la requête principale
-            (« agence marketing esthétique »). */}
+        {/* Le surtitre fait partie du H1 : il nomme la cible. Jamais
+            « agence marketing ». */}
         <h1 className="hero-heading">
-          <span className="cv-label hero-label">Agence marketing esthétique</span>
+          <span className="cv-label hero-label">Instituts &amp; centres esthétiques</span>
           <span className="hero-split-title">
             Nous remplissons votre <em>agenda.</em>
             <br />

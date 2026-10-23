@@ -58,7 +58,7 @@ export function Nav() {
       <div className="nav-announce">
         <strong>Diagnostic offert de votre zone</strong>
         <span className="nav-announce-sep" aria-hidden="true">·</span>
-        <span className="nav-announce-detail">30 min, sans engagement</span>
+        <span className="nav-announce-detail">Sans engagement</span>
         <span className="nav-announce-sep" aria-hidden="true">·</span>
         <a href="#agenda" data-cta="bandeau">
           Réserver <span aria-hidden="true">→</span>

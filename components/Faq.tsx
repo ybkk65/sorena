@@ -1,4 +1,5 @@
 import { faqSchema } from "@/lib/seo";
+import { frenchTypo } from "@/lib/text";
 import { Actions } from "./conversion/Actions";
 import { Relance } from "./conversion/Relance";
 import { SectionHead } from "./conversion/SectionHead";
@@ -8,35 +9,23 @@ import { JsonLd } from "./JsonLd";
 const QUESTIONS = [
   {
     q: "Combien cela coûte-t-il ?",
-    a: "Notre accompagnement est sur devis, et votre budget publicitaire s'y ajoute. Le prix vous est donné pendant le diagnostic, qui est offert et sans engagement.",
-  },
-  {
-    q: "En quoi êtes-vous différents des autres agences ?",
-    a: "Nous ne livrons pas des contacts : nous suivons chaque demande jusqu'au rendez-vous honoré, avec une offre de valeur, jamais une remise.",
+    a: "L'installation du système est entièrement personnalisée : le tarif s'adapte à vos besoins, à vos moyens et à l'étape où vous en êtes dans votre développement. On définit tout ensemble pendant votre diagnostic offert.",
   },
   {
     q: "J'ai déjà essayé la publicité, sans résultat.",
-    a: "Le problème vient rarement de la publicité, mais de ce qui suit : répondre vite, qualifier, relancer, sécuriser la venue. C'est là que nous intervenons.",
+    a: "Une publicité seule ne remplit pas un agenda. Ce qui fait la différence, c'est tout ce qui se passe après le clic : répondre vite, rappeler, relancer, confirmer. C'est exactement ce que notre système prend en charge.",
   },
   {
     q: "Est-ce que cela fonctionne dans ma ville ?",
-    a: "Une clientèle prête à investir dans de beaux soins existe partout. Nous étudions votre zone pendant le diagnostic, avant tout engagement.",
+    a: "Oui. Notre système s'adapte à chaque centre, de l'institut intimiste en zone rurale au centre multi-cabines en plein centre-ville. Et pour que votre zone reste la vôtre, nous n'accompagnons qu'un seul centre dans un rayon de 10 km.",
   },
   {
-    q: "Je n'ai pas le temps de gérer tout cela.",
-    a: "Vous ne gérez rien : publicité, réponses, relances et acompte sont pris en charge. Vous recevez les clientes en cabine.",
-  },
-  {
-    q: "Travaillez-vous avec mes concurrentes ?",
-    a: "Non. Nous n'accompagnons qu'une seule maison par zone de 10 km.",
+    q: "Et si je n'ai aucune compétence technique ou marketing ?",
+    a: "C'est justement pour ça que nous existons. Vous n'avez besoin d'aucune compétence : nous installons et pilotons tout le système en 7 jours. Vous nous parlez de votre centre, de vos soins et de vos objectifs, et vos nouvelles demandes arrivent directement chez vous. Pas de jargon, rien de technique à gérer.",
   },
   {
     q: "Vous engagez-vous sur des résultats ?",
     a: "Nous fixons ensemble un objectif de rendez-vous qualifiés. Tant qu'il n'est pas atteint, nous continuons sans frais supplémentaires.",
-  },
-  {
-    q: "Travaillez-vous avec les médecins ?",
-    a: "Non pour la publicité : le code de déontologie médicale l'interdit. Notre protocole s'adresse aux instituts et centres esthétiques non médicaux.",
   },
 ];
 
@@ -66,10 +55,10 @@ export function Faq() {
           {QUESTIONS.map((item) => (
             <details key={item.q} className="faq-item">
               <summary className="faq-q">
-                <span>{item.q}</span>
+                <span>{frenchTypo(item.q)}</span>
                 <span className="plus" aria-hidden="true">+</span>
               </summary>
-              <div className="faq-a">{item.a}</div>
+              <div className="faq-a">{frenchTypo(item.a)}</div>
             </details>
           ))}
         </div>

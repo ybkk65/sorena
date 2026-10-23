@@ -39,7 +39,7 @@ export function MobileCta() {
     <div className={`mobile-cta${visible ? "" : " is-hidden"}`} aria-hidden={!visible}>
       <span className="mobile-cta-texte">
         <strong>Diagnostic offert de votre zone</strong>
-        <small>30 min · sans engagement</small>
+        <small>Sans engagement</small>
       </span>
       <a
         className="mobile-cta-btn"

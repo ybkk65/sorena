@@ -10,12 +10,26 @@ import { Actions } from "./Actions";
  * coordonnée demandée pour voir le résultat.
  */
 
+/** `nom` : le soin tel qu'il est repris dans les phrases des étapes suivantes. */
 const SOINS = [
-  { id: "visage", label: "Soins visage", detail: "Signature, HydraFacial, anti-âge" },
-  { id: "laser", label: "Épilation laser ou IPL", detail: "À la séance ou au forfait" },
-  { id: "minceur", label: "Cures minceur & remodelage", detail: "Bilans, cures, séances" },
-  { id: "corps", label: "Soins corps & massages", detail: "Rituels, drainage" },
-  { id: "autre", label: "Un autre soin", detail: "Celui que vous voulez remplir" },
+  {
+    id: "visage",
+    label: "Soins visage",
+    detail: "HydraFacial, jet peel, LED, radiofréquence, peeling",
+    nom: "vos soins visage",
+  },
+  {
+    id: "epilation",
+    label: "Épilation définitive",
+    detail: "Laser diode, lumière pulsée, thermolyse",
+    nom: "votre épilation définitive",
+  },
+  {
+    id: "minceur",
+    label: "Minceur et remodelage",
+    detail: "Cryolipolyse, radiofréquence corps, pressothérapie, remodelage manuel",
+    nom: "vos soins minceur et remodelage",
+  },
 ] as const;
 
 type Soin = (typeof SOINS)[number];
@@ -88,7 +102,7 @@ export function Calculateur() {
 
   const fini = etape === TOTAL;
   const estimation = estimerCreneauxPerdus(reponses);
-  const nomSoin = soin && soin.id !== "autre" ? soin.label.toLowerCase() : "votre soin";
+  const nomSoin = soin ? soin.nom : "votre soin";
 
   return (
     <div className="calc-carte reveal">

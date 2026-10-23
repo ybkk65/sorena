@@ -109,7 +109,7 @@ export const centreLaser: LandingPage = {
     {
       type: "cta",
       title: "Vos créneaux machine méritent un plan précis.",
-      text: "Le diagnostic de 30 minutes est offert et sans engagement. Nous étudions votre zone, vos forfaits, votre agenda et la formation de vos praticiennes, puis vous repartez avec un plan clair. Le tarif de l'accompagnement est discuté à ce moment-là.",
+      text: "Le diagnostic est offert et sans engagement. Nous étudions votre zone, vos forfaits, votre agenda et la formation de vos praticiennes, puis vous repartez avec un plan clair. Le tarif de l'accompagnement est discuté à ce moment-là.",
     },
     { type: "h2", text: "Qualifier les demandes sans collecter de données de santé" },
     {
@@ -168,7 +168,7 @@ export const centreLaser: LandingPage = {
     },
     {
       q: "Je suis médecin et je pratique l'épilation laser : pouvez-vous m'accompagner ?",
-      a: "Pas avec ce protocole. Le code de déontologie médicale interdit au médecin d'obtenir, contre paiement ou autrement, un référencement prioritaire sur internet (article R.4127-80 du code de la santé publique), et l'Ordre en déduit l'interdiction de la publicité payante, quel que soit l'acte. Les avances d'honoraires et la facturation d'un rendez-vous non honoré lui sont aussi interdites. Cette page s'adresse aux centres et instituts non médicaux.",
+      a: "Pas avec ce système. Le code de déontologie médicale interdit au médecin d'obtenir, contre paiement ou autrement, un référencement prioritaire sur internet (article R.4127-80 du code de la santé publique), et l'Ordre en déduit l'interdiction de la publicité payante, quel que soit l'acte. Les avances d'honoraires et la facturation d'un rendez-vous non honoré lui sont aussi interdites. Cette page s'adresse aux centres et instituts non médicaux.",
     },
   ],
   related: [

@@ -89,7 +89,7 @@ export const institutDeBeaute: LandingPage = {
     {
       type: "cta",
       title: "Votre zone est-elle encore disponible ?",
-      text: "Nous n'accompagnons qu'un institut par zone de 10 km. Le diagnostic de 30 minutes est offert : nous étudions votre secteur, vos soins et votre agenda, et vous repartez avec un plan clair.",
+      text: "Nous n'accompagnons qu'un institut par zone de 10 km. Le diagnostic est offert : nous étudions votre secteur, vos soins et votre agenda, et vous repartez avec un plan clair.",
     },
     { type: "h2", text: "Une seule maison par zone de 10 km" },
     {
@@ -131,7 +131,7 @@ export const institutDeBeaute: LandingPage = {
     },
     {
       q: "En combien de temps le système est-il en place ?",
-      a: "Le protocole s'installe en 7 jours une fois les éléments de votre institut réunis (soins, tarifs, créneaux, visuels). Nous fixons ensuite ensemble un objectif de rendez-vous qualifiés.",
+      a: "Le système s'installe en 7 jours une fois les éléments de votre institut réunis (soins, tarifs, créneaux, visuels). Nous fixons ensuite ensemble un objectif de rendez-vous qualifiés.",
     },
   ],
   related: [

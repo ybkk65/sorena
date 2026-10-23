@@ -136,7 +136,7 @@ export const afficheRendezVousNonHonore: Article = {
     {
       type: "cta",
       title: "Des rappels et des arrhes qui tournent sans vous",
-      text: "Nous mettons en place les rappels, les relances et l'acompte ou les arrhes à la réservation, avec une politique d'annulation claire, au sein d'un protocole d'acquisition complet. Une seule maison accompagnée par zone de 10 km. Le diagnostic de 30 minutes est offert.",
+      text: "Nous mettons en place les rappels, les relances et l'acompte ou les arrhes à la réservation, avec une politique d'annulation claire, au sein d'un système d'acquisition complet. Une seule maison accompagnée par zone de 10 km. Le diagnostic est offert.",
     },
 
     { type: "h2", text: "Modèle 5 : le message après un rendez-vous non honoré" },
@@ -220,7 +220,7 @@ export const afficheRendezVousNonHonore: Article = {
     },
     {
       type: "p",
-      text: "Ces modèles demandent surtout de la régularité : confirmer chaque réservation, envoyer chaque rappel au bon moment, écrire à chaque absente. Chez Sorena, ces messages, les arrhes et une politique d'annulation claire font partie d'un même protocole d'acquisition. Pour tout déléguer, découvrez notre [solution clé en main contre les rendez-vous non honorés](/rendez-vous-non-honores) : elle réduit les absences, dans votre ton et dans le respect de ces règles.",
+      text: "Ces modèles demandent surtout de la régularité : confirmer chaque réservation, envoyer chaque rappel au bon moment, écrire à chaque absente. Chez Sorena, ces messages, les arrhes et une politique d'annulation claire font partie d'un même système d'acquisition. Pour tout déléguer, découvrez notre [solution clé en main contre les rendez-vous non honorés](/rendez-vous-non-honores) : elle réduit les absences, dans votre ton et dans le respect de ces règles.",
     },
     {
       type: "callout",

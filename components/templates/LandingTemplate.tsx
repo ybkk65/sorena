@@ -126,7 +126,7 @@ export function LandingTemplate({ page }: LandingTemplateProps) {
 
           <aside className="lp-aside">
             <div className="lp-aside-card">
-              <p className="lp-aside-kicker">Diagnostic · 30 min · offert</p>
+              <p className="lp-aside-kicker">Diagnostic offert</p>
               <p className="lp-aside-title">
                 Votre zone est-elle <em>encore libre&nbsp;?</em>
               </p>

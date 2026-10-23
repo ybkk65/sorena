@@ -115,7 +115,7 @@ export default function AProposPage() {
             <h2>Comment nous travaillons</h2>
             <ol>
               <li>
-                <strong>Le diagnostic (30 min, offert).</strong> Nous étudions votre
+                <strong>Le diagnostic (offert).</strong> Nous étudions votre
                 zone, vos soins, votre agenda et votre parcours de réservation.
                 Vous repartez avec un plan clair, même si nous ne travaillons pas
                 ensemble.

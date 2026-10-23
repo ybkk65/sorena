@@ -109,7 +109,7 @@ export const iaPriseDeRendezVous: LandingPage = {
     {
       type: "cta",
       title: "Où se perdent vos demandes aujourd'hui ?",
-      text: "Pendant le diagnostic de 30 minutes, offert et sans engagement, nous regardons comment vos demandes arrivent et qui y répond. Nous partons de votre outil de réservation actuel, que nous étudions au diagnostic, et nous repérons avec vous les moments où personne ne répond.",
+      text: "Pendant le diagnostic, offert et sans engagement, nous regardons comment vos demandes arrivent et qui y répond. Nous partons de votre outil de réservation actuel, que nous étudions au diagnostic, et nous repérons avec vous les moments où personne ne répond.",
     },
     { type: "h2", text: "Transparence : vos clientes savent qu'elles échangent avec une IA" },
     {
@@ -171,7 +171,7 @@ export const iaPriseDeRendezVous: LandingPage = {
     },
     {
       q: "L'IA fonctionne-t-elle avec mon outil de réservation ?",
-      a: "Nous partons de votre outil de réservation actuel, que nous étudions au diagnostic. Le protocole est ensuite installé en 7 jours, dès que nous disposons de la liste de vos soins, de vos tarifs et de vos disponibilités.",
+      a: "Nous partons de votre outil de réservation actuel, que nous étudions au diagnostic. Le système est ensuite installé en 7 jours, dès que nous disposons de la liste de vos soins, de vos tarifs et de vos disponibilités.",
     },
   ],
   related: [

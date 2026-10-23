@@ -76,7 +76,7 @@ const TUILES = [
     cle: "invitation",
     visuel: <VisuelInvitation />,
     titre: "Une invitation, jamais une remise",
-    detail: "Des annonces qui proposent un bilan ou une première séance, pas une promo.",
+    detail: "Des annonces qui proposent un bilan ou une première séance.",
   },
   {
     cle: "rappel",

@@ -105,7 +105,7 @@ export const publiciteFacebookInstagram: LandingPage = {
     {
       type: "cta",
       title: "Avant de lancer une campagne, vérifions votre zone.",
-      text: "Une seule maison par zone de 10 km. En 30 minutes, offertes et sans engagement, nous étudions vos soins, votre secteur et votre agenda, et nous parlons ouvertement du tarif.",
+      text: "Une seule maison par zone de 10 km. Pendant le diagnostic, offert et sans engagement, nous étudions vos soins, votre secteur et votre agenda, et nous parlons ouvertement du tarif.",
     },
     { type: "h2", text: "Publicité Instagram pour esthéticienne : tout se joue après le clic" },
     {
@@ -136,7 +136,7 @@ export const publiciteFacebookInstagram: LandingPage = {
     },
     {
       type: "p",
-      text: "Notre engagement porte sur autre chose : un **objectif de rendez-vous qualifiés**, fixé ensemble au diagnostic. Tant qu'il n'est pas atteint, nous poursuivons sans frais supplémentaires. Le protocole s'installe en 7 jours, une fois les éléments de votre maison réunis : soins, tarifs, créneaux, visuels.",
+      text: "Notre engagement porte sur autre chose : un **objectif de rendez-vous qualifiés**, fixé ensemble au diagnostic. Tant qu'il n'est pas atteint, nous poursuivons sans frais supplémentaires. Le système s'installe en 7 jours, une fois les éléments de votre maison réunis : soins, tarifs, créneaux, visuels.",
     },
     {
       type: "p",
@@ -170,7 +170,7 @@ export const publiciteFacebookInstagram: LandingPage = {
     },
     {
       q: "Quand la première campagne peut-elle démarrer ?",
-      a: "Dès que le protocole est installé : comptez 7 jours à partir du moment où nous disposons de vos soins, tarifs, créneaux et visuels. Nous ne promettons pas, en revanche, de délai de résultats. L'engagement porte sur l'objectif de rendez-vous qualifiés fixé au diagnostic : s'il n'est pas atteint, nous continuons sans frais supplémentaires.",
+      a: "Dès que le système est installé : comptez 7 jours à partir du moment où nous disposons de vos soins, tarifs, créneaux et visuels. Nous ne promettons pas, en revanche, de délai de résultats. L'engagement porte sur l'objectif de rendez-vous qualifiés fixé au diagnostic : s'il n'est pas atteint, nous continuons sans frais supplémentaires.",
     },
   ],
   related: [

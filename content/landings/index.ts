@@ -12,7 +12,7 @@ export const LANDINGS: readonly LandingPage[] = [
   institutDeBeaute,
   centreLaser,
   centreMinceur,
-  // Leviers du protocole
+  // Leviers du système
   publiciteFacebookInstagram,
   iaPriseDeRendezVous,
   rendezVousNonHonores,

@@ -98,7 +98,7 @@ export const centreMinceur: LandingPage = {
     {
       type: "cta",
       title: "Parlons de vos appareils avant de parler de publicité.",
-      text: "Le diagnostic de 30 minutes est offert et sans engagement. Nous passons en revue vos soins, vos appareils, votre cadre d'exercice et votre zone. Si un soin ne peut pas être promu, nous vous le disons ; pour les autres, vous repartez avec un plan clair. Le tarif est discuté à ce moment-là.",
+      text: "Le diagnostic est offert et sans engagement. Nous passons en revue vos soins, vos appareils, votre cadre d'exercice et votre zone. Si un soin ne peut pas être promu, nous vous le disons ; pour les autres, vous repartez avec un plan clair. Le tarif est discuté à ce moment-là.",
     },
     { type: "h2", text: "Comment nous amenons des clientes jusqu'à vos bilans" },
     {
@@ -163,7 +163,7 @@ export const centreMinceur: LandingPage = {
     },
     {
       q: "Je suis médecin et je propose des soins de silhouette : pouvez-vous m'accompagner ?",
-      a: "Pas avec ce protocole. Le code de déontologie médicale interdit au médecin d'obtenir, contre paiement ou autrement, un référencement prioritaire sur internet (article R.4127-80 du code de la santé publique), et l'Ordre en déduit l'interdiction de la publicité payante, quel que soit l'acte. Les promotions, les avances d'honoraires et la facturation d'un rendez-vous non honoré lui sont aussi interdites. Cette page s'adresse aux centres non médicaux.",
+      a: "Pas avec ce système. Le code de déontologie médicale interdit au médecin d'obtenir, contre paiement ou autrement, un référencement prioritaire sur internet (article R.4127-80 du code de la santé publique), et l'Ordre en déduit l'interdiction de la publicité payante, quel que soit l'acte. Les promotions, les avances d'honoraires et la facturation d'un rendez-vous non honoré lui sont aussi interdites. Cette page s'adresse aux centres non médicaux.",
     },
   ],
   related: [

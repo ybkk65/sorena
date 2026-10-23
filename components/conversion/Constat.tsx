@@ -135,9 +135,9 @@ export function Constat() {
             </a>
           </div>
 
-          <div className="cs-reglages" aria-label="Exemple de protocole">
+          <div className="cs-reglages" aria-label="Exemple de système">
             <div className="cs-reglages-tete">
-              <span>Votre protocole</span>
+              <span>Votre système</span>
               <span className="cs-actif">
                 Actif <span className="cs-toggle" aria-hidden="true" />
               </span>

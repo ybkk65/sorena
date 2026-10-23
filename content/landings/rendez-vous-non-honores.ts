@@ -132,7 +132,7 @@ export const rendezVousNonHonores: LandingPage = {
     {
       type: "cta",
       title: "Combien de cabines sont restées vides le mois dernier ?",
-      text: "Le diagnostic dure 30 minutes ; il est offert et sans engagement. Nous y passons en revue votre agenda et vos annulations, en partant de votre outil de réservation actuel, que nous étudions à cette occasion, et vous repartez en sachant par où commencer.",
+      text: "Le diagnostic est offert et sans engagement. Nous y passons en revue votre agenda et vos annulations, en partant de votre outil de réservation actuel, que nous étudions à cette occasion, et vous repartez en sachant par où commencer.",
     },
     { type: "h2", text: "Rappel de rendez-vous en institut : le bon moment, le bon ton" },
     {
@@ -172,7 +172,7 @@ export const rendezVousNonHonores: LandingPage = {
     },
     {
       type: "p",
-      text: "Le protocole complet, qualification, acompte, rappels et relances, se met en place en 7 jours, dès que nous avons rassemblé les éléments de votre maison. Et comme aucune autre maison n'est accompagnée dans un rayon de 10 km autour de vous, ce parcours reste le vôtre dans votre secteur.",
+      text: "Le système complet, qualification, acompte, rappels et relances, se met en place en 7 jours, dès que nous avons rassemblé les éléments de votre maison. Et comme aucune autre maison n'est accompagnée dans un rayon de 10 km autour de vous, ce parcours reste le vôtre dans votre secteur.",
     },
   ],
   faq: [

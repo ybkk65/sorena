@@ -103,7 +103,7 @@ export const rentabiliteEpilationLaser: Article = {
     {
       type: "cta",
       title: "Votre point mort dépend de deux chiffres sur lesquels on peut agir.",
-      text: "L'occupation de la machine et les forfaits menés à terme. Nous y travaillons avec une publicité Meta locale réservée aux plus de 18 ans, une invitation au bilan ou à une séance test au juste prix, un assistant IA présenté comme tel qui pré-qualifie chaque demande 24 h/24 (soin, créneau, budget), un acompte ou des arrhes avec des conditions d'annulation claires, qui réduisent les absences, et des relances avec l'accord de la cliente. Le diagnostic de 30 minutes est offert.",
+      text: "L'occupation de la machine et les forfaits menés à terme. Nous y travaillons avec une publicité Meta locale réservée aux plus de 18 ans, une invitation au bilan ou à une séance test au juste prix, un assistant IA présenté comme tel qui pré-qualifie chaque demande 24 h/24 (soin, créneau, budget), un acompte ou des arrhes avec des conditions d'annulation claires, qui réduisent les absences, et des relances avec l'accord de la cliente. Le diagnostic est offert.",
     },
 
     { type: "h2", text: "Exemple chiffré fictif : le point mort d'un centre imaginaire" },
@@ -220,7 +220,7 @@ export const rentabiliteEpilationLaser: Article = {
     },
     {
       type: "p",
-      text: "Les deux premiers leviers dépendent de la façon dont vous trouvez et accompagnez vos clientes. C'est le cœur de notre accompagnement des [centres d'épilation laser](/centre-laser) : un protocole installé en 7 jours, et une seule maison accompagnée par zone de 10 km.",
+      text: "Les deux premiers leviers dépendent de la façon dont vous trouvez et accompagnez vos clientes. C'est le cœur de notre accompagnement des [centres d'épilation laser](/centre-laser) : un système installé en 7 jours, et une seule maison accompagnée par zone de 10 km.",
     },
   ],
   faq: [

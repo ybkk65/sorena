@@ -149,7 +149,7 @@ export const acompteRendezVousInstitut: Article = {
     {
       type: "cta",
       title: "Et si l'acompte était déjà en place dans votre agenda ?",
-      text: "Nous installons les rappels, les relances et l'acompte ou les arrhes à la réservation, avec une politique d'annulation claire, au sein d'un protocole d'acquisition complet. Une seule maison accompagnée par zone de 10 km. Le diagnostic de 30 minutes est offert.",
+      text: "Nous installons les rappels, les relances et l'acompte ou les arrhes à la réservation, avec une politique d'annulation claire, au sein d'un système d'acquisition complet. Une seule maison accompagnée par zone de 10 km. Le diagnostic est offert.",
     },
 
     { type: "h2", text: "Rendez-vous non honoré : facture et indemnité, que pouvez-vous réclamer ?" },
@@ -278,7 +278,7 @@ export const acompteRendezVousInstitut: Article = {
     },
     {
       type: "p",
-      text: "C'est précisément ce que nous mettons en place chez Sorena : l'acompte ou les arrhes, les rappels et les relances y forment un seul protocole d'acquisition, de la publicité jusqu'à la cabine. Si vous préférez déléguer l'ensemble, découvrez notre [solution clé en main contre les rendez-vous non honorés](/rendez-vous-non-honores) : elle réduit les absences, sans sortir du cadre décrit ici.",
+      text: "C'est précisément ce que nous mettons en place chez Sorena : l'acompte ou les arrhes, les rappels et les relances y forment un seul système d'acquisition, de la publicité jusqu'à la cabine. Si vous préférez déléguer l'ensemble, découvrez notre [solution clé en main contre les rendez-vous non honorés](/rendez-vous-non-honores) : elle réduit les absences, sans sortir du cadre décrit ici.",
     },
     {
       type: "callout",

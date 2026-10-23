@@ -40,7 +40,7 @@ export function articlesByDate(): Article[] {
 function landingCard(page: LandingPage): LinkCard {
   return {
     path: `/${page.slug}`,
-    kicker: page.kind === "metier" ? "Pour qui" : "Le protocole",
+    kicker: page.kind === "metier" ? "Pour qui" : "Le système",
     title: page.cardTitle,
     text: page.cardText,
   };

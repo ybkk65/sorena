@@ -9,7 +9,7 @@ import { JsonLd } from "./JsonLd";
 const QUESTIONS = [
   {
     q: "Combien cela coûte-t-il ?",
-    a: "L'installation du système est entièrement personnalisée : le tarif s'adapte à vos besoins, à vos moyens et à l'étape où vous en êtes dans votre développement. On définit tout ensemble pendant votre diagnostic offert.",
+    a: "L'installation du système est entièrement personnalisée : le tarif s'adapte à vos besoins, à vos moyens et à l'étape où vous en êtes dans votre développement. Nous définissons tout ensemble pendant votre diagnostic offert.",
   },
   {
     q: "J'ai déjà essayé la publicité, sans résultat.",

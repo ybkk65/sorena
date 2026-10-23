@@ -149,7 +149,7 @@ export const budgetPubliciteFacebookInstitut: Article = {
     {
       type: "cta",
       title: "Vous voulez faire ce calcul avec vos vrais chiffres ?",
-      text: "Pendant le diagnostic de 30 minutes, offert, nous reprenons ce calcul avec votre soin d'entrée, votre zone et votre agenda. Vous repartez avec un objectif de rendez-vous et un budget cohérents, que vous travailliez avec nous ou non.",
+      text: "Pendant le diagnostic offert, nous reprenons ce calcul avec votre soin d'entrée, votre zone et votre agenda. Vous repartez avec un objectif de rendez-vous et un budget cohérents, que vous travailliez avec nous ou non.",
     },
 
     { type: "h2", text: "Ce qui fait baisser le coût d'une nouvelle cliente, plus que le budget" },
@@ -207,7 +207,7 @@ export const budgetPubliciteFacebookInstitut: Article = {
     },
     {
       type: "p",
-      text: "Le bon budget n'est pas celui d'un autre institut : c'est celui qui respecte votre coût maximal par nouvelle cliente, une fois mesuré dans votre zone. Si vous préférez déléguer, c'est le métier de Sorena : publicité Meta locale portée par une invitation de valeur, IA qui répond et qualifie chaque demande, relances et acompte, protocole installé en 7 jours. Nous fixons ensemble un objectif de rendez-vous et poursuivons sans frais supplémentaires tant qu'il n'est pas atteint, avec une seule maison par zone de 10 km. Tout est détaillé sur notre page [Publicité Facebook institut de beauté](/publicite-facebook-instagram).",
+      text: "Le bon budget n'est pas celui d'un autre institut : c'est celui qui respecte votre coût maximal par nouvelle cliente, une fois mesuré dans votre zone. Si vous préférez déléguer, c'est le métier de Sorena : publicité Meta locale portée par une invitation de valeur, IA qui répond et qualifie chaque demande, relances et acompte, système installé en 7 jours. Nous fixons ensemble un objectif de rendez-vous et poursuivons sans frais supplémentaires tant qu'il n'est pas atteint, avec une seule maison par zone de 10 km. Tout est détaillé sur notre page [Publicité Facebook institut de beauté](/publicite-facebook-instagram).",
     },
   ],
   faq: [

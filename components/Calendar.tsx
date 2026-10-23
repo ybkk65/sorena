@@ -156,7 +156,7 @@ export function Calendar() {
             (l'ancien bloc « CTA final » faisait doublon avec cette section). */}
         <div className="calendar-head reveal">
           <div className="calendar-head-main">
-            <span className="cv-label">Diagnostic · 30 min · offert</span>
+            <span className="cv-label">Diagnostic offert</span>
             <h2 className="calendar-title">
               Votre zone est‑elle <em>encore libre&nbsp;?</em>
             </h2>

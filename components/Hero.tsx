@@ -3,7 +3,7 @@ import { Actions } from "./conversion/Actions";
 
 /** Trois engagements, en ligne éditoriale sous les actions. */
 const ENGAGEMENTS = [
-  { valeur: "30 min", libelle: "Diagnostic offert" },
+  { valeur: "Offert", libelle: "Diagnostic" },
   { valeur: "10 km", libelle: "Une maison par zone" },
   { valeur: "7 jours", libelle: "Installation" },
 ];

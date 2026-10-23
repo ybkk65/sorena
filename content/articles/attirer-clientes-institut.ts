@@ -165,7 +165,7 @@ export const attirerClientesInstitut: Article = {
     {
       type: "cta",
       title: "Vous préférez construire ce parcours avec nous ?",
-      text: "Pendant le diagnostic de 30 minutes, offert, nous étudions votre zone, votre soin d'entrée et la façon dont vos demandes sont traitées aujourd'hui. Vous repartez avec un plan clair, que vous travailliez avec nous ou non.",
+      text: "Pendant le diagnostic offert, nous étudions votre zone, votre soin d'entrée et la façon dont vos demandes sont traitées aujourd'hui. Vous repartez avec un plan clair, que vous travailliez avec nous ou non.",
     },
 
     { type: "h2", text: "Répondre vite et transformer la demande en rendez-vous" },

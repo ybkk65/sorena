@@ -46,7 +46,7 @@ export function Hero() {
         <Image src="/assets/hero-room.jpg" alt="" fill priority sizes="(max-width: 900px) 100vw, 50vw" />
         <div className="hv-carte" aria-hidden="true">
           <span className="hv-carte-kicker">Nouvelle cliente</span>
-          <span className="hv-carte-titre">Soin visage signature</span>
+          <span className="hv-carte-titre">Bilan épilation laser</span>
           <span className="hv-carte-detail">Mardi · 11 h · acompte versé</span>
         </div>
       </div>
